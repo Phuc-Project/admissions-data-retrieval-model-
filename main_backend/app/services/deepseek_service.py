@@ -3,6 +3,8 @@ from typing import List, Dict, Any, Tuple, Optional
 from app.core.config import settings
 from app.schemas.chat import ChatMessage, CitationItem, ChatResponse
 from app.services.deep_research_service import deep_research_service
+from app.services.data_retrieval_client import retrieval_client
+
 
 SYSTEM_PROMPT = """Bạn là Cố vấn Hướng nghiệp & Tuyển sinh AI Cao cấp của EduPath 2026.
 Nhiệm vụ của bạn là tư vấn cho học sinh lớp 12 tại Việt Nam chuẩn bị thi tốt nghiệp THPT và xét tuyển đại học.
@@ -33,13 +35,24 @@ class DeepSeekService:
         student_profile: Optional[Dict[str, Any]] = None,
         use_deep_research: bool = True
     ) -> ChatResponse:
-        # Step 1: Deep Research Knowledge Retrieval (Google Search + Official MOET Docs)
         citations: List[CitationItem] = []
         research_context = ""
-        if use_deep_research:
-            research_context, citations = await deep_research_service.search_admission_knowledge(user_message)
 
-        # Step 2: Build enriched prompt
+        # Step 1: Query Live Data Retrieval Service (Server 2 on Vercel)
+        retrieval_context, retrieval_citations = await retrieval_client.get_admission_knowledge_for_query(user_message)
+        if retrieval_citations:
+            citations.extend(retrieval_citations)
+
+        # Step 2: Deep Research Knowledge Retrieval (MOET Circulars & Web Grounding)
+        if use_deep_research:
+            moet_context, moet_citations = await deep_research_service.search_admission_knowledge(user_message)
+            if moet_citations:
+                citations.extend(moet_citations)
+            research_context = f"{retrieval_context}\n\n{moet_context}".strip()
+        else:
+            research_context = retrieval_context.strip()
+
+        # Step 3: Build enriched prompt
         profile_context_str = ""
         if student_profile:
             profile_context_str = (
@@ -51,7 +64,8 @@ class DeepSeekService:
                 f"- Môn học yêu thích: {', '.join(student_profile.get('academic', {}).get('favorite_subjects', []))}\n"
             )
 
-        full_system_prompt = f"{SYSTEM_PROMPT}\n{profile_context_str}\n[DỮ LIỆU BỘ GD&ĐT & ĐỀ ÁN TUYỂN SINH]\n{research_context}"
+        full_system_prompt = f"{SYSTEM_PROMPT}\n{profile_context_str}\n[DỮ LIỆU ĐIỂM CHUẨN THỰC TẾ & BỘ GD&ĐT]\n{research_context}"
+
 
         # Step 3: Call Primary DeepSeek API
         if self.api_key and self.api_key.strip():
@@ -100,14 +114,14 @@ class DeepSeekService:
                 payload = {
                     "contents": [{"parts": [{"text": combined_prompt}]}]
                 }
-                async with httpx.AsyncClient(timeout=20.0) as client:
+                async with httpx.AsyncClient(timeout=35.0) as client:
                     g_resp = await client.post(gemini_url, json=payload)
                     if g_resp.status_code == 200:
                         g_data = g_resp.json()
                         reply_text = g_data["candidates"][0]["content"]["parts"][0]["text"]
                         return ChatResponse(
                             reply=reply_text,
-                            thought_process="Deep Research AI: Tích hợp dữ liệu thời gian thực từ Google Deep Research và quy chế Bộ GD&ĐT 2026.",
+                            thought_process="AI Cố vấn Hướng nghiệp (Deep Research & Gemini): Tích hợp dữ liệu thời gian thực từ Server Data Retrieval và quy chế Bộ GD&ĐT 2026.",
                             citations=citations,
                             recommended_followups=[
                                 "Chiến lược phân bổ nguyện vọng 3 tầng cho điểm số của em?",
@@ -118,18 +132,20 @@ class DeepSeekService:
             except Exception:
                 pass
 
-        # Step 5: Grounded Local Pedagogical Engine
-        return self._generate_grounded_fallback_response(user_message, student_profile, citations)
+        # Step 5: Grounded Local Pedagogical Engine (With Real-Time Retrieved Admissions Data)
+        return self._generate_grounded_fallback_response(user_message, student_profile, citations, retrieval_context)
 
     def _generate_grounded_fallback_response(
         self,
         message: str,
         profile: Optional[Dict[str, Any]],
-        citations: List[CitationItem]
+        citations: List[CitationItem],
+        retrieval_context: str = ""
     ) -> ChatResponse:
         score = profile.get("academic", {}).get("estimated_exam_score", 25.5) if profile else 25.5
         block = profile.get("academic", {}).get("target_block", "A00") if profile else "A00"
         h_code = profile.get("holland", {}).get("holland_code", "IRE") if profile else "IRE"
+
 
         msg_lower = message.lower()
 
@@ -160,7 +176,15 @@ class DeepSeekService:
                 f"  - **ĐHQG TP.HCM / Hà Nội**: Quy đổi thành thang điểm 10 kết hợp trong điểm xét tuyển tổng hợp ĐGNL.\n\n"
                 f"💡 **Khuyến nghị**: Nếu em đã có chứng chỉ IELTS từ 6.5 trở lên, hãy tận dụng ngay phương thức xét tuyển kết hợp sớm để tăng cơ hội trúng tuyển."
             )
-            thought = "Truy xuất bảng quy đổi chứng chỉ ngoại ngữ theo Thông tư 06/2026/TT-BGDĐT và đề án tuyển sinh các trường đại học năm 2026."
+        elif retrieval_context:
+            reply = (
+                f"Chào em! Thầy/cô cố vấn EduPath 2026 đã truy xuất dữ liệu tuyển sinh mới nhất cho em:\n\n"
+                f"{retrieval_context.strip()}\n\n"
+                f"💡 **Lời khuyên cố vấn**: Dựa trên điểm dự kiến {score}đ (khối {block}) của em:\n"
+                f"- Đối với các ngành có điểm chuẩn cao hơn từ 0.5 - 1.0 điểm: Em có thể đặt làm **Nguyện vọng 1 (Mơ ước)**.\n"
+                f"- Đối với các ngành có điểm chuẩn bằng hoặc thấp hơn từ 0.5 - 1.5 điểm: Đây là **Nguyện vọng Vừa sức & An toàn** giúp em nắm chắc cơ hội đỗ đại học!"
+            )
+            thought = "Truy xuất thời gian thực dữ liệu điểm chuẩn và thông tin tuyển sinh từ EduPath Data Retrieval API."
         else:
             reply = (
                 f"Chào em! Thầy/cô cố vấn EduPath 2026 đã ghi nhận câu hỏi của em.\n\n"
