@@ -45,10 +45,11 @@ class Settings(BaseSettings):
     GOOGLE_SEARCH_ENGINE_ID: str = ""
 
     # Supabase Database & Auth
-    SUPABASE_URL: str = ""
-    SUPABASE_KEY: str = ""
-    SUPABASE_SERVICE_ROLE_KEY: str = ""
-    DATABASE_URL: str = ""
+    SUPABASE_URL: str = os.getenv("SUPABASE_URL") or os.getenv("NEXT_PUBLIC_SUPABASE_URL") or ""
+    SUPABASE_KEY: str = os.getenv("SUPABASE_KEY") or os.getenv("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY") or os.getenv("NEXT_PUBLIC_SUPABASE_ANON_KEY") or ""
+    SUPABASE_SERVICE_ROLE_KEY: str = os.getenv("SUPABASE_SERVICE_ROLE_KEY") or ""
+    DATABASE_URL: str = os.getenv("DATABASE_URL") or ""
+
 
     # Redis Cache (Optional, fallback to in-memory cache)
     REDIS_URL: str = "redis://localhost:6379/0"

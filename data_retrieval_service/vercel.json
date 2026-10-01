@@ -10,7 +10,7 @@
   ],
   "services": {
     "admissions-data-retrieval-api": {
-      "root": "backend",
+      "root": ".",
       "entrypoint": "app.main:app"
     }
   }
