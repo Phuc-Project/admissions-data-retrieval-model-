@@ -74,11 +74,26 @@ def calculate_scct(holland_scores: Dict[str, float], scct_answers: Dict[str, int
             counts[group] += 1
             confidence_scores[group] += scct_answers.get(qid, 3)
 
+    # Calculate dynamic question counts per group
+    holland_counts = {}
+    for q in HOLLAND_QUESTIONS:
+        grp = q.get("group")
+        if grp:
+            holland_counts[grp] = holland_counts.get(grp, 0) + 1
+
+    scct_counts = {}
+    for q in SCCT_QUESTIONS:
+        grp = q.get("group")
+        if grp:
+            scct_counts[grp] = scct_counts.get(grp, 0) + 1
+
     results = []
     for g in ["R", "I", "A", "S", "E", "C"]:
         # Normalized average on scale 1-5
-        interest_avg = round(holland_scores.get(g, 15) / 5.0, 2)
-        conf_avg = round(confidence_scores.get(g, 9) / 3.0, 2)
+        h_cnt = max(holland_counts.get(g, 1), 1)
+        s_cnt = max(scct_counts.get(g, 1), 1)
+        interest_avg = round(holland_scores.get(g, 3.0 * h_cnt) / float(h_cnt), 2)
+        conf_avg = round(confidence_scores.get(g, 3.0 * s_cnt) / float(s_cnt), 2)
 
         # Cutoff threshold = 3.2
         is_high_interest = interest_avg >= 3.2
