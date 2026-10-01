@@ -54,7 +54,7 @@ class Settings(BaseSettings):
     CRAWLER_USER_AGENT: str = "AdmissionsResearchBot/1.0 (+contact@edupath2026.vn)"
     CRAWLER_DELAY_SECONDS: float = 1.5
     CRAWLER_MAX_WORKERS: int = 3
-    CHECKPOINT_DIR: str = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "checkpoints")
+    CHECKPOINT_DIR: str = "/tmp/checkpoints" if os.getenv("VERCEL") else os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "checkpoints")
 
     model_config = SettingsConfigDict(
         env_file=os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), ".env"),

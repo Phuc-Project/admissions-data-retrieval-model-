@@ -7,18 +7,21 @@ from app.tasks.scheduler import start_scheduler, stop_scheduler
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Gracefully start offline background crawler scheduler
-    try:
-        start_scheduler()
-    except Exception as e:
-        import logging
-        logging.getLogger("uvicorn").warning(f"Scheduler initialization skipped: {e}")
+    # Gracefully start offline background crawler scheduler (only in non-serverless environments)
+    import os
+    if not os.getenv("VERCEL"):
+        try:
+            start_scheduler()
+        except Exception as e:
+            import logging
+            logging.getLogger("uvicorn").warning(f"Scheduler initialization skipped: {e}")
     yield
     # Gracefully stop scheduler on shutdown
-    try:
-        stop_scheduler()
-    except Exception:
-        pass
+    if not os.getenv("VERCEL"):
+        try:
+            stop_scheduler()
+        except Exception:
+            pass
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
