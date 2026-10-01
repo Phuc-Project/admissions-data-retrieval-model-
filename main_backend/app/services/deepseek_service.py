@@ -55,14 +55,22 @@ class DeepSeekService:
         # Step 3: Build enriched prompt
         profile_context_str = ""
         if student_profile:
+            acad = student_profile.get('academic', {})
+            transcript_str = ""
+            if acad.get('transcript_gpa_overall'):
+                transcript_str = f" | Học bạ 3 năm THPT: GPA={acad.get('transcript_gpa_overall')} (Lớp 10: {acad.get('gpa_10')}, Lớp 11: {acad.get('gpa_11')}, Lớp 12: {acad.get('gpa_12')}) - Học lực: {acad.get('academic_ranking', 'Khá/Giỏi')}"
+            if acad.get('transcript_block_score'):
+                transcript_str += f", Tổng điểm học bạ khối {acad.get('target_block', 'A00')}={acad.get('transcript_block_score')}đ"
+
             profile_context_str = (
                 f"\n[HỒ SƠ HỌC SINH HIỆN TẠI]\n"
                 f"- Họ tên: {student_profile.get('student_name', 'Học sinh')}\n"
-                f"- Điểm thi dự kiến: {student_profile.get('academic', {}).get('estimated_exam_score', 'Chưa có')} (Khối {student_profile.get('academic', {}).get('target_block', 'A00')})\n"
+                f"- Điểm thi THPT dự kiến: {acad.get('estimated_exam_score', 'Chưa có')} (Khối {acad.get('target_block', 'A00')}){transcript_str}\n"
                 f"- Mã Holland: {student_profile.get('holland', {}).get('holland_code', 'Chưa làm test')} ({student_profile.get('holland', {}).get('primary_trait', '')})\n"
                 f"- DISC: {student_profile.get('disc', {}).get('dominant_trait', '')}\n"
-                f"- Môn học yêu thích: {', '.join(student_profile.get('academic', {}).get('favorite_subjects', []))}\n"
+                f"- Môn học yêu thích: {', '.join(acad.get('favorite_subjects', []))}\n"
             )
+
 
         full_system_prompt = f"{SYSTEM_PROMPT}\n{profile_context_str}\n[DỮ LIỆU ĐIỂM CHUẨN THỰC TẾ & BỘ GD&ĐT]\n{research_context}"
 

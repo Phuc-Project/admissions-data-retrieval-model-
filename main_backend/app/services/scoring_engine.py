@@ -262,6 +262,15 @@ def evaluate_full_survey(submission: SurveySubmission) -> StudentCareerProfile:
         favorite_subjects=submission.academic.favorite_subjects
     )
 
+    # Calculate high school transcript averages if not explicitly populated
+    ac = submission.academic
+    gpas = [g for g in [ac.gpa_10, ac.gpa_11, ac.gpa_12] if g is not None]
+    if gpas and ac.transcript_gpa_overall is None:
+        ac.transcript_gpa_overall = round(sum(gpas) / len(gpas), 2)
+
+    if ac.transcript_subject_scores and ac.transcript_block_score is None:
+        ac.transcript_block_score = round(sum(ac.transcript_subject_scores.values()), 2)
+
     profile_id = f"PRF_{uuid.uuid4().hex[:8].upper()}"
     created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -269,15 +278,20 @@ def evaluate_full_survey(submission: SurveySubmission) -> StudentCareerProfile:
     action_quadrants = [item.dimension_name for item in scct_res if "Hành động" in item.quadrant]
     action_str = ", ".join(action_quadrants) if action_quadrants else holland_res.primary_trait
 
+    transcript_info = ""
+    if ac.transcript_gpa_overall:
+        transcript_info = f" Học bạ THPT đạt GPA {ac.transcript_gpa_overall} (Xếp loại {ac.academic_ranking}), mở ra cơ hội cạnh tranh lớn cho phương thức xét học bạ sớm."
+
     ai_summary = (
         f"Học sinh {submission.student_name} sở hữu mã Holland chủ đạo là {holland_res.holland_code} "
         f"với xu hướng nghề nghiệp nổi bật ở nhóm {holland_res.primary_trait}. "
         f"Theo ma trận niềm tin năng lực SCCT, lĩnh vực thuộc Vùng Hành động tự tin nhất của em là: {action_str}. "
         f"Về phong cách làm việc, em thể hiện xu hướng {disc_res.dominant_trait}. "
-        f"Với điểm thi dự kiến {submission.academic.estimated_exam_score} khối {submission.academic.target_block}, "
+        f"Với điểm thi dự kiến {submission.academic.estimated_exam_score} khối {submission.academic.target_block},{transcript_info} "
         f"các nhóm ngành đào tạo có độ tương thích cao nhất gồm: "
         f"{', '.join([m.name for m in top_majors[:3]])}."
     )
+
 
     return StudentCareerProfile(
         id=profile_id,
