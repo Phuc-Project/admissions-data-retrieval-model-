@@ -1,8 +1,8 @@
 # admissions-data-retrieval-model-
 
-# EDUPATH 2026 - BACKEND AI CAREER, DATA RETRIEVAL & ADMISSIONS PIPELINE
+# CAREERCOMPASS-AI 2026 - MAIN AI CAREER ADVISORY & DATA RETRIEVAL PIPELINE
 
-Hệ thống Backend API Hướng nghiệp & Data Retrieval Pipeline Tuyển sinh Đại học Việt Nam, tuân thủ chặt chẽ **Thông tư 06/2026/TT-BGDĐT** của Bộ Giáo dục và Đào tạo và **Nghị định 13/2023/NĐ-CP** về bảo vệ dữ liệu cá nhân.
+Hệ thống API Tổng Cố vấn Hướng nghiệp & Tuyển sinh Đại học Lớp 12 (**CareerCompass-AI 2026**), tuân thủ chặt chẽ **Thông tư 06/2026/TT-BGDĐT** của Bộ Giáo dục và Đào tạo và **Nghị định 13/2023/NĐ-CP** về bảo vệ dữ liệu cá nhân.
 
 Kiến trúc cốt lõi:
 - **FastAPI** (Python 3.10+ async RESTful API, Uvicorn ASGI)

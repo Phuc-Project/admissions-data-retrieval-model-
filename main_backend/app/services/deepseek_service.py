@@ -6,7 +6,7 @@ from app.services.deep_research_service import deep_research_service
 from app.services.data_retrieval_client import retrieval_client
 
 
-SYSTEM_PROMPT = """Bạn là Cố vấn Hướng nghiệp & Tuyển sinh AI Cao cấp của EduPath 2026.
+SYSTEM_PROMPT = """Bạn là Cố vấn Hướng nghiệp & Tuyển sinh AI Cao cấp của CareerCompass-AI 2026.
 Nhiệm vụ của bạn là tư vấn cho học sinh lớp 12 tại Việt Nam chuẩn bị thi tốt nghiệp THPT và xét tuyển đại học.
 
 NGUYÊN TẮC TƯ VẤN:
@@ -186,16 +186,16 @@ class DeepSeekService:
             )
         elif retrieval_context:
             reply = (
-                f"Chào em! Thầy/cô cố vấn EduPath 2026 đã truy xuất dữ liệu tuyển sinh mới nhất cho em:\n\n"
+                f"Chào em! Thầy/cô cố vấn CareerCompass-AI 2026 đã truy xuất dữ liệu tuyển sinh mới nhất cho em:\n\n"
                 f"{retrieval_context.strip()}\n\n"
                 f"💡 **Lời khuyên cố vấn**: Dựa trên điểm dự kiến {score}đ (khối {block}) của em:\n"
                 f"- Đối với các ngành có điểm chuẩn cao hơn từ 0.5 - 1.0 điểm: Em có thể đặt làm **Nguyện vọng 1 (Mơ ước)**.\n"
                 f"- Đối với các ngành có điểm chuẩn bằng hoặc thấp hơn từ 0.5 - 1.5 điểm: Đây là **Nguyện vọng Vừa sức & An toàn** giúp em nắm chắc cơ hội đỗ đại học!"
             )
-            thought = "Truy xuất thời gian thực dữ liệu điểm chuẩn và thông tin tuyển sinh từ EduPath Data Retrieval API."
+            thought = "Truy xuất thời gian thực dữ liệu điểm chuẩn và thông tin tuyển sinh từ Admissions Data Retrieval API."
         else:
             reply = (
-                f"Chào em! Thầy/cô cố vấn EduPath 2026 đã ghi nhận câu hỏi của em.\n\n"
+                f"Chào em! Thầy/cô cố vấn CareerCompass-AI 2026 đã ghi nhận câu hỏi của em.\n\n"
                 f"Dựa trên hồ sơ của em (Mã Holland: **{h_code}**, Tổ hợp mục tiêu: **{block}**, Điểm dự kiến: **{score} điểm**):\n"
                 f"• Em có thế mạnh nổi trội ở tư duy logic và phân tích hệ thống. Các nhóm ngành như Máy tính & CNTT (Mã 748), "
                 f"Công nghệ kỹ thuật & Bán dẫn (Mã 751), và Kinh doanh & Dữ liệu (Mã 734) đang có triển vọng việc làm rất mạnh mẽ.\n"

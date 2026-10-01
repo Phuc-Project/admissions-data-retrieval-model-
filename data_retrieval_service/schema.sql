@@ -1,4 +1,4 @@
--- EduPath 2026 - Supabase PostgreSQL Schema
+-- CareerCompass-AI 2026 - Supabase PostgreSQL Schema
 -- Deep Research University Admissions & Exam Data
 
 -- Enable UUID extension

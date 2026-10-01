@@ -23,7 +23,7 @@ async def lifespan(app: FastAPI):
             pass
 
 app = FastAPI(
-    title="EduPath 2026 - Data Retrieval & Crawler Microservice",
+    title="CareerCompass 2026 - Data Retrieval & Crawler Microservice",
     version="1.0.0",
     description="Máy chủ Độc lập Cào & Truy xuất Dữ liệu Tuyển sinh Đại học Việt Nam (Google Gemini 2.5 Flash + Supabase)",
     openapi_url=f"{settings.API_V1_STR}/openapi.json",

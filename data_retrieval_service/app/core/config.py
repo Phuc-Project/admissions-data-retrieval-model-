@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import field_validator
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "EduPath 2026 - AI Career & University Orientation API"
+    PROJECT_NAME: str = "CareerCompass 2026 - Admissions Data Retrieval Microservice"
     VERSION: str = "1.0.0"
     API_V1_STR: str = "/api/v1"
     ENVIRONMENT: str = "development"
@@ -52,7 +52,7 @@ class Settings(BaseSettings):
     REDIS_URL: str = "redis://localhost:6379/0"
 
     # Crawler Settings (Compliance with Robots.txt & Decree 13/2023)
-    CRAWLER_USER_AGENT: str = "AdmissionsResearchBot/1.0 (+contact@edupath2026.vn)"
+    CRAWLER_USER_AGENT: str = "CareerCompassBot/1.0 (+contact@careercompass2026.vn)"
     CRAWLER_DELAY_SECONDS: float = 1.5
     CRAWLER_MAX_WORKERS: int = 3
     CHECKPOINT_DIR: str = "/tmp/checkpoints" if os.getenv("VERCEL") else os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "checkpoints")

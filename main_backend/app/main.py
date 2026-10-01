@@ -4,9 +4,9 @@ from app.core.config import settings
 from app.api.v1.router import api_router
 
 app = FastAPI(
-    title="EduPath 2026 - Main AI Career Advisory Backend",
+    title="CareerCompass-AI 2026 - Main AI Career Advisory Backend",
     version="1.0.0",
-    description="Máy chủ Hướng nghiệp & Cố vấn AI Lớp 12 (DeepSeek Reasoner R1/V3 + Chuẩn Thông tư 06/2026/TT-BGDĐT)",
+    description="Hệ thống Cố vấn Định hướng Nghề nghiệp & Tuyển sinh Đại học Lớp 12 (DeepSeek Reasoner R1/V3 + Chuẩn Thông tư 06/2026/TT-BGDĐT)",
     openapi_url=f"{settings.API_V1_STR}/openapi.json",
     docs_url="/docs",
     redoc_url="/redoc"
@@ -38,7 +38,7 @@ app.include_router(api_router, prefix=settings.API_V1_STR)
 @app.get("/", tags=["Health"])
 async def root():
     return {
-        "service": "EduPath 2026 - Main AI Backend",
+        "service": "CareerCompass-AI 2026 - Main AI Backend",
         "primary_ai": "DeepSeek Reasoner (R1 / V3)",
         "data_retrieval_service": settings.RETRIEVAL_SERVICE_URL,
         "regulation": "Thông tư 06/2026/TT-BGDĐT",
