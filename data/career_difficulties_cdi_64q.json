@@ -1,0 +1,450 @@
+[
+  {
+    "id": "CDI_1_1",
+    "part": 1,
+    "topic": "Mục tiêu nghề nghiệp",
+    "order": 1,
+    "question": "Tôi không chắc về mục tiêu nghề nghiệp của tôi; tôi không biết nên đi theo hướng nào."
+  },
+  {
+    "id": "CDI_1_2",
+    "part": 1,
+    "topic": "Mục tiêu nghề nghiệp",
+    "order": 2,
+    "question": "Theo tôi, mục tiêu nghề nghiệp không quan trọng lắm; tôi không thấy cần phải nỗ lực đạt được nó."
+  },
+  {
+    "id": "CDI_1_3",
+    "part": 1,
+    "topic": "Mục tiêu nghề nghiệp",
+    "order": 3,
+    "question": "Mục tiêu nghề nghiệp không phải là ưu tiên hàng đầu của tôi; tôi có những mục tiêu khác cần đạt được vào lúc này."
+  },
+  {
+    "id": "CDI_1_4",
+    "part": 1,
+    "topic": "Mục tiêu nghề nghiệp",
+    "order": 4,
+    "question": "Tôi nghi ngờ khả năng đạt được mục tiêu của mình."
+  },
+  {
+    "id": "CDI_1_5",
+    "part": 1,
+    "topic": "Mục tiêu nghề nghiệp",
+    "order": 5,
+    "question": "Hoàn cảnh của tôi không hỗ trợ tôi đạt được mục tiêu của mình."
+  },
+  {
+    "id": "CDI_1_6",
+    "part": 1,
+    "topic": "Mục tiêu nghề nghiệp",
+    "order": 6,
+    "question": "Tôi có nhiều cảm xúc lẫn lộn về mục tiêu của mình."
+  },
+  {
+    "id": "CDI_1_7",
+    "part": 1,
+    "topic": "Mục tiêu nghề nghiệp",
+    "order": 7,
+    "question": "Tôi có xu hướng trì hoãn những công việc mình cần làm."
+  },
+  {
+    "id": "CDI_2_1",
+    "part": 2,
+    "topic": "Cảm xúc và sự lo lắng",
+    "order": 8,
+    "question": "Tôi thường bi quan và luôn nghĩ rằng những điều tệ nhất sẽ xảy ra."
+  },
+  {
+    "id": "CDI_2_2",
+    "part": 2,
+    "topic": "Cảm xúc và sự lo lắng",
+    "order": 9,
+    "question": "Tôi nghi ngờ giá trị bản thân và có xu hướng đổ lỗi cho chính mình vì mọi sai sót cá nhân."
+  },
+  {
+    "id": "CDI_2_3",
+    "part": 2,
+    "topic": "Cảm xúc và sự lo lắng",
+    "order": 10,
+    "question": "Tôi sợ mắc sai lầm và đưa ra quyết định thiếu sáng suốt."
+  },
+  {
+    "id": "CDI_2_4",
+    "part": 2,
+    "topic": "Cảm xúc và sự lo lắng",
+    "order": 11,
+    "question": "Tôi sợ đưa ra quyết định khi còn nhiều điều chưa chắc chắn cũng như hậu quả đi kèm của nó."
+  },
+  {
+    "id": "CDI_2_5",
+    "part": 2,
+    "topic": "Cảm xúc và sự lo lắng",
+    "order": 12,
+    "question": "Tôi lo lắng khi phải đưa ra quyết định."
+  },
+  {
+    "id": "CDI_2_6",
+    "part": 2,
+    "topic": "Cảm xúc và sự lo lắng",
+    "order": 13,
+    "question": "Tôi thường cảm thấy sợ hãi và lo lắng trong nhiều tình huống."
+  },
+  {
+    "id": "CDI_2_7",
+    "part": 2,
+    "topic": "Cảm xúc và sự lo lắng",
+    "order": 14,
+    "question": "Tôi lo ngại lựa chọn của bản thân sẽ gây ảnh hưởng đến tình trạng cân bằng hiện tại của gia đình."
+  },
+  {
+    "id": "CDI_3_1",
+    "part": 3,
+    "topic": "Niềm tin quyết định nghề nghiệp",
+    "order": 15,
+    "question": "Lựa chọn nghề nghiệp là một quyết định hệ trọng vì nó chỉ được thực hiện một lần và tác động đến mọi thứ."
+  },
+  {
+    "id": "CDI_3_2",
+    "part": 3,
+    "topic": "Niềm tin quyết định nghề nghiệp",
+    "order": 16,
+    "question": "Công việc là điều quan trọng nhất trong cuộc sống."
+  },
+  {
+    "id": "CDI_3_3",
+    "part": 3,
+    "topic": "Niềm tin quyết định nghề nghiệp",
+    "order": 17,
+    "question": "Suy cho cùng, lựa chọn nghề nghiệp chủ yếu là do cơ hội và may mắn dẫn lối."
+  },
+  {
+    "id": "CDI_3_4",
+    "part": 3,
+    "topic": "Niềm tin quyết định nghề nghiệp",
+    "order": 18,
+    "question": "Nhà tham vấn nghề nghiệp sẽ có thể cho tôi biết rằng con đường nào phù hợp với tôi."
+  },
+  {
+    "id": "CDI_3_5",
+    "part": 3,
+    "topic": "Niềm tin quyết định nghề nghiệp",
+    "order": 19,
+    "question": "Các trắc nghiệm và đánh giá có thể cho tôi biết lựa chọn nghề nghiệp nào là tốt nhất cho mình."
+  },
+  {
+    "id": "CDI_3_6",
+    "part": 3,
+    "topic": "Niềm tin quyết định nghề nghiệp",
+    "order": 20,
+    "question": "Người thân và họ hàng của tôi biết rõ con đường nghề nghiệp nào sẽ phù hợp với tôi."
+  },
+  {
+    "id": "CDI_3_7",
+    "part": 3,
+    "topic": "Niềm tin quyết định nghề nghiệp",
+    "order": 21,
+    "question": "Có một số công việc dành cho nữ giới và một số công việc khác dành cho nam giới."
+  },
+  {
+    "id": "CDI_3_8",
+    "part": 3,
+    "topic": "Niềm tin quyết định nghề nghiệp",
+    "order": 22,
+    "question": "Uy tín của một nghề nghiệp hoặc lộ trình đào tạo là rất quan trọng."
+  },
+  {
+    "id": "CDI_4_1",
+    "part": 4,
+    "topic": "Quá trình ra quyết định",
+    "order": 23,
+    "question": "Tôi thiếu thông tin về cách thức phát triển sự nghiệp cá nhân từ trước đến giờ."
+  },
+  {
+    "id": "CDI_4_2",
+    "part": 4,
+    "topic": "Quá trình ra quyết định",
+    "order": 24,
+    "question": "Tôi thiếu thông tin về các bước cần thực hiện khi chọn nghề."
+  },
+  {
+    "id": "CDI_4_3",
+    "part": 4,
+    "topic": "Quá trình ra quyết định",
+    "order": 25,
+    "question": "Tôi thiếu thông tin về các khía cạnh cần cân nhắc khi chọn nghề."
+  },
+  {
+    "id": "CDI_4_4",
+    "part": 4,
+    "topic": "Quá trình ra quyết định",
+    "order": 26,
+    "question": "Tôi thiếu kiến thức về cách tổng hợp thông tin khi chọn nghề."
+  },
+  {
+    "id": "CDI_4_5",
+    "part": 4,
+    "topic": "Quá trình ra quyết định",
+    "order": 27,
+    "question": "Tôi không hiểu lý do cần tìm hiểu một số lựa chọn nghề nghiệp trước khi đưa ra quyết định."
+  },
+  {
+    "id": "CDI_4_6",
+    "part": 4,
+    "topic": "Quá trình ra quyết định",
+    "order": 28,
+    "question": "Tôi không biết nên ưu tiên lý trí hay cảm xúc khi chọn nghề."
+  },
+  {
+    "id": "CDI_4_7",
+    "part": 4,
+    "topic": "Quá trình ra quyết định",
+    "order": 29,
+    "question": "Tôi khó hình dung được bức tranh toàn cảnh về quá trình đưa ra quyết định nghề nghiệp."
+  },
+  {
+    "id": "CDI_5_1",
+    "part": 5,
+    "topic": "Hiểu về bản thân",
+    "order": 30,
+    "question": "Tôi chưa biết rõ về sở thích của mình (những gì tôi thích)."
+  },
+  {
+    "id": "CDI_5_2",
+    "part": 5,
+    "topic": "Hiểu về bản thân",
+    "order": 31,
+    "question": "Tôi chưa biết rõ về tính cách của mình (tôi là ai)."
+  },
+  {
+    "id": "CDI_5_3",
+    "part": 5,
+    "topic": "Hiểu về bản thân",
+    "order": 32,
+    "question": "Tôi chưa biết rõ về kỹ năng của mình (tôi giỏi ở lĩnh vực nào)."
+  },
+  {
+    "id": "CDI_5_4",
+    "part": 5,
+    "topic": "Hiểu về bản thân",
+    "order": 33,
+    "question": "Tôi chưa biết rõ về giá trị của mình (điều gì quan trọng với tôi)."
+  },
+  {
+    "id": "CDI_5_5",
+    "part": 5,
+    "topic": "Hiểu về bản thân",
+    "order": 34,
+    "question": "Tôi chưa biết rõ thế mạnh của mình."
+  },
+  {
+    "id": "CDI_5_6",
+    "part": 5,
+    "topic": "Hiểu về bản thân",
+    "order": 35,
+    "question": "Tôi chưa biết rõ về ý nghĩa cuộc sống, công việc hoặc học tập của mình."
+  },
+  {
+    "id": "CDI_5_7",
+    "part": 5,
+    "topic": "Hiểu về bản thân",
+    "order": 36,
+    "question": "Tôi gặp khó khăn trong việc tìm được sợi chỉ xuyên suốt trên con đường sự nghiệp của tôi."
+  },
+  {
+    "id": "CDI_6_1",
+    "part": 6,
+    "topic": "Thông tin nghề nghiệp và đào tạo",
+    "order": 37,
+    "question": "Tôi không biết liệu mình đã thu thập đủ thông tin về các lựa chọn để đưa ra quyết định chưa."
+  },
+  {
+    "id": "CDI_6_2",
+    "part": 6,
+    "topic": "Thông tin nghề nghiệp và đào tạo",
+    "order": 38,
+    "question": "Tôi muốn được giải đáp những thắc mắc của tôi về nghề nghiệp hoặc lộ trình đào tạo."
+  },
+  {
+    "id": "CDI_6_3",
+    "part": 6,
+    "topic": "Thông tin nghề nghiệp và đào tạo",
+    "order": 39,
+    "question": "Tôi không biết tìm thông tin về nghề nghiệp và lộ trình đào tạo ở đâu."
+  },
+  {
+    "id": "CDI_6_4",
+    "part": 6,
+    "topic": "Thông tin nghề nghiệp và đào tạo",
+    "order": 40,
+    "question": "Tôi không đánh giá được chất lượng thông tin tôi thu thập về nghề nghiệp và lộ trình đào tạo."
+  },
+  {
+    "id": "CDI_6_5",
+    "part": 6,
+    "topic": "Thông tin nghề nghiệp và đào tạo",
+    "order": 41,
+    "question": "Tôi thiếu thông tin về các nghề hiện có và đặc điểm của chúng."
+  },
+  {
+    "id": "CDI_6_6",
+    "part": 6,
+    "topic": "Thông tin nghề nghiệp và đào tạo",
+    "order": 42,
+    "question": "Tôi tự hỏi nghề nghiệp trong tương lai sẽ như thế nào."
+  },
+  {
+    "id": "CDI_6_7",
+    "part": 6,
+    "topic": "Thông tin nghề nghiệp và đào tạo",
+    "order": 43,
+    "question": "Tôi thiếu thông tin về lộ trình đào tạo."
+  },
+  {
+    "id": "CDI_7_1",
+    "part": 7,
+    "topic": "Sự do dự và so sánh",
+    "order": 44,
+    "question": "Tôi do dự giữa một vài lựa chọn nghề nghiệp vì tôi đều có hứng thú với chúng!"
+  },
+  {
+    "id": "CDI_7_2",
+    "part": 7,
+    "topic": "Sự do dự và so sánh",
+    "order": 45,
+    "question": "Các lựa chọn nghề nghiệp và/hoặc các lộ trình đào tạo mà tôi thích đều khó tiếp cận."
+  },
+  {
+    "id": "CDI_7_3",
+    "part": 7,
+    "topic": "Sự do dự và so sánh",
+    "order": 46,
+    "question": "Tôi muốn chọn sở thích làm khi rảnh rỗi của mình để nghiêm túc theo đuổi như một sự nghiệp."
+  },
+  {
+    "id": "CDI_7_4",
+    "part": 7,
+    "topic": "Sự do dự và so sánh",
+    "order": 47,
+    "question": "Tôi vẫn chưa chắc chắn về việc thay đổi nghề nghiệp."
+  },
+  {
+    "id": "CDI_7_5",
+    "part": 7,
+    "topic": "Sự do dự và so sánh",
+    "order": 48,
+    "question": "Tôi biết mình nên nghĩ đến một kế hoạch dự phòng, nhưng điều đó khiến tôi khó chịu."
+  },
+  {
+    "id": "CDI_7_6",
+    "part": 7,
+    "topic": "Sự do dự và so sánh",
+    "order": 49,
+    "question": "Tôi đang do dự giữa một vài lựa chọn, tất cả đều có ưu và nhược điểm."
+  },
+  {
+    "id": "CDI_7_7",
+    "part": 7,
+    "topic": "Sự do dự và so sánh",
+    "order": 50,
+    "question": "Tôi gặp khó khăn khi cân nhắc tất cả các lựa chọn mà tôi đang có."
+  },
+  {
+    "id": "CDI_8_1",
+    "part": 8,
+    "topic": "Môi trường và gia đình",
+    "order": 51,
+    "question": "Tôi cảm thấy tôi có vô vàn cơ hội nghề nghiệp."
+  },
+  {
+    "id": "CDI_8_2",
+    "part": 8,
+    "topic": "Môi trường và gia đình",
+    "order": 52,
+    "question": "Tôi chịu ảnh hưởng bởi các lựa chọn nghề nghiệp của các thành viên khác trong gia đình."
+  },
+  {
+    "id": "CDI_8_3",
+    "part": 8,
+    "topic": "Môi trường và gia đình",
+    "order": 53,
+    "question": "Tôi cảm thấy những lựa chọn nghề nghiệp của mình bị hạn chế bởi kỳ vọng từ gia đình."
+  },
+  {
+    "id": "CDI_8_4",
+    "part": 8,
+    "topic": "Môi trường và gia đình",
+    "order": 54,
+    "question": "Tôi muốn đạt được sự cân bằng trong các khía cạnh khác nhau của cuộc sống cá nhân."
+  },
+  {
+    "id": "CDI_8_5",
+    "part": 8,
+    "topic": "Môi trường và gia đình",
+    "order": 55,
+    "question": "Tôi cảm thấy các triển vọng nghề nghiệp của mình bị giới hạn bởi những rào cản vượt quá tầm với."
+  },
+  {
+    "id": "CDI_8_6",
+    "part": 8,
+    "topic": "Môi trường và gia đình",
+    "order": 56,
+    "question": "Tôi chưa hoặc không thể nắm vững các quy tắc xã hội tại môi trường làm việc hiện tại hoặc mơ ước."
+  },
+  {
+    "id": "CDI_8_7",
+    "part": 8,
+    "topic": "Môi trường và gia đình",
+    "order": 57,
+    "question": "Tôi gặp khó khăn trong việc khiến mọi người lắng nghe và/hoặc tôn trọng các quyết định của tôi."
+  },
+  {
+    "id": "CDI_9_1",
+    "part": 9,
+    "topic": "Căng thẳng và đối phó",
+    "order": 58,
+    "question": "Tôi kỳ vọng lựa chọn nghề nghiệp của mình sẽ mang đến nhiều niềm vui và sự hài lòng hơn cho tôi."
+  },
+  {
+    "id": "CDI_9_2",
+    "part": 9,
+    "topic": "Căng thẳng và đối phó",
+    "order": 59,
+    "question": "Tôi mệt mỏi với những thăng trầm trong sự nghiệp."
+  },
+  {
+    "id": "CDI_9_3",
+    "part": 9,
+    "topic": "Căng thẳng và đối phó",
+    "order": 60,
+    "question": "Tôi đang trải qua giai đoạn chuyển tiếp rất căng thẳng và/hoặc bất ổn."
+  },
+  {
+    "id": "CDI_9_4",
+    "part": 9,
+    "topic": "Căng thẳng và đối phó",
+    "order": 61,
+    "question": "Tôi gặp khó khăn khi lập kế hoạch: Tôi liên tục đối diện với những sự việc không lường trước được."
+  },
+  {
+    "id": "CDI_9_5",
+    "part": 9,
+    "topic": "Căng thẳng và đối phó",
+    "order": 62,
+    "question": "Tôi sợ thất bại; và/hoặc tôi thấy khó vươn lên sau thất bại."
+  },
+  {
+    "id": "CDI_9_6",
+    "part": 9,
+    "topic": "Căng thẳng và đối phó",
+    "order": 63,
+    "question": "Tôi có xu hướng trốn tránh những vấn đề: Tôi cần những chiến lược hiệu quả để giải quyết chúng."
+  },
+  {
+    "id": "CDI_9_7",
+    "part": 9,
+    "topic": "Căng thẳng và đối phó",
+    "order": 64,
+    "question": "Tôi thấy con đường sự nghiệp của mình gần như không có gì thú vị cả."
+  }
+]

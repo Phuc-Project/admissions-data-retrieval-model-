@@ -1,0 +1,191 @@
+[
+  {
+    "id": "CED_THPT_1",
+    "section": "Sự hiểu biết",
+    "subsection": "Về bản thân",
+    "order": 1,
+    "question": "Tôi hiểu rõ về sở thích nghề nghiệp của bản thân và biết các sở thích này liên quan ra sao đến hướng học và nghề nghiệp tương lai."
+  },
+  {
+    "id": "CED_THPT_2",
+    "section": "Sự hiểu biết",
+    "subsection": "Về bản thân",
+    "order": 2,
+    "question": "Tôi biết rõ những điểm mạnh và năng lực của mình và biết chúng liên quan ra sao đến hướng học và nghề nghiệp tương lai."
+  },
+  {
+    "id": "CED_THPT_3",
+    "section": "Sự hiểu biết",
+    "subsection": "Về bản thân",
+    "order": 3,
+    "question": "Tôi biết mình thích hoặc giỏi môn học nào và biết chúng liên quan ra sao đến hướng học và nghề nghiệp tương lai."
+  },
+  {
+    "id": "CED_THPT_4",
+    "section": "Sự hiểu biết",
+    "subsection": "Sự ảnh hưởng",
+    "order": 4,
+    "question": "Tôi hiểu rõ quan điểm của cha mẹ đối với hướng học và nghề nghiệp mà tôi quan tâm."
+  },
+  {
+    "id": "CED_THPT_5",
+    "section": "Sự hiểu biết",
+    "subsection": "Sự ảnh hưởng",
+    "order": 5,
+    "question": "Tôi hiểu rõ tầm quan trọng khi chọn ngành học/chọn nghề và biết rằng đây là trách nhiệm của tôi và không bị ảnh hưởng bởi bạn bè hoặc mạng xã hội."
+  },
+  {
+    "id": "CED_THPT_6",
+    "section": "Sự hiểu biết",
+    "subsection": "Sự ảnh hưởng",
+    "order": 6,
+    "question": "Tôi hiểu rõ tầm quan trọng khi chọn ngành học/chọn nghề và biết rằng đây là trách nhiệm của tôi và cần giúp sức bởi thầy cô lẫn cha mẹ."
+  },
+  {
+    "id": "CED_THPT_7",
+    "section": "Sự hiểu biết",
+    "subsection": "Về các cơ hội",
+    "order": 7,
+    "question": "Tôi thấu hiểu thế giới nghề nghiệp và các lựa chọn nghề nghiệp trong tương lai."
+  },
+  {
+    "id": "CED_THPT_8",
+    "section": "Sự hiểu biết",
+    "subsection": "Về các cơ hội",
+    "order": 8,
+    "question": "Tôi hiểu rõ về các hướng học/ngành học phù hợp với tôi và định hướng nghề nghiệp liên quan đến các ngành học ấy."
+  },
+  {
+    "id": "CED_THPT_9",
+    "section": "Sự hiểu biết",
+    "subsection": "Về các cơ hội",
+    "order": 9,
+    "question": "Tôi nắm bắt các con đường phát triển sự nghiệp khác nhau mà tôi đang quan tâm."
+  },
+  {
+    "id": "CED_THPT_10",
+    "section": "Hành động",
+    "subsection": "Đặt mục tiêu",
+    "order": 10,
+    "question": "Tôi đã đặt ra những mục tiêu học tập/nghề nghiệp rõ ràng và khả thi."
+  },
+  {
+    "id": "CED_THPT_11",
+    "section": "Hành động",
+    "subsection": "Đặt mục tiêu",
+    "order": 11,
+    "question": "Tôi đã xây dựng kế hoạch nghề nghiệp cho bản thân."
+  },
+  {
+    "id": "CED_THPT_12",
+    "section": "Hành động",
+    "subsection": "Đặt mục tiêu",
+    "order": 12,
+    "question": "Kế hoạch nghề nghiệp/học tập của tôi bao gồm cả mục tiêu ngắn, vừa và dài hạn."
+  },
+  {
+    "id": "CED_THPT_13",
+    "section": "Hành động",
+    "subsection": "Ra quyết định",
+    "order": 13,
+    "question": "Tôi ra quyết định hiệu quả khi lựa chọn ngành/nghề."
+  },
+  {
+    "id": "CED_THPT_14",
+    "section": "Hành động",
+    "subsection": "Ra quyết định",
+    "order": 14,
+    "question": "Tôi có thể tìm hiểu thông tin chi tiết về các ngành học và nghề nghiệp để ra quyết định sáng suốt hơn."
+  },
+  {
+    "id": "CED_THPT_15",
+    "section": "Hành động",
+    "subsection": "Ra quyết định",
+    "order": 15,
+    "question": "Tôi thường cân nhắc kỹ càng về các lựa chọn ngành học/nghề trước khi ra quyết định."
+  },
+  {
+    "id": "CED_THPT_16",
+    "section": "Hành động",
+    "subsection": "Hành động",
+    "order": 16,
+    "question": "Tôi có thể viết hồ sơ ứng tuyển cá nhân (CV/resume) và thư giới thiệu thể hiện năng lực cạnh tranh của bản thân."
+  },
+  {
+    "id": "CED_THPT_17",
+    "section": "Hành động",
+    "subsection": "Hành động",
+    "order": 17,
+    "question": "Tôi thành thạo trong việc chuẩn bị một bộ hồ sơ ứng tuyển tìm việc/đăng ký học."
+  },
+  {
+    "id": "CED_THPT_18",
+    "section": "Hành động",
+    "subsection": "Hành động",
+    "order": 18,
+    "question": "Tôi có thể tìm hiểu thông tin phù hợp về các yêu cầu ứng tuyển/ứng thí cho công việc và/hoặc các khóa học nâng cao và chuyên sâu hơn."
+  },
+  {
+    "id": "CED_THPT_19",
+    "section": "Hành động",
+    "subsection": "Suy ngẫm/Đánh giá",
+    "order": 19,
+    "question": "Tôi xem lại kế hoạch học tập/nghề nghiệp của bản thân mỗi 6 tháng."
+  },
+  {
+    "id": "CED_THPT_20",
+    "section": "Hành động",
+    "subsection": "Suy ngẫm/Đánh giá",
+    "order": 20,
+    "question": "Tôi thường xuyên kiểm tra thông tin về ngành học/nghề nghiệp để nắm bắt kịp thời những thay đổi liên quan đến kế hoạch của mình."
+  },
+  {
+    "id": "CED_THPT_21",
+    "section": "Hành động",
+    "subsection": "Suy ngẫm/Đánh giá",
+    "order": 21,
+    "question": "Tôi lập kế hoạch dự phòng phù hợp để đảm bảo mọi việc vẫn ổn nếu lựa chọn ưu tiên hàng đầu có trở ngại."
+  },
+  {
+    "id": "CED_THPT_22",
+    "section": "Thái độ",
+    "subsection": "Tự tin vào tương lai",
+    "order": 22,
+    "question": "Tôi biết các bước cần hoàn thành để thực hiện kế hoạch nghề nghiệp/học tập của mình."
+  },
+  {
+    "id": "CED_THPT_23",
+    "section": "Thái độ",
+    "subsection": "Tự tin vào tương lai",
+    "order": 23,
+    "question": "Tôi tự tin rằng mình biết rõ về ngành học/hướng học hoặc con đường nghề nghiệp mà mình lựa chọn."
+  },
+  {
+    "id": "CED_THPT_24",
+    "section": "Thái độ",
+    "subsection": "Tự tin vào tương lai",
+    "order": 24,
+    "question": "Tôi tự tin rằng mình sẽ thành công trong tương lai."
+  },
+  {
+    "id": "CED_THPT_25",
+    "section": "Thái độ",
+    "subsection": "Tự tin vào năng lực bản thân",
+    "order": 25,
+    "question": "Tôi tin rằng mình có thể thành công ở hầu hết các nỗ lực mà tôi để tâm vào."
+  },
+  {
+    "id": "CED_THPT_26",
+    "section": "Thái độ",
+    "subsection": "Tự tin vào năng lực bản thân",
+    "order": 26,
+    "question": "Tôi có thể vượt qua mọi thử thách để vươn tới thành công."
+  },
+  {
+    "id": "CED_THPT_27",
+    "section": "Thái độ",
+    "subsection": "Tự tin vào năng lực bản thân",
+    "order": 27,
+    "question": "Tôi tự tin rằng mình có thể thực hiện hiệu quả những nhiệm vụ khó."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "GRIT_1",
+    "order": 1,
+    "question": "Tôi đã vượt qua những khó khăn để chinh phục thử thách quan trọng."
+  },
+  {
+    "id": "GRIT_2",
+    "order": 2,
+    "question": "Đôi khi các ý tưởng và dự án mới khiến tôi xao lãng và không còn chú ý đến những ý tưởng trước đó."
+  },
+  {
+    "id": "GRIT_3",
+    "order": 3,
+    "question": "Những điều tôi quan tâm thay đổi qua từng năm."
+  },
+  {
+    "id": "GRIT_4",
+    "order": 4,
+    "question": "Tôi không nản lòng trước những khó khăn."
+  },
+  {
+    "id": "GRIT_5",
+    "order": 5,
+    "question": "Tôi bị cuốn hút bởi một ý tưởng hoặc dự án nào đó trong một thời gian ngắn, rồi tôi lại dần mất đi hứng thú."
+  },
+  {
+    "id": "GRIT_6",
+    "order": 6,
+    "question": "Tôi là người chăm chỉ."
+  },
+  {
+    "id": "GRIT_7",
+    "order": 7,
+    "question": "Tôi thường lập mục tiêu này nhưng rồi lại chọn theo đuổi mục tiêu khác."
+  },
+  {
+    "id": "GRIT_8",
+    "order": 8,
+    "question": "Tôi khó tập trung vào các dự án mà thường phải mất hơn vài tháng để hoàn thành."
+  },
+  {
+    "id": "GRIT_9",
+    "order": 9,
+    "question": "Tôi hoàn thành những việc mình đề ra."
+  },
+  {
+    "id": "GRIT_10",
+    "order": 10,
+    "question": "Tôi từng hoàn thành một mục tiêu đòi hỏi nỗ lực trong nhiều năm."
+  },
+  {
+    "id": "GRIT_11",
+    "order": 11,
+    "question": "Cứ mỗi vài tháng, tôi lại quan tâm theo đuổi các mục tiêu mới."
+  },
+  {
+    "id": "GRIT_12",
+    "order": 12,
+    "question": "Tôi cần mẫn."
+  }
+]

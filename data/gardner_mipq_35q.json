@@ -1,0 +1,212 @@
+[
+  {
+    "id": "MIPQ_1",
+    "intelligence": "Ngôn ngữ (Linguistic)",
+    "order": 1,
+    "question": "Tôi thể hiện bản thân một cách tự nhiên và thoải mái qua viết lách."
+  },
+  {
+    "id": "MIPQ_2",
+    "intelligence": "Ngôn ngữ (Linguistic)",
+    "order": 2,
+    "question": "Tại trường, tôi dễ dàng học các môn về ngôn ngữ hoặc xã hội hơn toán học, vật lý và hóa học."
+  },
+  {
+    "id": "MIPQ_3",
+    "intelligence": "Ngôn ngữ (Linguistic)",
+    "order": 3,
+    "question": "Gần đây, tôi có viết về điều khiến bản thân đặc biệt tự hào hoặc về điều người khác ghi nhận mình."
+  },
+  {
+    "id": "MIPQ_4",
+    "intelligence": "Ngôn ngữ (Linguistic)",
+    "order": 4,
+    "question": "Tôi học tập hiệu quả nhờ vào các phép ẩn dụ hoặc ngôn từ sống động."
+  },
+  {
+    "id": "MIPQ_5",
+    "intelligence": "Logic - Toán học (Logical-Mathematical)",
+    "order": 5,
+    "question": "Tôi học tốt các môn toán học, vật lý hoặc hóa học ở trường."
+  },
+  {
+    "id": "MIPQ_6",
+    "intelligence": "Logic - Toán học (Logical-Mathematical)",
+    "order": 6,
+    "question": "Tôi có thể tương tác và giải quyết các vấn đề phức tạp."
+  },
+  {
+    "id": "MIPQ_7",
+    "intelligence": "Logic - Toán học (Logical-Mathematical)",
+    "order": 7,
+    "question": "Tôi dễ dàng thực hiện các phép tính nhẩm."
+  },
+  {
+    "id": "MIPQ_8",
+    "intelligence": "Logic - Toán học (Logical-Mathematical)",
+    "order": 8,
+    "question": "Tôi giỏi chơi các trò chơi và giải quyết vấn đề đòi hỏi tư duy suy luận."
+  },
+  {
+    "id": "MIPQ_9",
+    "intelligence": "Không gian - Thị giác (Spatial)",
+    "order": 9,
+    "question": "Tôi dễ học hình học và các môn học liên quan không gian hơn giải phương trình."
+  },
+  {
+    "id": "MIPQ_10",
+    "intelligence": "Không gian - Thị giác (Spatial)",
+    "order": 10,
+    "question": "Tôi dễ dàng nhận diện các kiểu mẫu, đường nét phức tạp và đa chiều."
+  },
+  {
+    "id": "MIPQ_11",
+    "intelligence": "Không gian - Thị giác (Spatial)",
+    "order": 11,
+    "question": "Tôi dễ hình dung phong cảnh với góc nhìn bao quát từ trên cao xuống."
+  },
+  {
+    "id": "MIPQ_12",
+    "intelligence": "Không gian - Thị giác (Spatial)",
+    "order": 12,
+    "question": "Khi đọc, tôi hình thành các hình ảnh trong đầu."
+  },
+  {
+    "id": "MIPQ_13",
+    "intelligence": "Vận động cơ thể (Bodily-Kinesthetic)",
+    "order": 13,
+    "question": "Tôi khéo tay."
+  },
+  {
+    "id": "MIPQ_14",
+    "intelligence": "Vận động cơ thể (Bodily-Kinesthetic)",
+    "order": 14,
+    "question": "Tôi có thể dễ thực hiện các thao tác cụ thể bằng tay (đan lát và làm mộc)."
+  },
+  {
+    "id": "MIPQ_15",
+    "intelligence": "Vận động cơ thể (Bodily-Kinesthetic)",
+    "order": 15,
+    "question": "Tôi có khiếu khi hướng dẫn người khác thực hiện việc gì đó."
+  },
+  {
+    "id": "MIPQ_16",
+    "intelligence": "Vận động cơ thể (Bodily-Kinesthetic)",
+    "order": 16,
+    "question": "Tôi thành thạo các công việc thủ công (làm mộc, thêu thùa) khi còn đi học."
+  },
+  {
+    "id": "MIPQ_17",
+    "intelligence": "Âm nhạc - Thính giác (Musical)",
+    "order": 17,
+    "question": "Sau khi nghe giai điệu một đến hai lần, tôi có thể hát hoặc huýt sáo lại khá chính xác."
+  },
+  {
+    "id": "MIPQ_18",
+    "intelligence": "Âm nhạc - Thính giác (Musical)",
+    "order": 18,
+    "question": "Khi nghe nhạc, tôi có thể chọn ra nhạc cụ và nhận ra chính xác các âm điệu."
+  },
+  {
+    "id": "MIPQ_19",
+    "intelligence": "Âm nhạc - Thính giác (Musical)",
+    "order": 19,
+    "question": "Tôi có thể dễ dàng gõ nhịp theo giai điệu."
+  },
+  {
+    "id": "MIPQ_20",
+    "intelligence": "Âm nhạc - Thính giác (Musical)",
+    "order": 20,
+    "question": "Tôi nhận ra ngay khi âm điệu lạc tông."
+  },
+  {
+    "id": "MIPQ_21",
+    "intelligence": "Tương tác giao tiếp (Interpersonal)",
+    "order": 21,
+    "question": "Ngay trong nhóm lạ, tôi vẫn có thể dễ tìm người trò chuyện cùng."
+  },
+  {
+    "id": "MIPQ_22",
+    "intelligence": "Tương tác giao tiếp (Interpersonal)",
+    "order": 22,
+    "question": "Tôi dễ kết giao với nhiều kiểu người khác nhau."
+  },
+  {
+    "id": "MIPQ_23",
+    "intelligence": "Tương tác giao tiếp (Interpersonal)",
+    "order": 23,
+    "question": "Tôi dễ dàng tiếp cận với người khác."
+  },
+  {
+    "id": "MIPQ_24",
+    "intelligence": "Tương tác giao tiếp (Interpersonal)",
+    "order": 24,
+    "question": "Khi thương lượng hoặc thảo luận nhóm, tôi có thể giúp nhóm hướng tới sự đồng thuận."
+  },
+  {
+    "id": "MIPQ_25",
+    "intelligence": "Nội tâm - Tự nhận thức (Intrapersonal)",
+    "order": 25,
+    "question": "Tôi có thể phân tích các động cơ và cách hành động của bản thân."
+  },
+  {
+    "id": "MIPQ_26",
+    "intelligence": "Nội tâm - Tự nhận thức (Intrapersonal)",
+    "order": 26,
+    "question": "Tôi thường suy ngẫm về các cảm nhận, cảm xúc và tìm kiếm các lý do ẩn sau đó."
+  },
+  {
+    "id": "MIPQ_27",
+    "intelligence": "Nội tâm - Tự nhận thức (Intrapersonal)",
+    "order": 27,
+    "question": "Tôi thường dành thời gian để suy tư về các vấn đề quan trọng trong cuộc sống."
+  },
+  {
+    "id": "MIPQ_28",
+    "intelligence": "Nội tâm - Tự nhận thức (Intrapersonal)",
+    "order": 28,
+    "question": "Tôi thích đọc các bài viết về tâm lý hoặc triết học để nâng cao khả năng thấu hiểu bản thân."
+  },
+  {
+    "id": "MIPQ_29",
+    "intelligence": "Nội tâm - Tự nhận thức (Intrapersonal)",
+    "order": 29,
+    "question": "Trong những ngày bận rộn, tôi vẫn rất cần dành thời gian để suy tư và ngẫm nghĩ."
+  },
+  {
+    "id": "MIPQ_30",
+    "intelligence": "Hiện sinh - Triết học (Existential)",
+    "order": 30,
+    "question": "Cuộc sống thường nhật cũng đầy những điều bất ngờ."
+  },
+  {
+    "id": "MIPQ_31",
+    "intelligence": "Hiện sinh - Triết học (Existential)",
+    "order": 31,
+    "question": "Tôi thường suy ngẫm về ý nghĩa cuộc đời."
+  },
+  {
+    "id": "MIPQ_32",
+    "intelligence": "Hiện sinh - Triết học (Existential)",
+    "order": 32,
+    "question": "Tôi thấy mình cần chia sẻ một khoảng lặng với người khác."
+  },
+  {
+    "id": "MIPQ_33",
+    "intelligence": "Tự nhiên - Sinh thái (Naturalistic)",
+    "order": 33,
+    "question": "Tôi thích vẻ đẹp và trải nghiệm liên quan đến thiên nhiên."
+  },
+  {
+    "id": "MIPQ_34",
+    "intelligence": "Tự nhiên - Sinh thái (Naturalistic)",
+    "order": 34,
+    "question": "Với tôi, bảo vệ môi trường là việc rất quan trọng."
+  },
+  {
+    "id": "MIPQ_35",
+    "intelligence": "Tự nhiên - Sinh thái (Naturalistic)",
+    "order": 35,
+    "question": "Tôi quan tâm đến những thứ mình tiêu thụ nhằm bảo vệ môi trường."
+  }
+]

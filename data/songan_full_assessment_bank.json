@@ -1,0 +1,2503 @@
+{
+  "source": "Huong Nghiep Song An (https://tracnghiem.huongnghiepsongan.com)",
+  "license": "Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)",
+  "total_questions": 333,
+  "assessments": {
+    "holland_thpt_sinhvien": {
+      "name": "Khám phá sở thích Holland (Dành cho Học sinh Cấp 3 & Sinh viên)",
+      "code": "HLKPST1622",
+      "scale": "Likert 5 mức (Rất không thích -> Rất thích)",
+      "question_count": 84,
+      "questions": [
+        {
+          "id": "HL_R_1",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 1,
+          "question": "Tự mua và lắp ráp máy vi tính theo ý mình"
+        },
+        {
+          "id": "HL_R_2",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 2,
+          "question": "Lắp ráp tủ theo hướng dẫn của sách hướng dẫn hoặc trang mạng"
+        },
+        {
+          "id": "HL_R_3",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 3,
+          "question": "Trang điểm cho mình hay cho bạn theo hướng dẫn của sách hướng dẫn hoặc trang mạng"
+        },
+        {
+          "id": "HL_R_4",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 4,
+          "question": "Cắt tỉa cây cảnh"
+        },
+        {
+          "id": "HL_R_5",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 5,
+          "question": "Tháo mở điện thoại di động hay máy tính ra để tìm hiểu"
+        },
+        {
+          "id": "HL_R_6",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 6,
+          "question": "Tham gia một chuyến du lịch thám hiểm (như khám phá hang động, núi rừng)"
+        },
+        {
+          "id": "HL_R_7",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 7,
+          "question": "Chăm sóc vật nuôi"
+        },
+        {
+          "id": "HL_R_8",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 8,
+          "question": "Sửa xe, như xe đạp, xe máy (các lỗi nhỏ)"
+        },
+        {
+          "id": "HL_R_9",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 9,
+          "question": "Làm đồ nội thất"
+        },
+        {
+          "id": "HL_R_10",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 10,
+          "question": "Lắp ráp máy vi tính"
+        },
+        {
+          "id": "HL_R_11",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 11,
+          "question": "Leo núi"
+        },
+        {
+          "id": "HL_R_12",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 12,
+          "question": "Đóng gói đồ đạc vào thùng"
+        },
+        {
+          "id": "HL_R_13",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 13,
+          "question": "Chơi một môn thể thao"
+        },
+        {
+          "id": "HL_R_14",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 14,
+          "question": "Tham gia chuyến đạp xe xuyên quốc gia (từ TPHCM ra Hà Nội, từ Hà Nội vào TPHCM)"
+        },
+        {
+          "id": "HL_I_1",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 1,
+          "question": "Tham quan bảo tàng"
+        },
+        {
+          "id": "HL_I_2",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 2,
+          "question": "Tìm hiểu sự hình thành của các vì sao và vũ trụ"
+        },
+        {
+          "id": "HL_I_3",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 3,
+          "question": "Tìm hiểu về văn hóa một quốc gia mà mình thích"
+        },
+        {
+          "id": "HL_I_4",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 4,
+          "question": "Tìm hiểu về tâm lý con người"
+        },
+        {
+          "id": "HL_I_5",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 5,
+          "question": "Đọc một cuốn sách về tương lai của loài người trong một triệu năm nữa"
+        },
+        {
+          "id": "HL_I_6",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 6,
+          "question": "Đọc sách, báo hay xem trang tin tức về khoa học"
+        },
+        {
+          "id": "HL_I_7",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 7,
+          "question": "Tìm hiểu về cảm xúc con người"
+        },
+        {
+          "id": "HL_I_8",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 8,
+          "question": "Được xem một ca mổ tim"
+        },
+        {
+          "id": "HL_I_9",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 9,
+          "question": "Tìm hiểu nguồn gốc của một dịch bệnh, nguồn gốc loài người, v.v."
+        },
+        {
+          "id": "HL_I_10",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 10,
+          "question": "Đọc các bài báo về ảnh hưởng của AI (trí tuệ nhân tạo) lên nghề nghiệp tương lai"
+        },
+        {
+          "id": "HL_I_11",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 11,
+          "question": "Tìm hiểu về thế giới động vật (qua các kênh tìm hiểu khoa học)"
+        },
+        {
+          "id": "HL_I_12",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 12,
+          "question": "Phát minh xe điện"
+        },
+        {
+          "id": "HL_I_13",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 13,
+          "question": "Tiến hành thí nghiệm hóa học"
+        },
+        {
+          "id": "HL_I_14",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 14,
+          "question": "Nghiên cứu về chế độ dinh dưỡng"
+        },
+        {
+          "id": "HL_A_1",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 1,
+          "question": "Tạo ra một tác phẩm nghệ thuật, tranh, câu chuyện"
+        },
+        {
+          "id": "HL_A_2",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 2,
+          "question": "Viết truyện ngắn"
+        },
+        {
+          "id": "HL_A_3",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 3,
+          "question": "Chứng tỏ năng lực nghệ thuật của bản thân với người khác (nói lên suy nghĩ/quan điểm qua tác phẩm nghệ thuật)"
+        },
+        {
+          "id": "HL_A_4",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 4,
+          "question": "Chơi trong một ban nhạc"
+        },
+        {
+          "id": "HL_A_5",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 5,
+          "question": "Chỉnh sửa phim"
+        },
+        {
+          "id": "HL_A_6",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 6,
+          "question": "Thuyết trình hoặc thiết kế, theo ý tưởng của mình"
+        },
+        {
+          "id": "HL_A_7",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 7,
+          "question": "Vẽ phim hoạt hình"
+        },
+        {
+          "id": "HL_A_8",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 8,
+          "question": "Hát trong một ban nhạc"
+        },
+        {
+          "id": "HL_A_9",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 9,
+          "question": "Biểu diễn nhảy hiện đại"
+        },
+        {
+          "id": "HL_A_10",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 10,
+          "question": "Dẫn chương trình (MC) cho một sự kiện"
+        },
+        {
+          "id": "HL_A_11",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 11,
+          "question": "Độc thoại hay kể chuyện trên đài phát thanh/phần mềm"
+        },
+        {
+          "id": "HL_A_12",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 12,
+          "question": "Viết kịch bản cho phim hoặc chương trình truyền hình"
+        },
+        {
+          "id": "HL_A_13",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 13,
+          "question": "Chụp ảnh cho các sự kiện trong cuộc sống hoặc sự kiện nghệ thuật"
+        },
+        {
+          "id": "HL_A_14",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 14,
+          "question": "Viết một bài phê bình phim cho bộ phim mình thích/ghét nhất"
+        },
+        {
+          "id": "HL_S_1",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 1,
+          "question": "Giúp người khác chọn nghề nghiệp phù hợp"
+        },
+        {
+          "id": "HL_S_2",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 2,
+          "question": "Kết nối hai người bạn với nhau"
+        },
+        {
+          "id": "HL_S_3",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 3,
+          "question": "Dạy cho bạn mình cách giảm cân qua ăn uống đúng cách"
+        },
+        {
+          "id": "HL_S_4",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 4,
+          "question": "Tham gia ngày trái đất bằng cách lượm rác hay tắt điện"
+        },
+        {
+          "id": "HL_S_5",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 5,
+          "question": "Hướng dẫn khách nước ngoài chỗ ăn ngon"
+        },
+        {
+          "id": "HL_S_6",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 6,
+          "question": "Cứu động vật bị bỏ rơi ngoài đường"
+        },
+        {
+          "id": "HL_S_7",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 7,
+          "question": "Tham gia vào một cuộc thảo luận nhóm nhỏ"
+        },
+        {
+          "id": "HL_S_8",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 8,
+          "question": "Kể chuyện cười cho bạn bè nghe"
+        },
+        {
+          "id": "HL_S_9",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 9,
+          "question": "Dạy em nhỏ chơi một trò chơi hay một môn thể thao"
+        },
+        {
+          "id": "HL_S_10",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 10,
+          "question": "Lắng nghe bạn bè tâm sự về vấn đề cá nhân của họ"
+        },
+        {
+          "id": "HL_S_11",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 11,
+          "question": "Giúp bạn bè giải quyết vấn đề liên quan đến tình yêu"
+        },
+        {
+          "id": "HL_S_12",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 12,
+          "question": "Tham gia một chuyến đi từ thiện"
+        },
+        {
+          "id": "HL_S_13",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 13,
+          "question": "Giúp một dự án cộng đồng trong sức của mình"
+        },
+        {
+          "id": "HL_S_14",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 14,
+          "question": "Sẵn sàng giúp thầy cô, bạn bè khi thấy họ cần"
+        },
+        {
+          "id": "HL_E_1",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 1,
+          "question": "Tham gia ban đại diện học sinh ở trường"
+        },
+        {
+          "id": "HL_E_2",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 2,
+          "question": "Làm cán bộ lớp"
+        },
+        {
+          "id": "HL_E_3",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 3,
+          "question": "Bán hàng trực tuyến"
+        },
+        {
+          "id": "HL_E_4",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 4,
+          "question": "Quản lý một cửa hàng trực tuyến"
+        },
+        {
+          "id": "HL_E_5",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 5,
+          "question": "Học về thị trường chứng khoán (bitcoin, cổ phiếu, tiền tệ, v.v.)"
+        },
+        {
+          "id": "HL_E_6",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 6,
+          "question": "Tham gia một khóa học về quản lý tài chính"
+        },
+        {
+          "id": "HL_E_7",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 7,
+          "question": "Tham dự một trại huấn luyện kỹ năng lãnh đạo dành cho lứa tuổi thanh thiếu niên"
+        },
+        {
+          "id": "HL_E_8",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 8,
+          "question": "Lập kế hoạch làm việc cho thành viên nhóm"
+        },
+        {
+          "id": "HL_E_9",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 9,
+          "question": "Kiếm tiền bằng cách kinh doanh trực tuyến"
+        },
+        {
+          "id": "HL_E_10",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 10,
+          "question": "Nói trước đám đông về một đề tài mình thích"
+        },
+        {
+          "id": "HL_E_11",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 11,
+          "question": "Tham gia xây dựng các luật lệ mới cho lớp/trường"
+        },
+        {
+          "id": "HL_E_12",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 12,
+          "question": "Thuyết phục cha mẹ theo ý mình"
+        },
+        {
+          "id": "HL_E_13",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 13,
+          "question": "Tổ chức đi chơi cho một nhóm bạn"
+        },
+        {
+          "id": "HL_E_14",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 14,
+          "question": "Kiếm tiền bằng cách làm thêm"
+        },
+        {
+          "id": "HL_C_1",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 1,
+          "question": "Mở tài khoản tiết kiệm"
+        },
+        {
+          "id": "HL_C_2",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 2,
+          "question": "Lập kế hoạch chi tiêu hàng tháng"
+        },
+        {
+          "id": "HL_C_3",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 3,
+          "question": "Chuẩn bị ngân sách cho chuyến đi chơi tập thể lớp"
+        },
+        {
+          "id": "HL_C_4",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 4,
+          "question": "Chuẩn bị cho buổi trình bày trước lớp"
+        },
+        {
+          "id": "HL_C_5",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 5,
+          "question": "Lập kế hoạch cho kỳ nghỉ hè/Tết"
+        },
+        {
+          "id": "HL_C_6",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 6,
+          "question": "Đếm và sắp xếp tiền"
+        },
+        {
+          "id": "HL_C_7",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 7,
+          "question": "Sắp xếp lại bàn học"
+        },
+        {
+          "id": "HL_C_8",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 8,
+          "question": "Viết kế hoạch học tập cho học kỳ mới"
+        },
+        {
+          "id": "HL_C_9",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 9,
+          "question": "Hoàn tất bài tập theo đúng hạn được giao"
+        },
+        {
+          "id": "HL_C_10",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 10,
+          "question": "Dò lỗi chính tả cho phụ đề của một phim ưa thích"
+        },
+        {
+          "id": "HL_C_11",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 11,
+          "question": "Học một khóa vi tính văn phòng và biết cách sắp xếp văn bản, thư mục sao cho chỉn chu"
+        },
+        {
+          "id": "HL_C_12",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 12,
+          "question": "Làm thủ quỹ cho lớp"
+        },
+        {
+          "id": "HL_C_13",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 13,
+          "question": "Sắp xếp lại tủ quần áo cá nhân"
+        },
+        {
+          "id": "HL_C_14",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 14,
+          "question": "Giúp ba/mẹ quản lý tiền chợ của gia đình (mua gì, mua khi nào, mua bao nhiêu)"
+        }
+      ]
+    },
+    "holland_worker": {
+      "name": "Khám phá sở thích Holland (Dành cho Người đi làm)",
+      "code": "HLKPST23",
+      "scale": "Likert 5 mức (Rất không thích -> Rất thích)",
+      "question_count": 84,
+      "questions": [
+        {
+          "id": "HL23_R_1",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 1,
+          "question": "Giúp sửa chữa đồ vật gia dụng (bàn/ghế/tủ bếp/lò vi sóng/đèn, v.v.)"
+        },
+        {
+          "id": "HL23_R_2",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 2,
+          "question": "Lắp ráp máy tính cá nhân hoặc máy tính xách tay (laptop)"
+        },
+        {
+          "id": "HL23_R_3",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 3,
+          "question": "Trồng hay tỉa hoa, cây cảnh, cây vườn"
+        },
+        {
+          "id": "HL23_R_4",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 4,
+          "question": "Cắt và đánh bóng vàng, bạc, đá quý"
+        },
+        {
+          "id": "HL23_R_5",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 5,
+          "question": "Xếp sách trong thư viện"
+        },
+        {
+          "id": "HL23_R_6",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 6,
+          "question": "Tham gia một chuyến du lịch thám hiểm (như khám phá hang động, núi rừng)"
+        },
+        {
+          "id": "HL23_R_7",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 7,
+          "question": "Chăm sóc vật nuôi"
+        },
+        {
+          "id": "HL23_R_8",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 8,
+          "question": "Làm đồ mộc/tạo thành vật dụng từ gỗ"
+        },
+        {
+          "id": "HL23_R_9",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 9,
+          "question": "Lắp ráp nội thất từ hướng dẫn bằng văn bản"
+        },
+        {
+          "id": "HL23_R_10",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 10,
+          "question": "Khắc chữ trên gỗ, đá, viết, bình nước, vật dụng, v.v."
+        },
+        {
+          "id": "HL23_R_11",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 11,
+          "question": "Lái xe taxi hay xe công nghệ"
+        },
+        {
+          "id": "HL23_R_12",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 12,
+          "question": "Chơi trò chơi (game) trực tuyến"
+        },
+        {
+          "id": "HL23_R_13",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 13,
+          "question": "Đi bộ, chạy xe đạp hay chạy bộ đường dài (chạy marathon)"
+        },
+        {
+          "id": "HL23_R_14",
+          "group": "R",
+          "group_name": "Kỹ thuật",
+          "group_english": "Realistic",
+          "order": 14,
+          "question": "Du lịch tự túc, theo lịch trình bản thân tự sắp xếp"
+        },
+        {
+          "id": "HL23_I_1",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 1,
+          "question": "Đọc sách hoặc tạp chí về những phát hiện khoa học mới"
+        },
+        {
+          "id": "HL23_I_2",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 2,
+          "question": "Tìm hiểu cách thức hoạt động của bộ não/hệ thần kinh"
+        },
+        {
+          "id": "HL23_I_3",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 3,
+          "question": "Nghiên cứu cách giảm ô nhiễm nước"
+        },
+        {
+          "id": "HL23_I_4",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 4,
+          "question": "Nghiên cứu sự chuyển động của các hành tinh"
+        },
+        {
+          "id": "HL23_I_5",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 5,
+          "question": "Khám phá một bảo tàng"
+        },
+        {
+          "id": "HL23_I_6",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 6,
+          "question": "Phát minh ra một chất liệu mới thay thế cho cái cũ với độ hữu ích và hiệu quả cao hơn"
+        },
+        {
+          "id": "HL23_I_7",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 1,
+          "question": "Tìm hiểu về nguồn gốc một căn bệnh/dịch bệnh"
+        },
+        {
+          "id": "HL23_I_8",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 8,
+          "question": "Phát triển một cách để dự đoán thời tiết tốt hơn"
+        },
+        {
+          "id": "HL23_I_9",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 9,
+          "question": "Tìm hiểu về trái đất, mặt trời và các ngôi sao"
+        },
+        {
+          "id": "HL23_I_10",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 10,
+          "question": "Tìm hiểu về thế giới động vật"
+        },
+        {
+          "id": "HL23_I_11",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 11,
+          "question": "Nghiên cứu về năng lượng mặt trời"
+        },
+        {
+          "id": "HL23_I_12",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 12,
+          "question": "Tìm hiểu cách giảm rác thải trong gia đình"
+        },
+        {
+          "id": "HL23_I_13",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 13,
+          "question": "Xem các đoạn phim về một diễn giả mình thích"
+        },
+        {
+          "id": "HL23_I_14",
+          "group": "I",
+          "group_name": "Nghiên cứu",
+          "group_english": "Investigative",
+          "order": 14,
+          "question": "Nghiên cứu về các giai đoạn phát triển tâm lý con người"
+        },
+        {
+          "id": "HL23_A_1",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 1,
+          "question": "Thiết kế bìa sách cho một cuốn sách mình thích"
+        },
+        {
+          "id": "HL23_A_2",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 2,
+          "question": "Soạn hay mix nhạc"
+        },
+        {
+          "id": "HL23_A_3",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 3,
+          "question": "Chơi nhạc cụ trong một ban nhạc"
+        },
+        {
+          "id": "HL23_A_4",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 4,
+          "question": "Tạo những bức ảnh sáng tạo"
+        },
+        {
+          "id": "HL23_A_5",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 5,
+          "question": "Vẽ minh họa một câu chuyện trên mạng, báo, hay trong sách"
+        },
+        {
+          "id": "HL23_A_6",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 6,
+          "question": "Viết các bài trên trang mạng xã hội hay Blog cá nhân"
+        },
+        {
+          "id": "HL23_A_7",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 7,
+          "question": "Giải trí cho người khác bằng cách kể chuyện hay kể chuyện cười"
+        },
+        {
+          "id": "HL23_A_8",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 8,
+          "question": "Tham gia hoạt động nghệ thuật (ca hát, nhạc họa v.v.)"
+        },
+        {
+          "id": "HL23_A_9",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 9,
+          "question": "Chỉnh sửa phim"
+        },
+        {
+          "id": "HL23_A_10",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 10,
+          "question": "Tạo hiệu ứng đặc biệt cho phim"
+        },
+        {
+          "id": "HL23_A_11",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 11,
+          "question": "Biểu diễn nhảy/khiêu vũ một mình hay trong nhóm"
+        },
+        {
+          "id": "HL23_A_12",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 12,
+          "question": "Chứng tỏ năng lực nghệ thuật của bản thân với người khác (nói lên suy nghĩ/quan điểm qua tác phẩm nghệ thuật)"
+        },
+        {
+          "id": "HL23_A_13",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 13,
+          "question": "Làm người mẫu chụp hình quảng cáo hay quay phim quảng cáo"
+        },
+        {
+          "id": "HL23_A_14",
+          "group": "A",
+          "group_name": "Nghệ thuật",
+          "group_english": "Artistic",
+          "order": 14,
+          "question": "Tham gia vào các hoạt động nghệ thuật như phác thảo và vẽ tranh, v.v."
+        },
+        {
+          "id": "HL23_S_1",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 1,
+          "question": "Giúp đỡ những người đang gặp vấn đề cá nhân hoặc tình cảm"
+        },
+        {
+          "id": "HL23_S_2",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 2,
+          "question": "Dạy cho ai đó một sở thích mới"
+        },
+        {
+          "id": "HL23_S_3",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 3,
+          "question": "Tư vấn hướng dẫn nghề nghiệp cho người khác"
+        },
+        {
+          "id": "HL23_S_4",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 4,
+          "question": "Giúp ai đó đưa ra quyết định quan trọng"
+        },
+        {
+          "id": "HL23_S_5",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 5,
+          "question": "Hướng dẫn du khách"
+        },
+        {
+          "id": "HL23_S_6",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 6,
+          "question": "Kết nối hai người bạn với nhau"
+        },
+        {
+          "id": "HL23_S_7",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 7,
+          "question": "Làm việc trong một dự án xây dựng cộng đồng"
+        },
+        {
+          "id": "HL23_S_8",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 8,
+          "question": "Dạy trẻ con cách tự bảo vệ bản thân"
+        },
+        {
+          "id": "HL23_S_9",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 9,
+          "question": "Giúp đỡ những người khác trong trường hợp khẩn cấp"
+        },
+        {
+          "id": "HL23_S_10",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 10,
+          "question": "Dạy học cho trẻ có hoàn cảnh khó khăn"
+        },
+        {
+          "id": "HL23_S_11",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 11,
+          "question": "Tham gia một cộng đồng mạng có cùng giá trị (bảo vệ môi trường, giúp nạn nhân lũ lụt, chia sẻ thông tin về sức khỏe, v.v.)"
+        },
+        {
+          "id": "HL23_S_12",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 12,
+          "question": "Giúp giải quyết mâu thuẫn giữa những người bạn"
+        },
+        {
+          "id": "HL23_S_13",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 13,
+          "question": "Giúp gây quỹ cho một dự án chữa bệnh cho trẻ vùng sâu, vùng xa"
+        },
+        {
+          "id": "HL23_S_14",
+          "group": "S",
+          "group_name": "Xã hội",
+          "group_english": "Social",
+          "order": 14,
+          "question": "Hướng dẫn người khác học một kỹ năng mới"
+        },
+        {
+          "id": "HL23_E_1",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 1,
+          "question": "Quản lý một cửa hàng"
+        },
+        {
+          "id": "HL23_E_2",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 2,
+          "question": "Điều hành nhân sự trong một nhóm, dự án hoặc tổ chức"
+        },
+        {
+          "id": "HL23_E_3",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 3,
+          "question": "Lên kế hoạch tuyển dụng nhân sự cho một công ty"
+        },
+        {
+          "id": "HL23_E_4",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 4,
+          "question": "Xây dựng các quy tắc hoặc chính sách mới"
+        },
+        {
+          "id": "HL23_E_5",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 5,
+          "question": "Trình bày thông tin/Thuyết trình trước một nhóm"
+        },
+        {
+          "id": "HL23_E_6",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 6,
+          "question": "Phát triển kế hoạch khởi nghiệp, như tìm nhà đầu tư, v.v."
+        },
+        {
+          "id": "HL23_E_7",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 7,
+          "question": "Sắp xếp, quản lý kệ hàng, sản phẩm hàng hóa tại cửa hàng bách hóa hay siêu thị"
+        },
+        {
+          "id": "HL23_E_8",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 8,
+          "question": "Tìm lỗi trong bản thảo báo cáo"
+        },
+        {
+          "id": "HL23_E_9",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 9,
+          "question": "Thảo luận một vấn đề gây hiểu lầm với nhân viên bán hàng"
+        },
+        {
+          "id": "HL23_E_10",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 10,
+          "question": "Mua và bán chứng khoán"
+        },
+        {
+          "id": "HL23_E_11",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 11,
+          "question": "Quản lý một doanh nghiệp nhỏ"
+        },
+        {
+          "id": "HL23_E_12",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 12,
+          "question": "Quản lý một bộ phận trong một công ty lớn"
+        },
+        {
+          "id": "HL23_E_13",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 13,
+          "question": "Lập kế hoạch làm việc cho người khác"
+        },
+        {
+          "id": "HL23_E_14",
+          "group": "E",
+          "group_name": "Quản lý",
+          "group_english": "Enterprising",
+          "order": 14,
+          "question": "Thuyết phục người khác tham gia một dự án của mình"
+        },
+        {
+          "id": "HL23_C_1",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 1,
+          "question": "Tính lãi cho khoản vay ngân hàng"
+        },
+        {
+          "id": "HL23_C_2",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 2,
+          "question": "Tính toán ngân sách thu chi cho một tổ chức"
+        },
+        {
+          "id": "HL23_C_3",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 3,
+          "question": "Giữ và sắp xếp hồ sơ"
+        },
+        {
+          "id": "HL23_C_4",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 4,
+          "question": "Tính toán lương và thuế cho người lao động"
+        },
+        {
+          "id": "HL23_C_5",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 5,
+          "question": "Sắp xếp, đếm và lưu trữ vật tư của một công ty"
+        },
+        {
+          "id": "HL23_C_6",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 6,
+          "question": "Tính toán hàng tồn kho trong một cửa hàng"
+        },
+        {
+          "id": "HL23_C_7",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 7,
+          "question": "Cài đặt phần mềm đồng bộ trên các máy tính của một công ty"
+        },
+        {
+          "id": "HL23_C_8",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 8,
+          "question": "Tạo bảng báo cáo chi tiết gồm cả biểu đồ, đồ thị, v.v."
+        },
+        {
+          "id": "HL23_C_9",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 9,
+          "question": "Tổ chức một sự kiện (tiệc, đám cưới, chương trình giải trí)"
+        },
+        {
+          "id": "HL23_C_10",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 10,
+          "question": "Đặt mua văn phòng phẩm cho tất cả bộ phận của một công ty lớn"
+        },
+        {
+          "id": "HL23_C_11",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 11,
+          "question": "Tìm lỗi trong tài khoản tài chính"
+        },
+        {
+          "id": "HL23_C_12",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 12,
+          "question": "Mua sắm theo đơn đặt hàng của khách hàng trực tuyến"
+        },
+        {
+          "id": "HL23_C_13",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 13,
+          "question": "Giữ hồ sơ chuyển và nhận hàng hoá"
+        },
+        {
+          "id": "HL23_C_14",
+          "group": "C",
+          "group_name": "Nghiệp vụ",
+          "group_english": "Conventional",
+          "order": 14,
+          "question": "Tạo một quy trình vận hành mới cho một tổ chức"
+        }
+      ]
+    },
+    "gardner_mipq": {
+      "name": "Bảng hỏi nhận dạng Trí thông minh đa diện (MIPQ) - Howard Gardner",
+      "code": "MIPQVI",
+      "scale": "Likert 5 mức (Hoàn toàn không đồng ý -> Hoàn toàn đồng ý)",
+      "question_count": 35,
+      "questions": [
+        {
+          "id": "MIPQ_1",
+          "intelligence": "Ngôn ngữ (Linguistic)",
+          "order": 1,
+          "question": "Tôi thể hiện bản thân một cách tự nhiên và thoải mái qua viết lách."
+        },
+        {
+          "id": "MIPQ_2",
+          "intelligence": "Ngôn ngữ (Linguistic)",
+          "order": 2,
+          "question": "Tại trường, tôi dễ dàng học các môn về ngôn ngữ hoặc xã hội hơn toán học, vật lý và hóa học."
+        },
+        {
+          "id": "MIPQ_3",
+          "intelligence": "Ngôn ngữ (Linguistic)",
+          "order": 3,
+          "question": "Gần đây, tôi có viết về điều khiến bản thân đặc biệt tự hào hoặc về điều người khác ghi nhận mình."
+        },
+        {
+          "id": "MIPQ_4",
+          "intelligence": "Ngôn ngữ (Linguistic)",
+          "order": 4,
+          "question": "Tôi học tập hiệu quả nhờ vào các phép ẩn dụ hoặc ngôn từ sống động."
+        },
+        {
+          "id": "MIPQ_5",
+          "intelligence": "Logic - Toán học (Logical-Mathematical)",
+          "order": 5,
+          "question": "Tôi học tốt các môn toán học, vật lý hoặc hóa học ở trường."
+        },
+        {
+          "id": "MIPQ_6",
+          "intelligence": "Logic - Toán học (Logical-Mathematical)",
+          "order": 6,
+          "question": "Tôi có thể tương tác và giải quyết các vấn đề phức tạp."
+        },
+        {
+          "id": "MIPQ_7",
+          "intelligence": "Logic - Toán học (Logical-Mathematical)",
+          "order": 7,
+          "question": "Tôi dễ dàng thực hiện các phép tính nhẩm."
+        },
+        {
+          "id": "MIPQ_8",
+          "intelligence": "Logic - Toán học (Logical-Mathematical)",
+          "order": 8,
+          "question": "Tôi giỏi chơi các trò chơi và giải quyết vấn đề đòi hỏi tư duy suy luận."
+        },
+        {
+          "id": "MIPQ_9",
+          "intelligence": "Không gian - Thị giác (Spatial)",
+          "order": 9,
+          "question": "Tôi dễ học hình học và các môn học liên quan không gian hơn giải phương trình."
+        },
+        {
+          "id": "MIPQ_10",
+          "intelligence": "Không gian - Thị giác (Spatial)",
+          "order": 10,
+          "question": "Tôi dễ dàng nhận diện các kiểu mẫu, đường nét phức tạp và đa chiều."
+        },
+        {
+          "id": "MIPQ_11",
+          "intelligence": "Không gian - Thị giác (Spatial)",
+          "order": 11,
+          "question": "Tôi dễ hình dung phong cảnh với góc nhìn bao quát từ trên cao xuống."
+        },
+        {
+          "id": "MIPQ_12",
+          "intelligence": "Không gian - Thị giác (Spatial)",
+          "order": 12,
+          "question": "Khi đọc, tôi hình thành các hình ảnh trong đầu."
+        },
+        {
+          "id": "MIPQ_13",
+          "intelligence": "Vận động cơ thể (Bodily-Kinesthetic)",
+          "order": 13,
+          "question": "Tôi khéo tay."
+        },
+        {
+          "id": "MIPQ_14",
+          "intelligence": "Vận động cơ thể (Bodily-Kinesthetic)",
+          "order": 14,
+          "question": "Tôi có thể dễ thực hiện các thao tác cụ thể bằng tay (đan lát và làm mộc)."
+        },
+        {
+          "id": "MIPQ_15",
+          "intelligence": "Vận động cơ thể (Bodily-Kinesthetic)",
+          "order": 15,
+          "question": "Tôi có khiếu khi hướng dẫn người khác thực hiện việc gì đó."
+        },
+        {
+          "id": "MIPQ_16",
+          "intelligence": "Vận động cơ thể (Bodily-Kinesthetic)",
+          "order": 16,
+          "question": "Tôi thành thạo các công việc thủ công (làm mộc, thêu thùa) khi còn đi học."
+        },
+        {
+          "id": "MIPQ_17",
+          "intelligence": "Âm nhạc - Thính giác (Musical)",
+          "order": 17,
+          "question": "Sau khi nghe giai điệu một đến hai lần, tôi có thể hát hoặc huýt sáo lại khá chính xác."
+        },
+        {
+          "id": "MIPQ_18",
+          "intelligence": "Âm nhạc - Thính giác (Musical)",
+          "order": 18,
+          "question": "Khi nghe nhạc, tôi có thể chọn ra nhạc cụ và nhận ra chính xác các âm điệu."
+        },
+        {
+          "id": "MIPQ_19",
+          "intelligence": "Âm nhạc - Thính giác (Musical)",
+          "order": 19,
+          "question": "Tôi có thể dễ dàng gõ nhịp theo giai điệu."
+        },
+        {
+          "id": "MIPQ_20",
+          "intelligence": "Âm nhạc - Thính giác (Musical)",
+          "order": 20,
+          "question": "Tôi nhận ra ngay khi âm điệu lạc tông."
+        },
+        {
+          "id": "MIPQ_21",
+          "intelligence": "Tương tác giao tiếp (Interpersonal)",
+          "order": 21,
+          "question": "Ngay trong nhóm lạ, tôi vẫn có thể dễ tìm người trò chuyện cùng."
+        },
+        {
+          "id": "MIPQ_22",
+          "intelligence": "Tương tác giao tiếp (Interpersonal)",
+          "order": 22,
+          "question": "Tôi dễ kết giao với nhiều kiểu người khác nhau."
+        },
+        {
+          "id": "MIPQ_23",
+          "intelligence": "Tương tác giao tiếp (Interpersonal)",
+          "order": 23,
+          "question": "Tôi dễ dàng tiếp cận với người khác."
+        },
+        {
+          "id": "MIPQ_24",
+          "intelligence": "Tương tác giao tiếp (Interpersonal)",
+          "order": 24,
+          "question": "Khi thương lượng hoặc thảo luận nhóm, tôi có thể giúp nhóm hướng tới sự đồng thuận."
+        },
+        {
+          "id": "MIPQ_25",
+          "intelligence": "Nội tâm - Tự nhận thức (Intrapersonal)",
+          "order": 25,
+          "question": "Tôi có thể phân tích các động cơ và cách hành động của bản thân."
+        },
+        {
+          "id": "MIPQ_26",
+          "intelligence": "Nội tâm - Tự nhận thức (Intrapersonal)",
+          "order": 26,
+          "question": "Tôi thường suy ngẫm về các cảm nhận, cảm xúc và tìm kiếm các lý do ẩn sau đó."
+        },
+        {
+          "id": "MIPQ_27",
+          "intelligence": "Nội tâm - Tự nhận thức (Intrapersonal)",
+          "order": 27,
+          "question": "Tôi thường dành thời gian để suy tư về các vấn đề quan trọng trong cuộc sống."
+        },
+        {
+          "id": "MIPQ_28",
+          "intelligence": "Nội tâm - Tự nhận thức (Intrapersonal)",
+          "order": 28,
+          "question": "Tôi thích đọc các bài viết về tâm lý hoặc triết học để nâng cao khả năng thấu hiểu bản thân."
+        },
+        {
+          "id": "MIPQ_29",
+          "intelligence": "Nội tâm - Tự nhận thức (Intrapersonal)",
+          "order": 29,
+          "question": "Trong những ngày bận rộn, tôi vẫn rất cần dành thời gian để suy tư và ngẫm nghĩ."
+        },
+        {
+          "id": "MIPQ_30",
+          "intelligence": "Hiện sinh - Triết học (Existential)",
+          "order": 30,
+          "question": "Cuộc sống thường nhật cũng đầy những điều bất ngờ."
+        },
+        {
+          "id": "MIPQ_31",
+          "intelligence": "Hiện sinh - Triết học (Existential)",
+          "order": 31,
+          "question": "Tôi thường suy ngẫm về ý nghĩa cuộc đời."
+        },
+        {
+          "id": "MIPQ_32",
+          "intelligence": "Hiện sinh - Triết học (Existential)",
+          "order": 32,
+          "question": "Tôi thấy mình cần chia sẻ một khoảng lặng với người khác."
+        },
+        {
+          "id": "MIPQ_33",
+          "intelligence": "Tự nhiên - Sinh thái (Naturalistic)",
+          "order": 33,
+          "question": "Tôi thích vẻ đẹp và trải nghiệm liên quan đến thiên nhiên."
+        },
+        {
+          "id": "MIPQ_34",
+          "intelligence": "Tự nhiên - Sinh thái (Naturalistic)",
+          "order": 34,
+          "question": "Với tôi, bảo vệ môi trường là việc rất quan trọng."
+        },
+        {
+          "id": "MIPQ_35",
+          "intelligence": "Tự nhiên - Sinh thái (Naturalistic)",
+          "order": 35,
+          "question": "Tôi quan tâm đến những thứ mình tiêu thụ nhằm bảo vệ môi trường."
+        }
+      ]
+    },
+    "grit_scale": {
+      "name": "Thang đo Bền chí (Grit Scale) - Angela Duckworth",
+      "code": "GRITSCALEVI",
+      "scale": "Likert 5 mức (Không giống tôi chút nào -> Hoàn toàn giống tôi)",
+      "question_count": 12,
+      "questions": [
+        {
+          "id": "GRIT_1",
+          "order": 1,
+          "question": "Tôi đã vượt qua những khó khăn để chinh phục thử thách quan trọng."
+        },
+        {
+          "id": "GRIT_2",
+          "order": 2,
+          "question": "Đôi khi các ý tưởng và dự án mới khiến tôi xao lãng và không còn chú ý đến những ý tưởng trước đó."
+        },
+        {
+          "id": "GRIT_3",
+          "order": 3,
+          "question": "Những điều tôi quan tâm thay đổi qua từng năm."
+        },
+        {
+          "id": "GRIT_4",
+          "order": 4,
+          "question": "Tôi không nản lòng trước những khó khăn."
+        },
+        {
+          "id": "GRIT_5",
+          "order": 5,
+          "question": "Tôi bị cuốn hút bởi một ý tưởng hoặc dự án nào đó trong một thời gian ngắn, rồi tôi lại dần mất đi hứng thú."
+        },
+        {
+          "id": "GRIT_6",
+          "order": 6,
+          "question": "Tôi là người chăm chỉ."
+        },
+        {
+          "id": "GRIT_7",
+          "order": 7,
+          "question": "Tôi thường lập mục tiêu này nhưng rồi lại chọn theo đuổi mục tiêu khác."
+        },
+        {
+          "id": "GRIT_8",
+          "order": 8,
+          "question": "Tôi khó tập trung vào các dự án mà thường phải mất hơn vài tháng để hoàn thành."
+        },
+        {
+          "id": "GRIT_9",
+          "order": 9,
+          "question": "Tôi hoàn thành những việc mình đề ra."
+        },
+        {
+          "id": "GRIT_10",
+          "order": 10,
+          "question": "Tôi từng hoàn thành một mục tiêu đòi hỏi nỗ lực trong nhiều năm."
+        },
+        {
+          "id": "GRIT_11",
+          "order": 11,
+          "question": "Cứ mỗi vài tháng, tôi lại quan tâm theo đuổi các mục tiêu mới."
+        },
+        {
+          "id": "GRIT_12",
+          "order": 12,
+          "question": "Tôi cần mẫn."
+        }
+      ]
+    },
+    "ced_thpt": {
+      "name": "Thang đo Phát triển và Giáo dục Hướng nghiệp (Dành cho Học sinh THPT) - Col McCowan",
+      "code": "CED-THPT",
+      "scale": "Likert 5 mức (Rất không đồng ý -> Rất đồng ý)",
+      "question_count": 27,
+      "questions": [
+        {
+          "id": "CED_THPT_1",
+          "section": "Sự hiểu biết",
+          "subsection": "Về bản thân",
+          "order": 1,
+          "question": "Tôi hiểu rõ về sở thích nghề nghiệp của bản thân và biết các sở thích này liên quan ra sao đến hướng học và nghề nghiệp tương lai."
+        },
+        {
+          "id": "CED_THPT_2",
+          "section": "Sự hiểu biết",
+          "subsection": "Về bản thân",
+          "order": 2,
+          "question": "Tôi biết rõ những điểm mạnh và năng lực của mình và biết chúng liên quan ra sao đến hướng học và nghề nghiệp tương lai."
+        },
+        {
+          "id": "CED_THPT_3",
+          "section": "Sự hiểu biết",
+          "subsection": "Về bản thân",
+          "order": 3,
+          "question": "Tôi biết mình thích hoặc giỏi môn học nào và biết chúng liên quan ra sao đến hướng học và nghề nghiệp tương lai."
+        },
+        {
+          "id": "CED_THPT_4",
+          "section": "Sự hiểu biết",
+          "subsection": "Sự ảnh hưởng",
+          "order": 4,
+          "question": "Tôi hiểu rõ quan điểm của cha mẹ đối với hướng học và nghề nghiệp mà tôi quan tâm."
+        },
+        {
+          "id": "CED_THPT_5",
+          "section": "Sự hiểu biết",
+          "subsection": "Sự ảnh hưởng",
+          "order": 5,
+          "question": "Tôi hiểu rõ tầm quan trọng khi chọn ngành học/chọn nghề và biết rằng đây là trách nhiệm của tôi và không bị ảnh hưởng bởi bạn bè hoặc mạng xã hội."
+        },
+        {
+          "id": "CED_THPT_6",
+          "section": "Sự hiểu biết",
+          "subsection": "Sự ảnh hưởng",
+          "order": 6,
+          "question": "Tôi hiểu rõ tầm quan trọng khi chọn ngành học/chọn nghề và biết rằng đây là trách nhiệm của tôi và cần giúp sức bởi thầy cô lẫn cha mẹ."
+        },
+        {
+          "id": "CED_THPT_7",
+          "section": "Sự hiểu biết",
+          "subsection": "Về các cơ hội",
+          "order": 7,
+          "question": "Tôi thấu hiểu thế giới nghề nghiệp và các lựa chọn nghề nghiệp trong tương lai."
+        },
+        {
+          "id": "CED_THPT_8",
+          "section": "Sự hiểu biết",
+          "subsection": "Về các cơ hội",
+          "order": 8,
+          "question": "Tôi hiểu rõ về các hướng học/ngành học phù hợp với tôi và định hướng nghề nghiệp liên quan đến các ngành học ấy."
+        },
+        {
+          "id": "CED_THPT_9",
+          "section": "Sự hiểu biết",
+          "subsection": "Về các cơ hội",
+          "order": 9,
+          "question": "Tôi nắm bắt các con đường phát triển sự nghiệp khác nhau mà tôi đang quan tâm."
+        },
+        {
+          "id": "CED_THPT_10",
+          "section": "Hành động",
+          "subsection": "Đặt mục tiêu",
+          "order": 10,
+          "question": "Tôi đã đặt ra những mục tiêu học tập/nghề nghiệp rõ ràng và khả thi."
+        },
+        {
+          "id": "CED_THPT_11",
+          "section": "Hành động",
+          "subsection": "Đặt mục tiêu",
+          "order": 11,
+          "question": "Tôi đã xây dựng kế hoạch nghề nghiệp cho bản thân."
+        },
+        {
+          "id": "CED_THPT_12",
+          "section": "Hành động",
+          "subsection": "Đặt mục tiêu",
+          "order": 12,
+          "question": "Kế hoạch nghề nghiệp/học tập của tôi bao gồm cả mục tiêu ngắn, vừa và dài hạn."
+        },
+        {
+          "id": "CED_THPT_13",
+          "section": "Hành động",
+          "subsection": "Ra quyết định",
+          "order": 13,
+          "question": "Tôi ra quyết định hiệu quả khi lựa chọn ngành/nghề."
+        },
+        {
+          "id": "CED_THPT_14",
+          "section": "Hành động",
+          "subsection": "Ra quyết định",
+          "order": 14,
+          "question": "Tôi có thể tìm hiểu thông tin chi tiết về các ngành học và nghề nghiệp để ra quyết định sáng suốt hơn."
+        },
+        {
+          "id": "CED_THPT_15",
+          "section": "Hành động",
+          "subsection": "Ra quyết định",
+          "order": 15,
+          "question": "Tôi thường cân nhắc kỹ càng về các lựa chọn ngành học/nghề trước khi ra quyết định."
+        },
+        {
+          "id": "CED_THPT_16",
+          "section": "Hành động",
+          "subsection": "Hành động",
+          "order": 16,
+          "question": "Tôi có thể viết hồ sơ ứng tuyển cá nhân (CV/resume) và thư giới thiệu thể hiện năng lực cạnh tranh của bản thân."
+        },
+        {
+          "id": "CED_THPT_17",
+          "section": "Hành động",
+          "subsection": "Hành động",
+          "order": 17,
+          "question": "Tôi thành thạo trong việc chuẩn bị một bộ hồ sơ ứng tuyển tìm việc/đăng ký học."
+        },
+        {
+          "id": "CED_THPT_18",
+          "section": "Hành động",
+          "subsection": "Hành động",
+          "order": 18,
+          "question": "Tôi có thể tìm hiểu thông tin phù hợp về các yêu cầu ứng tuyển/ứng thí cho công việc và/hoặc các khóa học nâng cao và chuyên sâu hơn."
+        },
+        {
+          "id": "CED_THPT_19",
+          "section": "Hành động",
+          "subsection": "Suy ngẫm/Đánh giá",
+          "order": 19,
+          "question": "Tôi xem lại kế hoạch học tập/nghề nghiệp của bản thân mỗi 6 tháng."
+        },
+        {
+          "id": "CED_THPT_20",
+          "section": "Hành động",
+          "subsection": "Suy ngẫm/Đánh giá",
+          "order": 20,
+          "question": "Tôi thường xuyên kiểm tra thông tin về ngành học/nghề nghiệp để nắm bắt kịp thời những thay đổi liên quan đến kế hoạch của mình."
+        },
+        {
+          "id": "CED_THPT_21",
+          "section": "Hành động",
+          "subsection": "Suy ngẫm/Đánh giá",
+          "order": 21,
+          "question": "Tôi lập kế hoạch dự phòng phù hợp để đảm bảo mọi việc vẫn ổn nếu lựa chọn ưu tiên hàng đầu có trở ngại."
+        },
+        {
+          "id": "CED_THPT_22",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào tương lai",
+          "order": 22,
+          "question": "Tôi biết các bước cần hoàn thành để thực hiện kế hoạch nghề nghiệp/học tập của mình."
+        },
+        {
+          "id": "CED_THPT_23",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào tương lai",
+          "order": 23,
+          "question": "Tôi tự tin rằng mình biết rõ về ngành học/hướng học hoặc con đường nghề nghiệp mà mình lựa chọn."
+        },
+        {
+          "id": "CED_THPT_24",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào tương lai",
+          "order": 24,
+          "question": "Tôi tự tin rằng mình sẽ thành công trong tương lai."
+        },
+        {
+          "id": "CED_THPT_25",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào năng lực bản thân",
+          "order": 25,
+          "question": "Tôi tin rằng mình có thể thành công ở hầu hết các nỗ lực mà tôi để tâm vào."
+        },
+        {
+          "id": "CED_THPT_26",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào năng lực bản thân",
+          "order": 26,
+          "question": "Tôi có thể vượt qua mọi thử thách để vươn tới thành công."
+        },
+        {
+          "id": "CED_THPT_27",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào năng lực bản thân",
+          "order": 27,
+          "question": "Tôi tự tin rằng mình có thể thực hiện hiệu quả những nhiệm vụ khó."
+        }
+      ]
+    },
+    "ced_dhcd": {
+      "name": "Thang đo Phát triển và Giáo dục Hướng nghiệp (Dành cho Sinh viên ĐH-CĐ) - Col McCowan",
+      "code": "CED-DHCD",
+      "scale": "Likert 5 mức (Rất không đồng ý -> Rất đồng ý)",
+      "question_count": 27,
+      "questions": [
+        {
+          "id": "CED_DHCD_1",
+          "section": "Sự hiểu biết",
+          "subsection": "Về bản thân",
+          "order": 1,
+          "question": "Tôi hiểu rõ về điểm mạnh và tố chất của bản thân và biết tất cả điều này liên quan ra sao đến các nghề nghiệp tương lai hoặc các lựa chọn liên quan tới bậc học cao hơn."
+        },
+        {
+          "id": "CED_DHCD_2",
+          "section": "Sự hiểu biết",
+          "subsection": "Về bản thân",
+          "order": 2,
+          "question": "Tôi hiểu mình cần bồi dưỡng các tố chất khi tốt nghiệp để có thể khiến mình trở nên thu hút hơn trước những người sử dụng lao động trong tương lai."
+        },
+        {
+          "id": "CED_DHCD_3",
+          "section": "Sự hiểu biết",
+          "subsection": "Về bản thân",
+          "order": 3,
+          "question": "Tôi có thể chứng minh các sở thích, kỹ năng và tố chất cho người sử dụng lao động trong tương lai."
+        },
+        {
+          "id": "CED_DHCD_4",
+          "section": "Sự hiểu biết",
+          "subsection": "Sự ảnh hưởng",
+          "order": 4,
+          "question": "Tôi hiểu rõ tầm quan trọng khi chọn ngành học/chọn nghề và biết rằng đây là trách nhiệm của tôi và không bị ảnh hưởng bởi bạn bè hoặc/và mạng xã hội."
+        },
+        {
+          "id": "CED_DHCD_5",
+          "section": "Sự hiểu biết",
+          "subsection": "Sự ảnh hưởng",
+          "order": 5,
+          "question": "Tôi hiểu rằng việc tiếp cận tới các cơ hội nghề nghiệp có thể phụ thuộc vào một loạt các tình huống liên quan tới các chính sách của chính phủ, các địa điểm cụ thể hoặc các ngành công nghiệp đang phát triển, v.v."
+        },
+        {
+          "id": "CED_DHCD_6",
+          "section": "Sự hiểu biết",
+          "subsection": "Sự ảnh hưởng",
+          "order": 6,
+          "question": "Tôi có thể quản lý các kỳ vọng của những người quan trọng với mình liên quan tới các lựa chọn hoặc hướng dẫn về ngành học/nghề nghiệp."
+        },
+        {
+          "id": "CED_DHCD_7",
+          "section": "Sự hiểu biết",
+          "subsection": "Về các cơ hội",
+          "order": 7,
+          "question": "Tôi thấu hiểu thế giới nghề nghiệp và các lựa chọn nghề nghiệp trong tương lai."
+        },
+        {
+          "id": "CED_DHCD_8",
+          "section": "Sự hiểu biết",
+          "subsection": "Về các cơ hội",
+          "order": 8,
+          "question": "Tôi hiểu rõ về các chủ đề/môn học/ngành học/chương trình phù hợp với tôi và định hướng nghề nghiệp liên quan đến các ngành học ấy."
+        },
+        {
+          "id": "CED_DHCD_9",
+          "section": "Sự hiểu biết",
+          "subsection": "Về các cơ hội",
+          "order": 9,
+          "question": "Tôi nắm bắt về các con đường phát triển sự nghiệp khác nhau đang rộng mở với mình."
+        },
+        {
+          "id": "CED_DHCD_10",
+          "section": "Hành động",
+          "subsection": "Đặt mục tiêu",
+          "order": 10,
+          "question": "Tôi đã đặt ra những mục tiêu học tập/nghề nghiệp rõ ràng và khả thi."
+        },
+        {
+          "id": "CED_DHCD_11",
+          "section": "Hành động",
+          "subsection": "Đặt mục tiêu",
+          "order": 11,
+          "question": "Tôi đã xây dựng kế hoạch nghề nghiệp cho bản thân."
+        },
+        {
+          "id": "CED_DHCD_12",
+          "section": "Hành động",
+          "subsection": "Đặt mục tiêu",
+          "order": 12,
+          "question": "Kế hoạch nghề nghiệp/học tập của tôi bao gồm cả những mục tiêu ngắn, vừa và dài hạn."
+        },
+        {
+          "id": "CED_DHCD_13",
+          "section": "Hành động",
+          "subsection": "Ra quyết định",
+          "order": 13,
+          "question": "Tôi biết cách ra quyết định và lựa chọn vững chắc về ngành học/nghề nghiệp ."
+        },
+        {
+          "id": "CED_DHCD_14",
+          "section": "Hành động",
+          "subsection": "Ra quyết định",
+          "order": 14,
+          "question": "Tôi có thể tìm hiểu thông tin chi tiết về các ngành học và nghề nghiệp để ra quyết định sáng suốt hơn."
+        },
+        {
+          "id": "CED_DHCD_15",
+          "section": "Hành động",
+          "subsection": "Ra quyết định",
+          "order": 15,
+          "question": "Tôi thường cân nhắc kỹ càng về các lựa chọn ngành học/nghề trước khi ra quyết định."
+        },
+        {
+          "id": "CED_DHCD_16",
+          "section": "Hành động",
+          "subsection": "Hành động",
+          "order": 16,
+          "question": "Tôi thành thạo trong việc hoàn thành một bộ hồ sơ ứng tuyển tìm việc/đăng ký học."
+        },
+        {
+          "id": "CED_DHCD_17",
+          "section": "Hành động",
+          "subsection": "Hành động",
+          "order": 17,
+          "question": "Tôi tự tin mình sẽ thể hiện tốt tại các buổi phỏng vấn việc làm."
+        },
+        {
+          "id": "CED_DHCD_18",
+          "section": "Hành động",
+          "subsection": "Hành động",
+          "order": 18,
+          "question": "Tôi giỏi trong việc xây dựng mạng lưới chuyên môn."
+        },
+        {
+          "id": "CED_DHCD_19",
+          "section": "Hành động",
+          "subsection": "Suy ngẫm/Đánh giá",
+          "order": 19,
+          "question": "Tôi thường xem lại kế hoạch học tập/nghề nghiệp của bản thân."
+        },
+        {
+          "id": "CED_DHCD_20",
+          "section": "Hành động",
+          "subsection": "Suy ngẫm/Đánh giá",
+          "order": 20,
+          "question": "Tôi thường xuyên kiểm tra thông tin về ngành học/nghề nghiệp để nắm bắt kịp thời những thay đổi liên quan đến kế hoạch của mình."
+        },
+        {
+          "id": "CED_DHCD_21",
+          "section": "Hành động",
+          "subsection": "Suy ngẫm/Đánh giá",
+          "order": 21,
+          "question": "Tôi lập kế hoạch dự phòng phù hợp để đảm bảo mọi việc vẫn ổn nếu lựa chọn ưu tiên hàng đầu có trở ngại."
+        },
+        {
+          "id": "CED_DHCD_22",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào tương lai",
+          "order": 22,
+          "question": "Tôi tự tin rằng mình biết các bước cần hoàn thành để thực hiện kế hoạch nghề nghiệp/học tập của mình."
+        },
+        {
+          "id": "CED_DHCD_23",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào tương lai",
+          "order": 23,
+          "question": "Tôi tự tin mình sẽ có được cơ hội nghề nghiệp/học tập bậc cao phù hợp sau khi tốt nghiệp."
+        },
+        {
+          "id": "CED_DHCD_24",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào tương lai",
+          "order": 24,
+          "question": "Tôi tự tin rằng mình sẽ thành công trong tương lai."
+        },
+        {
+          "id": "CED_DHCD_25",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào năng lực bản thân",
+          "order": 25,
+          "question": "Tôi tin rằng mình có thể thành công ở hầu hết các nỗ lực mà tôi để tâm vào."
+        },
+        {
+          "id": "CED_DHCD_26",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào năng lực bản thân",
+          "order": 26,
+          "question": "Tôi có thể vượt qua mọi thử thách để vươn tới thành công."
+        },
+        {
+          "id": "CED_DHCD_27",
+          "section": "Thái độ",
+          "subsection": "Tự tin vào năng lực bản thân",
+          "order": 27,
+          "question": "Tôi tự tin rằng mình có thể thực hiện hiệu quả những nhiệm vụ khó."
+        }
+      ]
+    },
+    "career_difficulties_cdi": {
+      "name": "Bảng đánh giá Khó khăn nghề nghiệp (Career Difficulties Inventory) - Shékina Rochat",
+      "code": "khokhannghenghiep",
+      "scale": "Likert 3 mức (Rất đồng ý / Khá đồng ý / Rất không đồng ý)",
+      "question_count": 64,
+      "questions": [
+        {
+          "id": "CDI_1_1",
+          "part": 1,
+          "topic": "Mục tiêu nghề nghiệp",
+          "order": 1,
+          "question": "Tôi không chắc về mục tiêu nghề nghiệp của tôi; tôi không biết nên đi theo hướng nào."
+        },
+        {
+          "id": "CDI_1_2",
+          "part": 1,
+          "topic": "Mục tiêu nghề nghiệp",
+          "order": 2,
+          "question": "Theo tôi, mục tiêu nghề nghiệp không quan trọng lắm; tôi không thấy cần phải nỗ lực đạt được nó."
+        },
+        {
+          "id": "CDI_1_3",
+          "part": 1,
+          "topic": "Mục tiêu nghề nghiệp",
+          "order": 3,
+          "question": "Mục tiêu nghề nghiệp không phải là ưu tiên hàng đầu của tôi; tôi có những mục tiêu khác cần đạt được vào lúc này."
+        },
+        {
+          "id": "CDI_1_4",
+          "part": 1,
+          "topic": "Mục tiêu nghề nghiệp",
+          "order": 4,
+          "question": "Tôi nghi ngờ khả năng đạt được mục tiêu của mình."
+        },
+        {
+          "id": "CDI_1_5",
+          "part": 1,
+          "topic": "Mục tiêu nghề nghiệp",
+          "order": 5,
+          "question": "Hoàn cảnh của tôi không hỗ trợ tôi đạt được mục tiêu của mình."
+        },
+        {
+          "id": "CDI_1_6",
+          "part": 1,
+          "topic": "Mục tiêu nghề nghiệp",
+          "order": 6,
+          "question": "Tôi có nhiều cảm xúc lẫn lộn về mục tiêu của mình."
+        },
+        {
+          "id": "CDI_1_7",
+          "part": 1,
+          "topic": "Mục tiêu nghề nghiệp",
+          "order": 7,
+          "question": "Tôi có xu hướng trì hoãn những công việc mình cần làm."
+        },
+        {
+          "id": "CDI_2_1",
+          "part": 2,
+          "topic": "Cảm xúc và sự lo lắng",
+          "order": 8,
+          "question": "Tôi thường bi quan và luôn nghĩ rằng những điều tệ nhất sẽ xảy ra."
+        },
+        {
+          "id": "CDI_2_2",
+          "part": 2,
+          "topic": "Cảm xúc và sự lo lắng",
+          "order": 9,
+          "question": "Tôi nghi ngờ giá trị bản thân và có xu hướng đổ lỗi cho chính mình vì mọi sai sót cá nhân."
+        },
+        {
+          "id": "CDI_2_3",
+          "part": 2,
+          "topic": "Cảm xúc và sự lo lắng",
+          "order": 10,
+          "question": "Tôi sợ mắc sai lầm và đưa ra quyết định thiếu sáng suốt."
+        },
+        {
+          "id": "CDI_2_4",
+          "part": 2,
+          "topic": "Cảm xúc và sự lo lắng",
+          "order": 11,
+          "question": "Tôi sợ đưa ra quyết định khi còn nhiều điều chưa chắc chắn cũng như hậu quả đi kèm của nó."
+        },
+        {
+          "id": "CDI_2_5",
+          "part": 2,
+          "topic": "Cảm xúc và sự lo lắng",
+          "order": 12,
+          "question": "Tôi lo lắng khi phải đưa ra quyết định."
+        },
+        {
+          "id": "CDI_2_6",
+          "part": 2,
+          "topic": "Cảm xúc và sự lo lắng",
+          "order": 13,
+          "question": "Tôi thường cảm thấy sợ hãi và lo lắng trong nhiều tình huống."
+        },
+        {
+          "id": "CDI_2_7",
+          "part": 2,
+          "topic": "Cảm xúc và sự lo lắng",
+          "order": 14,
+          "question": "Tôi lo ngại lựa chọn của bản thân sẽ gây ảnh hưởng đến tình trạng cân bằng hiện tại của gia đình."
+        },
+        {
+          "id": "CDI_3_1",
+          "part": 3,
+          "topic": "Niềm tin quyết định nghề nghiệp",
+          "order": 15,
+          "question": "Lựa chọn nghề nghiệp là một quyết định hệ trọng vì nó chỉ được thực hiện một lần và tác động đến mọi thứ."
+        },
+        {
+          "id": "CDI_3_2",
+          "part": 3,
+          "topic": "Niềm tin quyết định nghề nghiệp",
+          "order": 16,
+          "question": "Công việc là điều quan trọng nhất trong cuộc sống."
+        },
+        {
+          "id": "CDI_3_3",
+          "part": 3,
+          "topic": "Niềm tin quyết định nghề nghiệp",
+          "order": 17,
+          "question": "Suy cho cùng, lựa chọn nghề nghiệp chủ yếu là do cơ hội và may mắn dẫn lối."
+        },
+        {
+          "id": "CDI_3_4",
+          "part": 3,
+          "topic": "Niềm tin quyết định nghề nghiệp",
+          "order": 18,
+          "question": "Nhà tham vấn nghề nghiệp sẽ có thể cho tôi biết rằng con đường nào phù hợp với tôi."
+        },
+        {
+          "id": "CDI_3_5",
+          "part": 3,
+          "topic": "Niềm tin quyết định nghề nghiệp",
+          "order": 19,
+          "question": "Các trắc nghiệm và đánh giá có thể cho tôi biết lựa chọn nghề nghiệp nào là tốt nhất cho mình."
+        },
+        {
+          "id": "CDI_3_6",
+          "part": 3,
+          "topic": "Niềm tin quyết định nghề nghiệp",
+          "order": 20,
+          "question": "Người thân và họ hàng của tôi biết rõ con đường nghề nghiệp nào sẽ phù hợp với tôi."
+        },
+        {
+          "id": "CDI_3_7",
+          "part": 3,
+          "topic": "Niềm tin quyết định nghề nghiệp",
+          "order": 21,
+          "question": "Có một số công việc dành cho nữ giới và một số công việc khác dành cho nam giới."
+        },
+        {
+          "id": "CDI_3_8",
+          "part": 3,
+          "topic": "Niềm tin quyết định nghề nghiệp",
+          "order": 22,
+          "question": "Uy tín của một nghề nghiệp hoặc lộ trình đào tạo là rất quan trọng."
+        },
+        {
+          "id": "CDI_4_1",
+          "part": 4,
+          "topic": "Quá trình ra quyết định",
+          "order": 23,
+          "question": "Tôi thiếu thông tin về cách thức phát triển sự nghiệp cá nhân từ trước đến giờ."
+        },
+        {
+          "id": "CDI_4_2",
+          "part": 4,
+          "topic": "Quá trình ra quyết định",
+          "order": 24,
+          "question": "Tôi thiếu thông tin về các bước cần thực hiện khi chọn nghề."
+        },
+        {
+          "id": "CDI_4_3",
+          "part": 4,
+          "topic": "Quá trình ra quyết định",
+          "order": 25,
+          "question": "Tôi thiếu thông tin về các khía cạnh cần cân nhắc khi chọn nghề."
+        },
+        {
+          "id": "CDI_4_4",
+          "part": 4,
+          "topic": "Quá trình ra quyết định",
+          "order": 26,
+          "question": "Tôi thiếu kiến thức về cách tổng hợp thông tin khi chọn nghề."
+        },
+        {
+          "id": "CDI_4_5",
+          "part": 4,
+          "topic": "Quá trình ra quyết định",
+          "order": 27,
+          "question": "Tôi không hiểu lý do cần tìm hiểu một số lựa chọn nghề nghiệp trước khi đưa ra quyết định."
+        },
+        {
+          "id": "CDI_4_6",
+          "part": 4,
+          "topic": "Quá trình ra quyết định",
+          "order": 28,
+          "question": "Tôi không biết nên ưu tiên lý trí hay cảm xúc khi chọn nghề."
+        },
+        {
+          "id": "CDI_4_7",
+          "part": 4,
+          "topic": "Quá trình ra quyết định",
+          "order": 29,
+          "question": "Tôi khó hình dung được bức tranh toàn cảnh về quá trình đưa ra quyết định nghề nghiệp."
+        },
+        {
+          "id": "CDI_5_1",
+          "part": 5,
+          "topic": "Hiểu về bản thân",
+          "order": 30,
+          "question": "Tôi chưa biết rõ về sở thích của mình (những gì tôi thích)."
+        },
+        {
+          "id": "CDI_5_2",
+          "part": 5,
+          "topic": "Hiểu về bản thân",
+          "order": 31,
+          "question": "Tôi chưa biết rõ về tính cách của mình (tôi là ai)."
+        },
+        {
+          "id": "CDI_5_3",
+          "part": 5,
+          "topic": "Hiểu về bản thân",
+          "order": 32,
+          "question": "Tôi chưa biết rõ về kỹ năng của mình (tôi giỏi ở lĩnh vực nào)."
+        },
+        {
+          "id": "CDI_5_4",
+          "part": 5,
+          "topic": "Hiểu về bản thân",
+          "order": 33,
+          "question": "Tôi chưa biết rõ về giá trị của mình (điều gì quan trọng với tôi)."
+        },
+        {
+          "id": "CDI_5_5",
+          "part": 5,
+          "topic": "Hiểu về bản thân",
+          "order": 34,
+          "question": "Tôi chưa biết rõ thế mạnh của mình."
+        },
+        {
+          "id": "CDI_5_6",
+          "part": 5,
+          "topic": "Hiểu về bản thân",
+          "order": 35,
+          "question": "Tôi chưa biết rõ về ý nghĩa cuộc sống, công việc hoặc học tập của mình."
+        },
+        {
+          "id": "CDI_5_7",
+          "part": 5,
+          "topic": "Hiểu về bản thân",
+          "order": 36,
+          "question": "Tôi gặp khó khăn trong việc tìm được sợi chỉ xuyên suốt trên con đường sự nghiệp của tôi."
+        },
+        {
+          "id": "CDI_6_1",
+          "part": 6,
+          "topic": "Thông tin nghề nghiệp và đào tạo",
+          "order": 37,
+          "question": "Tôi không biết liệu mình đã thu thập đủ thông tin về các lựa chọn để đưa ra quyết định chưa."
+        },
+        {
+          "id": "CDI_6_2",
+          "part": 6,
+          "topic": "Thông tin nghề nghiệp và đào tạo",
+          "order": 38,
+          "question": "Tôi muốn được giải đáp những thắc mắc của tôi về nghề nghiệp hoặc lộ trình đào tạo."
+        },
+        {
+          "id": "CDI_6_3",
+          "part": 6,
+          "topic": "Thông tin nghề nghiệp và đào tạo",
+          "order": 39,
+          "question": "Tôi không biết tìm thông tin về nghề nghiệp và lộ trình đào tạo ở đâu."
+        },
+        {
+          "id": "CDI_6_4",
+          "part": 6,
+          "topic": "Thông tin nghề nghiệp và đào tạo",
+          "order": 40,
+          "question": "Tôi không đánh giá được chất lượng thông tin tôi thu thập về nghề nghiệp và lộ trình đào tạo."
+        },
+        {
+          "id": "CDI_6_5",
+          "part": 6,
+          "topic": "Thông tin nghề nghiệp và đào tạo",
+          "order": 41,
+          "question": "Tôi thiếu thông tin về các nghề hiện có và đặc điểm của chúng."
+        },
+        {
+          "id": "CDI_6_6",
+          "part": 6,
+          "topic": "Thông tin nghề nghiệp và đào tạo",
+          "order": 42,
+          "question": "Tôi tự hỏi nghề nghiệp trong tương lai sẽ như thế nào."
+        },
+        {
+          "id": "CDI_6_7",
+          "part": 6,
+          "topic": "Thông tin nghề nghiệp và đào tạo",
+          "order": 43,
+          "question": "Tôi thiếu thông tin về lộ trình đào tạo."
+        },
+        {
+          "id": "CDI_7_1",
+          "part": 7,
+          "topic": "Sự do dự và so sánh",
+          "order": 44,
+          "question": "Tôi do dự giữa một vài lựa chọn nghề nghiệp vì tôi đều có hứng thú với chúng!"
+        },
+        {
+          "id": "CDI_7_2",
+          "part": 7,
+          "topic": "Sự do dự và so sánh",
+          "order": 45,
+          "question": "Các lựa chọn nghề nghiệp và/hoặc các lộ trình đào tạo mà tôi thích đều khó tiếp cận."
+        },
+        {
+          "id": "CDI_7_3",
+          "part": 7,
+          "topic": "Sự do dự và so sánh",
+          "order": 46,
+          "question": "Tôi muốn chọn sở thích làm khi rảnh rỗi của mình để nghiêm túc theo đuổi như một sự nghiệp."
+        },
+        {
+          "id": "CDI_7_4",
+          "part": 7,
+          "topic": "Sự do dự và so sánh",
+          "order": 47,
+          "question": "Tôi vẫn chưa chắc chắn về việc thay đổi nghề nghiệp."
+        },
+        {
+          "id": "CDI_7_5",
+          "part": 7,
+          "topic": "Sự do dự và so sánh",
+          "order": 48,
+          "question": "Tôi biết mình nên nghĩ đến một kế hoạch dự phòng, nhưng điều đó khiến tôi khó chịu."
+        },
+        {
+          "id": "CDI_7_6",
+          "part": 7,
+          "topic": "Sự do dự và so sánh",
+          "order": 49,
+          "question": "Tôi đang do dự giữa một vài lựa chọn, tất cả đều có ưu và nhược điểm."
+        },
+        {
+          "id": "CDI_7_7",
+          "part": 7,
+          "topic": "Sự do dự và so sánh",
+          "order": 50,
+          "question": "Tôi gặp khó khăn khi cân nhắc tất cả các lựa chọn mà tôi đang có."
+        },
+        {
+          "id": "CDI_8_1",
+          "part": 8,
+          "topic": "Môi trường và gia đình",
+          "order": 51,
+          "question": "Tôi cảm thấy tôi có vô vàn cơ hội nghề nghiệp."
+        },
+        {
+          "id": "CDI_8_2",
+          "part": 8,
+          "topic": "Môi trường và gia đình",
+          "order": 52,
+          "question": "Tôi chịu ảnh hưởng bởi các lựa chọn nghề nghiệp của các thành viên khác trong gia đình."
+        },
+        {
+          "id": "CDI_8_3",
+          "part": 8,
+          "topic": "Môi trường và gia đình",
+          "order": 53,
+          "question": "Tôi cảm thấy những lựa chọn nghề nghiệp của mình bị hạn chế bởi kỳ vọng từ gia đình."
+        },
+        {
+          "id": "CDI_8_4",
+          "part": 8,
+          "topic": "Môi trường và gia đình",
+          "order": 54,
+          "question": "Tôi muốn đạt được sự cân bằng trong các khía cạnh khác nhau của cuộc sống cá nhân."
+        },
+        {
+          "id": "CDI_8_5",
+          "part": 8,
+          "topic": "Môi trường và gia đình",
+          "order": 55,
+          "question": "Tôi cảm thấy các triển vọng nghề nghiệp của mình bị giới hạn bởi những rào cản vượt quá tầm với."
+        },
+        {
+          "id": "CDI_8_6",
+          "part": 8,
+          "topic": "Môi trường và gia đình",
+          "order": 56,
+          "question": "Tôi chưa hoặc không thể nắm vững các quy tắc xã hội tại môi trường làm việc hiện tại hoặc mơ ước."
+        },
+        {
+          "id": "CDI_8_7",
+          "part": 8,
+          "topic": "Môi trường và gia đình",
+          "order": 57,
+          "question": "Tôi gặp khó khăn trong việc khiến mọi người lắng nghe và/hoặc tôn trọng các quyết định của tôi."
+        },
+        {
+          "id": "CDI_9_1",
+          "part": 9,
+          "topic": "Căng thẳng và đối phó",
+          "order": 58,
+          "question": "Tôi kỳ vọng lựa chọn nghề nghiệp của mình sẽ mang đến nhiều niềm vui và sự hài lòng hơn cho tôi."
+        },
+        {
+          "id": "CDI_9_2",
+          "part": 9,
+          "topic": "Căng thẳng và đối phó",
+          "order": 59,
+          "question": "Tôi mệt mỏi với những thăng trầm trong sự nghiệp."
+        },
+        {
+          "id": "CDI_9_3",
+          "part": 9,
+          "topic": "Căng thẳng và đối phó",
+          "order": 60,
+          "question": "Tôi đang trải qua giai đoạn chuyển tiếp rất căng thẳng và/hoặc bất ổn."
+        },
+        {
+          "id": "CDI_9_4",
+          "part": 9,
+          "topic": "Căng thẳng và đối phó",
+          "order": 61,
+          "question": "Tôi gặp khó khăn khi lập kế hoạch: Tôi liên tục đối diện với những sự việc không lường trước được."
+        },
+        {
+          "id": "CDI_9_5",
+          "part": 9,
+          "topic": "Căng thẳng và đối phó",
+          "order": 62,
+          "question": "Tôi sợ thất bại; và/hoặc tôi thấy khó vươn lên sau thất bại."
+        },
+        {
+          "id": "CDI_9_6",
+          "part": 9,
+          "topic": "Căng thẳng và đối phó",
+          "order": 63,
+          "question": "Tôi có xu hướng trốn tránh những vấn đề: Tôi cần những chiến lược hiệu quả để giải quyết chúng."
+        },
+        {
+          "id": "CDI_9_7",
+          "part": 9,
+          "topic": "Căng thẳng và đối phó",
+          "order": 64,
+          "question": "Tôi thấy con đường sự nghiệp của mình gần như không có gì thú vị cả."
+        }
+      ]
+    }
+  }
+}

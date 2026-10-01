@@ -1,0 +1,674 @@
+[
+  {
+    "id": "HL_R_1",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 1,
+    "question": "Tự mua và lắp ráp máy vi tính theo ý mình"
+  },
+  {
+    "id": "HL_R_2",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 2,
+    "question": "Lắp ráp tủ theo hướng dẫn của sách hướng dẫn hoặc trang mạng"
+  },
+  {
+    "id": "HL_R_3",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 3,
+    "question": "Trang điểm cho mình hay cho bạn theo hướng dẫn của sách hướng dẫn hoặc trang mạng"
+  },
+  {
+    "id": "HL_R_4",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 4,
+    "question": "Cắt tỉa cây cảnh"
+  },
+  {
+    "id": "HL_R_5",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 5,
+    "question": "Tháo mở điện thoại di động hay máy tính ra để tìm hiểu"
+  },
+  {
+    "id": "HL_R_6",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 6,
+    "question": "Tham gia một chuyến du lịch thám hiểm (như khám phá hang động, núi rừng)"
+  },
+  {
+    "id": "HL_R_7",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 7,
+    "question": "Chăm sóc vật nuôi"
+  },
+  {
+    "id": "HL_R_8",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 8,
+    "question": "Sửa xe, như xe đạp, xe máy (các lỗi nhỏ)"
+  },
+  {
+    "id": "HL_R_9",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 9,
+    "question": "Làm đồ nội thất"
+  },
+  {
+    "id": "HL_R_10",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 10,
+    "question": "Lắp ráp máy vi tính"
+  },
+  {
+    "id": "HL_R_11",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 11,
+    "question": "Leo núi"
+  },
+  {
+    "id": "HL_R_12",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 12,
+    "question": "Đóng gói đồ đạc vào thùng"
+  },
+  {
+    "id": "HL_R_13",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 13,
+    "question": "Chơi một môn thể thao"
+  },
+  {
+    "id": "HL_R_14",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 14,
+    "question": "Tham gia chuyến đạp xe xuyên quốc gia (từ TPHCM ra Hà Nội, từ Hà Nội vào TPHCM)"
+  },
+  {
+    "id": "HL_I_1",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 1,
+    "question": "Tham quan bảo tàng"
+  },
+  {
+    "id": "HL_I_2",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 2,
+    "question": "Tìm hiểu sự hình thành của các vì sao và vũ trụ"
+  },
+  {
+    "id": "HL_I_3",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 3,
+    "question": "Tìm hiểu về văn hóa một quốc gia mà mình thích"
+  },
+  {
+    "id": "HL_I_4",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 4,
+    "question": "Tìm hiểu về tâm lý con người"
+  },
+  {
+    "id": "HL_I_5",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 5,
+    "question": "Đọc một cuốn sách về tương lai của loài người trong một triệu năm nữa"
+  },
+  {
+    "id": "HL_I_6",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 6,
+    "question": "Đọc sách, báo hay xem trang tin tức về khoa học"
+  },
+  {
+    "id": "HL_I_7",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 7,
+    "question": "Tìm hiểu về cảm xúc con người"
+  },
+  {
+    "id": "HL_I_8",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 8,
+    "question": "Được xem một ca mổ tim"
+  },
+  {
+    "id": "HL_I_9",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 9,
+    "question": "Tìm hiểu nguồn gốc của một dịch bệnh, nguồn gốc loài người, v.v."
+  },
+  {
+    "id": "HL_I_10",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 10,
+    "question": "Đọc các bài báo về ảnh hưởng của AI (trí tuệ nhân tạo) lên nghề nghiệp tương lai"
+  },
+  {
+    "id": "HL_I_11",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 11,
+    "question": "Tìm hiểu về thế giới động vật (qua các kênh tìm hiểu khoa học)"
+  },
+  {
+    "id": "HL_I_12",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 12,
+    "question": "Phát minh xe điện"
+  },
+  {
+    "id": "HL_I_13",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 13,
+    "question": "Tiến hành thí nghiệm hóa học"
+  },
+  {
+    "id": "HL_I_14",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 14,
+    "question": "Nghiên cứu về chế độ dinh dưỡng"
+  },
+  {
+    "id": "HL_A_1",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 1,
+    "question": "Tạo ra một tác phẩm nghệ thuật, tranh, câu chuyện"
+  },
+  {
+    "id": "HL_A_2",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 2,
+    "question": "Viết truyện ngắn"
+  },
+  {
+    "id": "HL_A_3",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 3,
+    "question": "Chứng tỏ năng lực nghệ thuật của bản thân với người khác (nói lên suy nghĩ/quan điểm qua tác phẩm nghệ thuật)"
+  },
+  {
+    "id": "HL_A_4",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 4,
+    "question": "Chơi trong một ban nhạc"
+  },
+  {
+    "id": "HL_A_5",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 5,
+    "question": "Chỉnh sửa phim"
+  },
+  {
+    "id": "HL_A_6",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 6,
+    "question": "Thuyết trình hoặc thiết kế, theo ý tưởng của mình"
+  },
+  {
+    "id": "HL_A_7",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 7,
+    "question": "Vẽ phim hoạt hình"
+  },
+  {
+    "id": "HL_A_8",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 8,
+    "question": "Hát trong một ban nhạc"
+  },
+  {
+    "id": "HL_A_9",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 9,
+    "question": "Biểu diễn nhảy hiện đại"
+  },
+  {
+    "id": "HL_A_10",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 10,
+    "question": "Dẫn chương trình (MC) cho một sự kiện"
+  },
+  {
+    "id": "HL_A_11",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 11,
+    "question": "Độc thoại hay kể chuyện trên đài phát thanh/phần mềm"
+  },
+  {
+    "id": "HL_A_12",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 12,
+    "question": "Viết kịch bản cho phim hoặc chương trình truyền hình"
+  },
+  {
+    "id": "HL_A_13",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 13,
+    "question": "Chụp ảnh cho các sự kiện trong cuộc sống hoặc sự kiện nghệ thuật"
+  },
+  {
+    "id": "HL_A_14",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 14,
+    "question": "Viết một bài phê bình phim cho bộ phim mình thích/ghét nhất"
+  },
+  {
+    "id": "HL_S_1",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 1,
+    "question": "Giúp người khác chọn nghề nghiệp phù hợp"
+  },
+  {
+    "id": "HL_S_2",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 2,
+    "question": "Kết nối hai người bạn với nhau"
+  },
+  {
+    "id": "HL_S_3",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 3,
+    "question": "Dạy cho bạn mình cách giảm cân qua ăn uống đúng cách"
+  },
+  {
+    "id": "HL_S_4",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 4,
+    "question": "Tham gia ngày trái đất bằng cách lượm rác hay tắt điện"
+  },
+  {
+    "id": "HL_S_5",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 5,
+    "question": "Hướng dẫn khách nước ngoài chỗ ăn ngon"
+  },
+  {
+    "id": "HL_S_6",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 6,
+    "question": "Cứu động vật bị bỏ rơi ngoài đường"
+  },
+  {
+    "id": "HL_S_7",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 7,
+    "question": "Tham gia vào một cuộc thảo luận nhóm nhỏ"
+  },
+  {
+    "id": "HL_S_8",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 8,
+    "question": "Kể chuyện cười cho bạn bè nghe"
+  },
+  {
+    "id": "HL_S_9",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 9,
+    "question": "Dạy em nhỏ chơi một trò chơi hay một môn thể thao"
+  },
+  {
+    "id": "HL_S_10",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 10,
+    "question": "Lắng nghe bạn bè tâm sự về vấn đề cá nhân của họ"
+  },
+  {
+    "id": "HL_S_11",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 11,
+    "question": "Giúp bạn bè giải quyết vấn đề liên quan đến tình yêu"
+  },
+  {
+    "id": "HL_S_12",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 12,
+    "question": "Tham gia một chuyến đi từ thiện"
+  },
+  {
+    "id": "HL_S_13",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 13,
+    "question": "Giúp một dự án cộng đồng trong sức của mình"
+  },
+  {
+    "id": "HL_S_14",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 14,
+    "question": "Sẵn sàng giúp thầy cô, bạn bè khi thấy họ cần"
+  },
+  {
+    "id": "HL_E_1",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 1,
+    "question": "Tham gia ban đại diện học sinh ở trường"
+  },
+  {
+    "id": "HL_E_2",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 2,
+    "question": "Làm cán bộ lớp"
+  },
+  {
+    "id": "HL_E_3",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 3,
+    "question": "Bán hàng trực tuyến"
+  },
+  {
+    "id": "HL_E_4",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 4,
+    "question": "Quản lý một cửa hàng trực tuyến"
+  },
+  {
+    "id": "HL_E_5",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 5,
+    "question": "Học về thị trường chứng khoán (bitcoin, cổ phiếu, tiền tệ, v.v.)"
+  },
+  {
+    "id": "HL_E_6",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 6,
+    "question": "Tham gia một khóa học về quản lý tài chính"
+  },
+  {
+    "id": "HL_E_7",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 7,
+    "question": "Tham dự một trại huấn luyện kỹ năng lãnh đạo dành cho lứa tuổi thanh thiếu niên"
+  },
+  {
+    "id": "HL_E_8",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 8,
+    "question": "Lập kế hoạch làm việc cho thành viên nhóm"
+  },
+  {
+    "id": "HL_E_9",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 9,
+    "question": "Kiếm tiền bằng cách kinh doanh trực tuyến"
+  },
+  {
+    "id": "HL_E_10",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 10,
+    "question": "Nói trước đám đông về một đề tài mình thích"
+  },
+  {
+    "id": "HL_E_11",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 11,
+    "question": "Tham gia xây dựng các luật lệ mới cho lớp/trường"
+  },
+  {
+    "id": "HL_E_12",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 12,
+    "question": "Thuyết phục cha mẹ theo ý mình"
+  },
+  {
+    "id": "HL_E_13",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 13,
+    "question": "Tổ chức đi chơi cho một nhóm bạn"
+  },
+  {
+    "id": "HL_E_14",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 14,
+    "question": "Kiếm tiền bằng cách làm thêm"
+  },
+  {
+    "id": "HL_C_1",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 1,
+    "question": "Mở tài khoản tiết kiệm"
+  },
+  {
+    "id": "HL_C_2",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 2,
+    "question": "Lập kế hoạch chi tiêu hàng tháng"
+  },
+  {
+    "id": "HL_C_3",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 3,
+    "question": "Chuẩn bị ngân sách cho chuyến đi chơi tập thể lớp"
+  },
+  {
+    "id": "HL_C_4",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 4,
+    "question": "Chuẩn bị cho buổi trình bày trước lớp"
+  },
+  {
+    "id": "HL_C_5",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 5,
+    "question": "Lập kế hoạch cho kỳ nghỉ hè/Tết"
+  },
+  {
+    "id": "HL_C_6",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 6,
+    "question": "Đếm và sắp xếp tiền"
+  },
+  {
+    "id": "HL_C_7",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 7,
+    "question": "Sắp xếp lại bàn học"
+  },
+  {
+    "id": "HL_C_8",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 8,
+    "question": "Viết kế hoạch học tập cho học kỳ mới"
+  },
+  {
+    "id": "HL_C_9",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 9,
+    "question": "Hoàn tất bài tập theo đúng hạn được giao"
+  },
+  {
+    "id": "HL_C_10",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 10,
+    "question": "Dò lỗi chính tả cho phụ đề của một phim ưa thích"
+  },
+  {
+    "id": "HL_C_11",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 11,
+    "question": "Học một khóa vi tính văn phòng và biết cách sắp xếp văn bản, thư mục sao cho chỉn chu"
+  },
+  {
+    "id": "HL_C_12",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 12,
+    "question": "Làm thủ quỹ cho lớp"
+  },
+  {
+    "id": "HL_C_13",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 13,
+    "question": "Sắp xếp lại tủ quần áo cá nhân"
+  },
+  {
+    "id": "HL_C_14",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 14,
+    "question": "Giúp ba/mẹ quản lý tiền chợ của gia đình (mua gì, mua khi nào, mua bao nhiêu)"
+  }
+]

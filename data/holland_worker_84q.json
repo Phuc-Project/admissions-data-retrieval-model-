@@ -1,0 +1,674 @@
+[
+  {
+    "id": "HL23_R_1",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 1,
+    "question": "Giúp sửa chữa đồ vật gia dụng (bàn/ghế/tủ bếp/lò vi sóng/đèn, v.v.)"
+  },
+  {
+    "id": "HL23_R_2",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 2,
+    "question": "Lắp ráp máy tính cá nhân hoặc máy tính xách tay (laptop)"
+  },
+  {
+    "id": "HL23_R_3",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 3,
+    "question": "Trồng hay tỉa hoa, cây cảnh, cây vườn"
+  },
+  {
+    "id": "HL23_R_4",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 4,
+    "question": "Cắt và đánh bóng vàng, bạc, đá quý"
+  },
+  {
+    "id": "HL23_R_5",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 5,
+    "question": "Xếp sách trong thư viện"
+  },
+  {
+    "id": "HL23_R_6",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 6,
+    "question": "Tham gia một chuyến du lịch thám hiểm (như khám phá hang động, núi rừng)"
+  },
+  {
+    "id": "HL23_R_7",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 7,
+    "question": "Chăm sóc vật nuôi"
+  },
+  {
+    "id": "HL23_R_8",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 8,
+    "question": "Làm đồ mộc/tạo thành vật dụng từ gỗ"
+  },
+  {
+    "id": "HL23_R_9",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 9,
+    "question": "Lắp ráp nội thất từ hướng dẫn bằng văn bản"
+  },
+  {
+    "id": "HL23_R_10",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 10,
+    "question": "Khắc chữ trên gỗ, đá, viết, bình nước, vật dụng, v.v."
+  },
+  {
+    "id": "HL23_R_11",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 11,
+    "question": "Lái xe taxi hay xe công nghệ"
+  },
+  {
+    "id": "HL23_R_12",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 12,
+    "question": "Chơi trò chơi (game) trực tuyến"
+  },
+  {
+    "id": "HL23_R_13",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 13,
+    "question": "Đi bộ, chạy xe đạp hay chạy bộ đường dài (chạy marathon)"
+  },
+  {
+    "id": "HL23_R_14",
+    "group": "R",
+    "group_name": "Kỹ thuật",
+    "group_english": "Realistic",
+    "order": 14,
+    "question": "Du lịch tự túc, theo lịch trình bản thân tự sắp xếp"
+  },
+  {
+    "id": "HL23_I_1",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 1,
+    "question": "Đọc sách hoặc tạp chí về những phát hiện khoa học mới"
+  },
+  {
+    "id": "HL23_I_2",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 2,
+    "question": "Tìm hiểu cách thức hoạt động của bộ não/hệ thần kinh"
+  },
+  {
+    "id": "HL23_I_3",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 3,
+    "question": "Nghiên cứu cách giảm ô nhiễm nước"
+  },
+  {
+    "id": "HL23_I_4",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 4,
+    "question": "Nghiên cứu sự chuyển động của các hành tinh"
+  },
+  {
+    "id": "HL23_I_5",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 5,
+    "question": "Khám phá một bảo tàng"
+  },
+  {
+    "id": "HL23_I_6",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 6,
+    "question": "Phát minh ra một chất liệu mới thay thế cho cái cũ với độ hữu ích và hiệu quả cao hơn"
+  },
+  {
+    "id": "HL23_I_7",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 1,
+    "question": "Tìm hiểu về nguồn gốc một căn bệnh/dịch bệnh"
+  },
+  {
+    "id": "HL23_I_8",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 8,
+    "question": "Phát triển một cách để dự đoán thời tiết tốt hơn"
+  },
+  {
+    "id": "HL23_I_9",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 9,
+    "question": "Tìm hiểu về trái đất, mặt trời và các ngôi sao"
+  },
+  {
+    "id": "HL23_I_10",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 10,
+    "question": "Tìm hiểu về thế giới động vật"
+  },
+  {
+    "id": "HL23_I_11",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 11,
+    "question": "Nghiên cứu về năng lượng mặt trời"
+  },
+  {
+    "id": "HL23_I_12",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 12,
+    "question": "Tìm hiểu cách giảm rác thải trong gia đình"
+  },
+  {
+    "id": "HL23_I_13",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 13,
+    "question": "Xem các đoạn phim về một diễn giả mình thích"
+  },
+  {
+    "id": "HL23_I_14",
+    "group": "I",
+    "group_name": "Nghiên cứu",
+    "group_english": "Investigative",
+    "order": 14,
+    "question": "Nghiên cứu về các giai đoạn phát triển tâm lý con người"
+  },
+  {
+    "id": "HL23_A_1",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 1,
+    "question": "Thiết kế bìa sách cho một cuốn sách mình thích"
+  },
+  {
+    "id": "HL23_A_2",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 2,
+    "question": "Soạn hay mix nhạc"
+  },
+  {
+    "id": "HL23_A_3",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 3,
+    "question": "Chơi nhạc cụ trong một ban nhạc"
+  },
+  {
+    "id": "HL23_A_4",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 4,
+    "question": "Tạo những bức ảnh sáng tạo"
+  },
+  {
+    "id": "HL23_A_5",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 5,
+    "question": "Vẽ minh họa một câu chuyện trên mạng, báo, hay trong sách"
+  },
+  {
+    "id": "HL23_A_6",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 6,
+    "question": "Viết các bài trên trang mạng xã hội hay Blog cá nhân"
+  },
+  {
+    "id": "HL23_A_7",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 7,
+    "question": "Giải trí cho người khác bằng cách kể chuyện hay kể chuyện cười"
+  },
+  {
+    "id": "HL23_A_8",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 8,
+    "question": "Tham gia hoạt động nghệ thuật (ca hát, nhạc họa v.v.)"
+  },
+  {
+    "id": "HL23_A_9",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 9,
+    "question": "Chỉnh sửa phim"
+  },
+  {
+    "id": "HL23_A_10",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 10,
+    "question": "Tạo hiệu ứng đặc biệt cho phim"
+  },
+  {
+    "id": "HL23_A_11",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 11,
+    "question": "Biểu diễn nhảy/khiêu vũ một mình hay trong nhóm"
+  },
+  {
+    "id": "HL23_A_12",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 12,
+    "question": "Chứng tỏ năng lực nghệ thuật của bản thân với người khác (nói lên suy nghĩ/quan điểm qua tác phẩm nghệ thuật)"
+  },
+  {
+    "id": "HL23_A_13",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 13,
+    "question": "Làm người mẫu chụp hình quảng cáo hay quay phim quảng cáo"
+  },
+  {
+    "id": "HL23_A_14",
+    "group": "A",
+    "group_name": "Nghệ thuật",
+    "group_english": "Artistic",
+    "order": 14,
+    "question": "Tham gia vào các hoạt động nghệ thuật như phác thảo và vẽ tranh, v.v."
+  },
+  {
+    "id": "HL23_S_1",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 1,
+    "question": "Giúp đỡ những người đang gặp vấn đề cá nhân hoặc tình cảm"
+  },
+  {
+    "id": "HL23_S_2",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 2,
+    "question": "Dạy cho ai đó một sở thích mới"
+  },
+  {
+    "id": "HL23_S_3",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 3,
+    "question": "Tư vấn hướng dẫn nghề nghiệp cho người khác"
+  },
+  {
+    "id": "HL23_S_4",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 4,
+    "question": "Giúp ai đó đưa ra quyết định quan trọng"
+  },
+  {
+    "id": "HL23_S_5",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 5,
+    "question": "Hướng dẫn du khách"
+  },
+  {
+    "id": "HL23_S_6",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 6,
+    "question": "Kết nối hai người bạn với nhau"
+  },
+  {
+    "id": "HL23_S_7",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 7,
+    "question": "Làm việc trong một dự án xây dựng cộng đồng"
+  },
+  {
+    "id": "HL23_S_8",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 8,
+    "question": "Dạy trẻ con cách tự bảo vệ bản thân"
+  },
+  {
+    "id": "HL23_S_9",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 9,
+    "question": "Giúp đỡ những người khác trong trường hợp khẩn cấp"
+  },
+  {
+    "id": "HL23_S_10",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 10,
+    "question": "Dạy học cho trẻ có hoàn cảnh khó khăn"
+  },
+  {
+    "id": "HL23_S_11",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 11,
+    "question": "Tham gia một cộng đồng mạng có cùng giá trị (bảo vệ môi trường, giúp nạn nhân lũ lụt, chia sẻ thông tin về sức khỏe, v.v.)"
+  },
+  {
+    "id": "HL23_S_12",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 12,
+    "question": "Giúp giải quyết mâu thuẫn giữa những người bạn"
+  },
+  {
+    "id": "HL23_S_13",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 13,
+    "question": "Giúp gây quỹ cho một dự án chữa bệnh cho trẻ vùng sâu, vùng xa"
+  },
+  {
+    "id": "HL23_S_14",
+    "group": "S",
+    "group_name": "Xã hội",
+    "group_english": "Social",
+    "order": 14,
+    "question": "Hướng dẫn người khác học một kỹ năng mới"
+  },
+  {
+    "id": "HL23_E_1",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 1,
+    "question": "Quản lý một cửa hàng"
+  },
+  {
+    "id": "HL23_E_2",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 2,
+    "question": "Điều hành nhân sự trong một nhóm, dự án hoặc tổ chức"
+  },
+  {
+    "id": "HL23_E_3",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 3,
+    "question": "Lên kế hoạch tuyển dụng nhân sự cho một công ty"
+  },
+  {
+    "id": "HL23_E_4",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 4,
+    "question": "Xây dựng các quy tắc hoặc chính sách mới"
+  },
+  {
+    "id": "HL23_E_5",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 5,
+    "question": "Trình bày thông tin/Thuyết trình trước một nhóm"
+  },
+  {
+    "id": "HL23_E_6",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 6,
+    "question": "Phát triển kế hoạch khởi nghiệp, như tìm nhà đầu tư, v.v."
+  },
+  {
+    "id": "HL23_E_7",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 7,
+    "question": "Sắp xếp, quản lý kệ hàng, sản phẩm hàng hóa tại cửa hàng bách hóa hay siêu thị"
+  },
+  {
+    "id": "HL23_E_8",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 8,
+    "question": "Tìm lỗi trong bản thảo báo cáo"
+  },
+  {
+    "id": "HL23_E_9",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 9,
+    "question": "Thảo luận một vấn đề gây hiểu lầm với nhân viên bán hàng"
+  },
+  {
+    "id": "HL23_E_10",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 10,
+    "question": "Mua và bán chứng khoán"
+  },
+  {
+    "id": "HL23_E_11",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 11,
+    "question": "Quản lý một doanh nghiệp nhỏ"
+  },
+  {
+    "id": "HL23_E_12",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 12,
+    "question": "Quản lý một bộ phận trong một công ty lớn"
+  },
+  {
+    "id": "HL23_E_13",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 13,
+    "question": "Lập kế hoạch làm việc cho người khác"
+  },
+  {
+    "id": "HL23_E_14",
+    "group": "E",
+    "group_name": "Quản lý",
+    "group_english": "Enterprising",
+    "order": 14,
+    "question": "Thuyết phục người khác tham gia một dự án của mình"
+  },
+  {
+    "id": "HL23_C_1",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 1,
+    "question": "Tính lãi cho khoản vay ngân hàng"
+  },
+  {
+    "id": "HL23_C_2",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 2,
+    "question": "Tính toán ngân sách thu chi cho một tổ chức"
+  },
+  {
+    "id": "HL23_C_3",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 3,
+    "question": "Giữ và sắp xếp hồ sơ"
+  },
+  {
+    "id": "HL23_C_4",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 4,
+    "question": "Tính toán lương và thuế cho người lao động"
+  },
+  {
+    "id": "HL23_C_5",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 5,
+    "question": "Sắp xếp, đếm và lưu trữ vật tư của một công ty"
+  },
+  {
+    "id": "HL23_C_6",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 6,
+    "question": "Tính toán hàng tồn kho trong một cửa hàng"
+  },
+  {
+    "id": "HL23_C_7",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 7,
+    "question": "Cài đặt phần mềm đồng bộ trên các máy tính của một công ty"
+  },
+  {
+    "id": "HL23_C_8",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 8,
+    "question": "Tạo bảng báo cáo chi tiết gồm cả biểu đồ, đồ thị, v.v."
+  },
+  {
+    "id": "HL23_C_9",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 9,
+    "question": "Tổ chức một sự kiện (tiệc, đám cưới, chương trình giải trí)"
+  },
+  {
+    "id": "HL23_C_10",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 10,
+    "question": "Đặt mua văn phòng phẩm cho tất cả bộ phận của một công ty lớn"
+  },
+  {
+    "id": "HL23_C_11",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 11,
+    "question": "Tìm lỗi trong tài khoản tài chính"
+  },
+  {
+    "id": "HL23_C_12",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 12,
+    "question": "Mua sắm theo đơn đặt hàng của khách hàng trực tuyến"
+  },
+  {
+    "id": "HL23_C_13",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 13,
+    "question": "Giữ hồ sơ chuyển và nhận hàng hoá"
+  },
+  {
+    "id": "HL23_C_14",
+    "group": "C",
+    "group_name": "Nghiệp vụ",
+    "group_english": "Conventional",
+    "order": 14,
+    "question": "Tạo một quy trình vận hành mới cho một tổ chức"
+  }
+]
