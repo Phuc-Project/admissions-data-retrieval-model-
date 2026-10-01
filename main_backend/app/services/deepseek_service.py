@@ -1,10 +1,12 @@
 import httpx
+import re
 from typing import List, Dict, Any, Tuple, Optional
 from app.core.config import settings
 from app.schemas.chat import ChatMessage, CitationItem, ChatResponse
 from app.services.deep_research_service import deep_research_service
 from app.services.data_retrieval_client import retrieval_client
-
+from app.services.rag_service import rag_service
+from app.services.graph_service import graph_service
 
 SYSTEM_PROMPT = """Bạn là Cố vấn Hướng nghiệp & Tuyển sinh AI Cao cấp của CareerCompass-AI 2026.
 Nhiệm vụ của bạn là tư vấn cho học sinh lớp 12 tại Việt Nam chuẩn bị thi tốt nghiệp THPT và xét tuyển đại học.
@@ -12,8 +14,9 @@ Nhiệm vụ của bạn là tư vấn cho học sinh lớp 12 tại Việt Nam 
 NGUYÊN TẮC TƯ VẤN:
 1. Độc lập, khách quan, chuẩn mực sư phạm và khoa học. Tuyệt đối không phán đoán mê tín hay thần số học.
 2. Căn cứ 100% vào:
-   - Hồ sơ khảo sát đa chiều của học sinh (Holland RIASEC, SCCT niềm tin năng lực, Đa trí tuệ Gardner, DISC, điểm thi dự kiến, tổ hợp môn).
-   - Quy chế tuyển sinh đại học mới nhất của Bộ GD&ĐT (Thông tư 06/2026/TT-BGDĐT) và đề án tuyển sinh chính thức từ các trường.
+   - Hồ sơ khảo sát đa chiều của học sinh (Holland RIASEC, SCCT niềm tin năng lực, Đa trí tuệ Gardner, DISC, điểm thi dự kiến, điểm học bạ 3 năm THPT, tổ hợp môn).
+   - Cơ sở tri thức Đồ thị (Knowledge Graph) liên kết Mật mã Holland -> Ngành đào tạo -> Tổ hợp môn -> Trường ĐH -> Cơ hội việc làm.
+   - Kho văn bản quy phạm pháp luật RAG (Thông tư 06/2026/TT-BGDĐT) và đề án tuyển sinh chính thức từ các trường.
 3. Khi tư vấn chọn trường - ngành, luôn phân bổ chiến lược 3 tầng: Mơ ước (Dream), Vừa sức (Target), An toàn (Safety).
 4. Phản hồi có cấu trúc rõ ràng:
    - Nhận định hồ sơ & điểm mạnh
@@ -38,12 +41,54 @@ class DeepSeekService:
         citations: List[CitationItem] = []
         research_context = ""
 
-        # Step 1: Query Live Data Retrieval Service (Server 2 on Vercel)
+        # Step 1: Admission RAG Engine Retrieval
+        rag_context, rag_citations = rag_service.build_grounded_rag_context(user_message, top_k=3)
+        for rc in rag_citations:
+            citations.append(CitationItem(
+                source_title=rc["title"],
+                source_url=rc.get("url", "Cơ sở dữ liệu Tuyển sinh 2026"),
+                tier="Cấp 1 (Bộ GD&ĐT / Đề án chính thức)",
+                verified=True
+            ))
+
+        # Step 2: Knowledge Graph Multi-hop Path Traversal
+        h_code = "IRE"
+        target_block = "A00"
+        est_score = 25.0
+
+        if student_profile:
+            h_code = student_profile.get("holland", {}).get("holland_code", "IRE")
+            target_block = student_profile.get("academic", {}).get("target_block", "A00")
+            est_score = float(student_profile.get("academic", {}).get("estimated_exam_score", 25.0))
+        else:
+            # Extract block from user message if mentioned
+            block_match = re.search(r'\b([A-D][0-9]{2}|H00|V00)\b', user_message.upper())
+            if block_match:
+                target_block = block_match.group(1)
+
+        graph_paths = graph_service.query_multihop_advisory_paths(
+            holland_code=h_code,
+            target_block=target_block,
+            estimated_score=est_score
+        )
+
+        graph_context_lines = []
+        for gp in graph_paths[:3]:
+            uni_strs = []
+            for u in gp.get("offering_universities", [])[:3]:
+                uni_strs.append(f"{u['university_name']} (Chuẩn 2025: {u['cutoff_2025']}đ - Tầng: {u['tier']})")
+            graph_context_lines.append(
+                f"- Ngành {gp['major_name']} (Mã: {gp['major_code']}): Cơ hội làm việc [{', '.join(gp.get('leading_careers', []))}]. "
+                f"Trường đào tạo: {'; '.join(uni_strs)}."
+            )
+        graph_context_str = "\n".join(graph_context_lines)
+
+        # Step 3: Query Live Data Retrieval Service (Server 2 on Vercel)
         retrieval_context, retrieval_citations = await retrieval_client.get_admission_knowledge_for_query(user_message)
         if retrieval_citations:
             citations.extend(retrieval_citations)
 
-        # Step 2: Deep Research Knowledge Retrieval (MOET Circulars & Web Grounding)
+        # Step 4: Deep Research Knowledge Retrieval (MOET Circulars & Web Grounding)
         if use_deep_research:
             moet_context, moet_citations = await deep_research_service.search_admission_knowledge(user_message)
             if moet_citations:
@@ -52,7 +97,7 @@ class DeepSeekService:
         else:
             research_context = retrieval_context.strip()
 
-        # Step 3: Build enriched prompt
+        # Step 5: Build Enriched Prompt with Graph & RAG Grounding
         profile_context_str = ""
         if student_profile:
             acad = student_profile.get('academic', {})
@@ -71,11 +116,15 @@ class DeepSeekService:
                 f"- Môn học yêu thích: {', '.join(acad.get('favorite_subjects', []))}\n"
             )
 
+        full_system_prompt = (
+            f"{SYSTEM_PROMPT}\n"
+            f"{profile_context_str}\n"
+            f"[KHO VĂN BẢN QUY PHẠM RAG & ĐIỂM CHUẨN]\n{rag_context}\n\n"
+            f"[ĐỒ THỊ TRI THỨC ĐA CHẶNG (KNOWLEDGE GRAPH)]\n{graph_context_str}\n\n"
+            f"[DỮ LIỆU ĐIỂM CHUẨN THỰC TẾ & BỘ GD&ĐT]\n{research_context}"
+        )
 
-        full_system_prompt = f"{SYSTEM_PROMPT}\n{profile_context_str}\n[DỮ LIỆU ĐIỂM CHUẨN THỰC TẾ & BỘ GD&ĐT]\n{research_context}"
-
-
-        # Step 3: Call Primary DeepSeek API
+        # Step 6: Call Primary DeepSeek API
         if self.api_key and self.api_key.strip():
             try:
                 messages_payload = [{"role": "system", "content": full_system_prompt}]
@@ -100,7 +149,7 @@ class DeepSeekService:
                     if resp.status_code == 200:
                         data = resp.json()
                         reply = data["choices"][0]["message"]["content"]
-                        thought = data["choices"][0]["message"].get("reasoning_content", "DeepSeek Reasoner: Phân tích logic sư phạm dựa trên quy chế tuyển sinh 2026 và hồ sơ học sinh.")
+                        thought = data["choices"][0]["message"].get("reasoning_content", "DeepSeek Reasoner: Phân tích logic sư phạm đối chiếu Đồ thị Tri thức và Quy chế Tuyển sinh 2026.")
                         return ChatResponse(
                             reply=reply,
                             thought_process=thought,
@@ -114,7 +163,7 @@ class DeepSeekService:
             except Exception:
                 pass
 
-        # Step 4: Intelligent Secondary Engine via Google Gemini (with active Google Key)
+        # Step 7: Intelligent Secondary Engine via Google Gemini
         if self.google_key and self.google_key.strip():
             try:
                 gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={self.google_key}"
@@ -129,7 +178,7 @@ class DeepSeekService:
                         reply_text = g_data["candidates"][0]["content"]["parts"][0]["text"]
                         return ChatResponse(
                             reply=reply_text,
-                            thought_process="AI Cố vấn Hướng nghiệp (Deep Research & Gemini): Tích hợp dữ liệu thời gian thực từ Server Data Retrieval và quy chế Bộ GD&ĐT 2026.",
+                            thought_process="AI Cố vấn Hướng nghiệp (RAG + Knowledge Graph + Gemini): Đối chiếu văn bản pháp lý 2026 và phân tích dữ liệu tuyển sinh.",
                             citations=citations,
                             recommended_followups=[
                                 "Chiến lược phân bổ nguyện vọng 3 tầng cho điểm số của em?",
@@ -140,20 +189,28 @@ class DeepSeekService:
             except Exception:
                 pass
 
-        # Step 5: Grounded Local Pedagogical Engine (With Real-Time Retrieved Admissions Data)
-        return self._generate_grounded_fallback_response(user_message, student_profile, citations, retrieval_context)
+        # Step 8: Grounded Local Pedagogical Engine with GraphRAG synthesis
+        return self._generate_grounded_fallback_response(
+            message=user_message,
+            profile=student_profile,
+            citations=citations,
+            retrieval_context=retrieval_context,
+            rag_context=rag_context,
+            graph_paths=graph_paths
+        )
 
     def _generate_grounded_fallback_response(
         self,
         message: str,
         profile: Optional[Dict[str, Any]],
         citations: List[CitationItem],
-        retrieval_context: str = ""
+        retrieval_context: str = "",
+        rag_context: str = "",
+        graph_paths: Optional[List[Dict[str, Any]]] = None
     ) -> ChatResponse:
         score = profile.get("academic", {}).get("estimated_exam_score", 25.5) if profile else 25.5
         block = profile.get("academic", {}).get("target_block", "A00") if profile else "A00"
         h_code = profile.get("holland", {}).get("holland_code", "IRE") if profile else "IRE"
-
 
         msg_lower = message.lower()
 
@@ -184,26 +241,40 @@ class DeepSeekService:
                 f"  - **ĐHQG TP.HCM / Hà Nội**: Quy đổi thành thang điểm 10 kết hợp trong điểm xét tuyển tổng hợp ĐGNL.\n\n"
                 f"💡 **Khuyến nghị**: Nếu em đã có chứng chỉ IELTS từ 6.5 trở lên, hãy tận dụng ngay phương thức xét tuyển kết hợp sớm để tăng cơ hội trúng tuyển."
             )
-        elif retrieval_context:
+            thought = "Tra cứu quy chế quy đổi chứng chỉ quốc tế theo đề án các trường ĐH trọng điểm."
+        elif graph_paths and len(graph_paths) > 0:
+            top_path = graph_paths[0]
+            unis_text = ""
+            for u in top_path.get("offering_universities", [])[:3]:
+                unis_text += f"\n  - **{u['university_name']}**: Điểm chuẩn 2025: {u['cutoff_2025']}đ (Dự báo 2026: ~{u['cutoff_pred_2026']}đ - Phân hạng: *{u['tier']}*)"
+
             reply = (
-                f"Chào em! Thầy/cô cố vấn CareerCompass-AI 2026 đã truy xuất dữ liệu tuyển sinh mới nhất cho em:\n\n"
-                f"{retrieval_context.strip()}\n\n"
-                f"💡 **Lời khuyên cố vấn**: Dựa trên điểm dự kiến {score}đ (khối {block}) của em:\n"
-                f"- Đối với các ngành có điểm chuẩn cao hơn từ 0.5 - 1.0 điểm: Em có thể đặt làm **Nguyện vọng 1 (Mơ ước)**.\n"
-                f"- Đối với các ngành có điểm chuẩn bằng hoặc thấp hơn từ 0.5 - 1.5 điểm: Đây là **Nguyện vọng Vừa sức & An toàn** giúp em nắm chắc cơ hội đỗ đại học!"
+                f"Chào em! Dựa trên đồ thị tri thức hướng nghiệp kết nối mã Holland **{h_code}** và khối xét tuyển **{block}**:\n\n"
+                f"🎯 **Ngành đề xuất hàng đầu**: **{top_path['major_name']}** (Mã ngành: {top_path['major_code']})\n"
+                f"• **Cơ hội việc làm**: {', '.join(top_path.get('leading_careers', []))}\n"
+                f"• **Mức lương tham khảo**: {top_path.get('salary_range', '12 - 25 triệu/tháng')}\n"
+                f"• **Triển vọng tương lai**: {top_path.get('growth_outlook', 'Nhu cầu nhân lực tăng cao')}\n\n"
+                f"🏫 **Các trường đại học đào tạo phù hợp nhất**:{unis_text}\n\n"
+                f"💡 Với mức điểm dự kiến **{score} điểm**, em có thể tự tin nộp hồ sơ vào các trường nhóm *Vừa sức* và đặt 1 nguyện vọng *Mơ ước* nhé!"
             )
-            thought = "Truy xuất thời gian thực dữ liệu điểm chuẩn và thông tin tuyển sinh từ Admissions Data Retrieval API."
+            thought = "Duyệt Đồ thị Tri thức đa chặng (Knowledge Graph Traversal) kết nối Holland Trait -> Major -> University -> Careers."
+        elif rag_context:
+            reply = (
+                f"Chào em! Cố vấn CareerCompass-AI 2026 đã tra cứu thông tin tuyển sinh liên quan từ hệ thống:\n\n"
+                f"{rag_context[:600]}...\n\n"
+                f"💡 Em có thể cung cấp thêm điểm thi dự kiến hoặc ngành học muốn tìm hiểu để thầy/cô đưa ra danh sách trường cụ thể hơn nhé!"
+            )
+            thought = "Truy xuất tài liệu từ kho tri thức RAG Tuyển sinh 2026."
         else:
             reply = (
                 f"Chào em! Thầy/cô cố vấn CareerCompass-AI 2026 đã ghi nhận câu hỏi của em.\n\n"
                 f"Dựa trên hồ sơ của em (Mã Holland: **{h_code}**, Tổ hợp mục tiêu: **{block}**, Điểm dự kiến: **{score} điểm**):\n"
-                f"• Em có thế mạnh nổi trội ở tư duy logic và phân tích hệ thống. Các nhóm ngành như Máy tính & CNTT (Mã 748), "
-                f"Công nghệ kỹ thuật & Bán dẫn (Mã 751), và Kinh doanh & Dữ liệu (Mã 734) đang có triển vọng việc làm rất mạnh mẽ.\n"
-                f"• Với mức điểm {score}, em hoàn toàn đủ điều kiện cạnh tranh vào các trường đại học uy tín như ĐHQG Hà Nội/TP.HCM, "
-                f"ĐH Kinh tế Quốc dân, ĐH Bách Khoa, UEH hoặc ĐH Đà Nẵng.\n\n"
-                f"Em có thể chia sẻ thêm về ngành nghề em quan tâm nhất, hoặc khu vực muốn học (Bắc, Trung, Nam) để thầy/cô gợi ý chi tiết hơn nhé!"
+                f"• Em có thế mạnh nổi trội ở tư duy logic và phân tích hệ thống. Các nhóm ngành như Máy tính & CNTT, "
+                f"Công nghệ kỹ thuật & Vi mạch, và Kinh doanh & Dữ liệu đang có triển vọng việc làm rất mạnh mẽ.\n"
+                f"• Với mức điểm {score}, em hoàn toàn đủ điều kiện cạnh tranh vào các trường đại học uy tín.\n\n"
+                f"Em có thể chia sẻ thêm về ngành nghề em quan tâm nhất hoặc khu vực muốn theo học để thầy/cô gợi ý chi tiết hơn nhé!"
             )
-            thought = "Tổng hợp dữ liệu hồ sơ cá nhân hóa kết hợp ngân hàng 23 nhóm ngành đào tạo chuẩn GD&ĐT."
+            thought = "Tổng hợp dữ liệu hồ sơ cá nhân hóa kết hợp ngân hàng ngành đào tạo chuẩn GD&ĐT."
 
         if not citations:
             citations.append(CitationItem(
