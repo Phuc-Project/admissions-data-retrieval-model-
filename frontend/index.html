@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CareerCompass-AI 2026 - Cố vấn Hướng nghiệp & Tuyển sinh Đại học Lớp 12</title>
+    <title>CareerCompass AI 2026 - Cố vấn Hướng nghiệp & Tuyển sinh Đại học Lớp 12</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#070a12',
+                            800: '#0b0f19',
+                            700: '#111827',
+                            600: '#1e293b'
+                        },
+                        brand: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     
     <!-- FontAwesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,205 +39,224 @@
     <!-- Supabase JS Client SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     
-    <!-- Custom Styles -->
+    <!-- Custom Figma Styles -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-blue-600 selection:text-white">
+<body class="bg-[#0b0f19] text-slate-100 min-h-screen flex flex-col antialiased selection:bg-indigo-500 selection:text-white relative">
 
-    <!-- Top Guest Mode Banner (if guest) -->
-    <div id="guest-banner" class="hidden bg-amber-500 text-amber-950 px-4 py-2 text-xs font-semibold text-center flex items-center justify-center gap-2">
-        <i class="fas fa-shield-cat"></i>
-        <span>Em đang sử dụng chế độ Khách trải nghiệm.</span>
-        <button type="button" class="underline text-white hover:text-amber-100 font-bold ml-2" onclick="window.app.openAuthModal('register')">Đăng ký tài khoản</button> để lưu vĩnh viễn hồ sơ và kết quả phân tích!
+    <!-- Ambient Glowing Orbs -->
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+
+    <!-- Guest Mode Notification Bar -->
+    <div id="guest-banner" class="hidden relative z-50 bg-gradient-to-r from-amber-500/20 via-amber-500/10 to-amber-500/20 border-b border-amber-500/30 text-amber-200 px-4 py-2 text-xs font-medium text-center flex items-center justify-center gap-2 backdrop-blur-md">
+        <i class="fas fa-sparkles text-amber-400"></i>
+        <span>Đang ở chế độ Khách trải nghiệm.</span>
+        <button type="button" class="underline text-amber-300 hover:text-white font-bold ml-1" onclick="window.app.openAuthModal('register')">Đăng ký tài khoản</button> để đồng bộ hồ sơ và dữ liệu xét tuyển!
     </div>
 
-    <!-- Main Navigation Bar -->
-    <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80">
+    <!-- Header Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-[#0b0f19]/80 backdrop-blur-xl border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
             
             <!-- Brand Logo -->
-            <div class="flex items-center gap-3 cursor-pointer" onclick="window.app.switchTab('academic')">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/25">
-                    <i class="fas fa-compass text-xl"></i>
+            <div class="flex items-center gap-3.5 cursor-pointer group" onclick="window.app.switchTab('academic')">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-indigo-600 via-blue-600 to-cyan-500 p-0.5 shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-[#0b0f19] rounded-[14px] flex items-center justify-center">
+                        <i class="fas fa-compass text-indigo-400 text-lg group-hover:rotate-45 transition-transform duration-300"></i>
+                    </div>
                 </div>
                 <div>
                     <div class="flex items-center gap-2">
-                        <span class="text-xl font-bold font-heading tracking-tight text-slate-900">CareerCompass</span>
-                        <span class="px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-blue-100 text-blue-700">AI 2026</span>
+                        <span class="text-xl font-bold font-display tracking-tight text-white">CareerCompass</span>
+                        <span class="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">AI 2026</span>
                     </div>
-                    <p class="text-[11px] text-slate-500 font-medium">Chuẩn Thông tư 06/2026/TT-BGDĐT</p>
+                    <p class="text-[11px] text-slate-400 font-medium">Chuẩn Thông tư 06/2026/TT-BGDĐT</p>
                 </div>
             </div>
 
-            <!-- Navigation Tabs (Desktop) -->
-            <nav class="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-2xl border border-slate-200/60 text-sm">
-                <button type="button" data-tab="academic" class="flex items-center gap-2 px-3.5 py-2 rounded-xl text-slate-600 hover:text-blue-600 font-medium transition-all">
-                    <i class="fas fa-graduation-cap"></i> 1. Học bạ & Điểm thi
+            <!-- Central Floating Pill Navigation (Desktop) -->
+            <nav class="hidden lg:flex items-center gap-1 bg-white/5 border border-white/10 p-1.5 rounded-2xl backdrop-blur-md text-sm">
+                <button type="button" data-tab="academic" class="nav-pill flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold">
+                    <i class="fas fa-graduation-cap"></i> 1. Học bạ THPT
                 </button>
-                <button type="button" data-tab="survey" class="flex items-center gap-2 px-3.5 py-2 rounded-xl text-slate-600 hover:text-blue-600 font-medium transition-all">
+                <button type="button" data-tab="survey" class="nav-pill flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold">
                     <i class="fas fa-clipboard-check"></i> 2. Khảo sát 4 tầng
                 </button>
-                <button type="button" data-tab="profile" class="flex items-center gap-2 px-3.5 py-2 rounded-xl text-slate-600 hover:text-blue-600 font-medium transition-all">
+                <button type="button" data-tab="profile" class="nav-pill flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold">
                     <i class="fas fa-id-card"></i> 3. Career Passport
                 </button>
-                <button type="button" data-tab="recommendations" class="flex items-center gap-2 px-3.5 py-2 rounded-xl text-slate-600 hover:text-blue-600 font-medium transition-all">
+                <button type="button" data-tab="recommendations" class="nav-pill flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold">
                     <i class="fas fa-layer-group"></i> 4. Phân tầng Nguyện vọng
                 </button>
-                <button type="button" data-tab="roadmap" class="flex items-center gap-2 px-3.5 py-2 rounded-xl text-slate-600 hover:text-blue-600 font-medium transition-all">
+                <button type="button" data-tab="roadmap" class="nav-pill flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold">
                     <i class="fas fa-timeline"></i> 5. Lộ trình 2026
-                </button>
-                <button type="button" data-tab="chat" class="flex items-center gap-2 px-3.5 py-2 rounded-xl text-slate-600 hover:text-blue-600 font-medium transition-all">
-                    <i class="fas fa-robot text-indigo-600"></i> Cố vấn DeepSeek
                 </button>
             </nav>
 
-            <!-- User Auth Controls -->
-            <div class="flex items-center gap-2">
+            <!-- Right Controls: Auth & AI Copilot Button -->
+            <div class="flex items-center gap-3">
+                <!-- Floating Copilot Button -->
+                <button type="button" onclick="window.app.switchTab('chat')" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-400/30 hover:border-indigo-400/60 text-indigo-300 hover:text-white text-xs font-bold transition-all shadow-sm">
+                    <i class="fas fa-robot text-indigo-400 animate-pulse"></i>
+                    <span>Cố vấn DeepSeek</span>
+                </button>
+
+                <!-- Auth Buttons -->
                 <div id="auth-action-buttons" class="flex items-center gap-2">
-                    <button type="button" id="btn-guest-login" class="px-3 py-1.5 text-xs font-semibold text-slate-600 hover:text-blue-600 rounded-xl hover:bg-slate-100 transition-all">
+                    <button type="button" id="btn-guest-login" class="px-3 py-1.5 text-xs font-semibold text-slate-400 hover:text-white rounded-xl hover:bg-white/5 transition-all">
                         Trải nghiệm thử
                     </button>
-                    <button type="button" id="btn-open-login" class="px-4 py-2 text-xs font-bold text-slate-700 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-blue-400 transition-all">
+                    <button type="button" id="btn-open-login" class="px-3.5 py-2 text-xs font-bold text-slate-200 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all">
                         Đăng nhập
                     </button>
-                    <button type="button" id="btn-open-register" class="px-4 py-2 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md shadow-blue-500/20 transition-all">
+                    <button type="button" id="btn-open-register" class="px-3.5 py-2 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl shadow-lg shadow-indigo-600/30 transition-all">
                         Đăng ký
                     </button>
                 </div>
 
-                <!-- Logged In User State -->
-                <div id="user-profile-btn" class="hidden flex items-center gap-3 bg-white pl-2 pr-3 py-1.5 rounded-2xl border border-slate-200 shadow-sm">
-                    <div id="user-avatar" class="w-8 h-8 rounded-xl bg-blue-600 text-white font-bold flex items-center justify-center text-xs">P</div>
+                <!-- Logged In User Chip -->
+                <div id="user-profile-btn" class="hidden flex items-center gap-3 bg-white/5 border border-white/10 pl-2 pr-3 py-1.5 rounded-2xl">
+                    <div id="user-avatar" class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-600 to-blue-500 text-white font-bold flex items-center justify-center text-xs shadow-md">P</div>
                     <div class="text-left hidden sm:block">
-                        <p id="user-name-display" class="text-xs font-bold text-slate-900 leading-tight">Học sinh Lớp 12</p>
+                        <p id="user-name-display" class="text-xs font-bold text-white leading-tight">Học sinh Lớp 12</p>
                         <p class="text-[10px] text-slate-400">Niên khóa 2025-2026</p>
                     </div>
-                    <button type="button" id="btn-logout" title="Đăng xuất" class="text-slate-400 hover:text-rose-500 ml-1">
+                    <button type="button" id="btn-logout" title="Đăng xuất" class="text-slate-400 hover:text-rose-400 ml-1">
                         <i class="fas fa-arrow-right-from-bracket text-xs"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Navigation Strip -->
-        <div class="lg:hidden flex items-center gap-1 overflow-x-auto px-4 py-2 border-t border-slate-200/60 text-xs no-scrollbar">
-            <button type="button" data-tab="academic" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-slate-600 font-medium">1. Học bạ</button>
-            <button type="button" data-tab="survey" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-slate-600 font-medium">2. Khảo sát</button>
-            <button type="button" data-tab="profile" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-slate-600 font-medium">3. Passport</button>
-            <button type="button" data-tab="recommendations" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-slate-600 font-medium">4. Nguyện vọng</button>
-            <button type="button" data-tab="roadmap" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-slate-600 font-medium">5. Lộ trình</button>
-            <button type="button" data-tab="chat" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-slate-600 font-medium text-indigo-600 font-bold">Cố vấn AI</button>
+        <!-- Mobile Strip -->
+        <div class="lg:hidden flex items-center gap-1.5 overflow-x-auto px-4 py-2 border-t border-white/5 text-xs no-scrollbar bg-[#070a12]/90">
+            <button type="button" data-tab="academic" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-slate-400 font-medium">1. Học bạ</button>
+            <button type="button" data-tab="survey" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-slate-400 font-medium">2. Khảo sát</button>
+            <button type="button" data-tab="profile" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-slate-400 font-medium">3. Passport</button>
+            <button type="button" data-tab="recommendations" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-slate-400 font-medium">4. Nguyện vọng</button>
+            <button type="button" data-tab="roadmap" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-slate-400 font-medium">5. Lộ trình</button>
+            <button type="button" data-tab="chat" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-indigo-400 font-bold">Cố vấn AI</button>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Main Workspace Container -->
+    <main class="relative z-10 flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
         <!-- ========================================== -->
-        <!-- VIEW 1: HỒ SƠ HỌC THUẬT & ĐIỂM HỌC BẠ THPT -->
+        <!-- VIEW 1: HỒ SƠ HỌC THUẬT & HỌC BẠ THPT      -->
         <!-- ========================================== -->
         <section id="view-academic" class="tab-view">
             <div class="max-w-4xl mx-auto">
                 <div class="mb-8">
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-700">Bước 1 trên 4</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 mt-2 font-heading">Hồ sơ Học thuật & Điểm Học bạ THPT</h2>
-                    <p class="text-slate-500 text-sm mt-1">Cung cấp dữ liệu học bạ 3 năm THPT và điểm thi dự kiến để AI phân tích đồng thời 2 chiến lược: <strong>Xét học bạ sớm</strong> và <strong>Xét điểm thi tốt nghiệp 2026</strong>.</p>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-3">
+                        <i class="fas fa-layer-group text-[10px]"></i> Bước 1: Thu thập Dữ liệu Học thuật
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display tracking-tight">Hồ sơ Học thuật & Điểm Học bạ THPT</h2>
+                    <p class="text-slate-400 text-sm mt-2 leading-relaxed">Nhập kết quả học bạ 3 năm THPT và điểm thi tốt nghiệp dự kiến để AI phân tích đồng thời 2 chiến lược: <strong>Xét học bạ sớm</strong> và <strong>Xét điểm thi tốt nghiệp 2026</strong>.</p>
                 </div>
 
                 <form id="academic-form" class="space-y-6">
-                    <!-- Khối xét tuyển mục tiêu -->
-                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
-                        <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
-                            <i class="fas fa-bullseye text-blue-600"></i> 1. Tổ hợp xét tuyển mục tiêu (Khối thi)
+                    
+                    <!-- 1. Tổ hợp xét tuyển mục tiêu -->
+                    <div class="figma-card p-6 sm:p-8 rounded-3xl">
+                        <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2.5">
+                            <span class="w-7 h-7 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs font-bold">1</span>
+                            <span>Tổ hợp xét tuyển mục tiêu (Khối thi chính)</span>
                         </h3>
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
                             <label class="cursor-pointer">
                                 <input type="radio" name="target_block" value="A00" checked class="peer sr-only">
-                                <div class="p-3 text-center rounded-2xl border border-slate-200 peer-checked:border-blue-600 peer-checked:bg-blue-50/50 peer-checked:text-blue-700 font-bold text-sm">
-                                    A00
-                                    <div class="text-[11px] font-normal text-slate-500 mt-0.5">Toán - Lý - Hóa</div>
+                                <div class="p-4 text-center rounded-2xl bg-white/5 border border-white/10 peer-checked:border-indigo-500 peer-checked:bg-indigo-500/10 peer-checked:text-indigo-300 font-bold text-sm transition-all hover:bg-white/10">
+                                    <span class="text-base block">A00</span>
+                                    <span class="text-[11px] font-normal text-slate-400 mt-1 block">Toán • Lý • Hóa</span>
                                 </div>
                             </label>
                             <label class="cursor-pointer">
                                 <input type="radio" name="target_block" value="A01" class="peer sr-only">
-                                <div class="p-3 text-center rounded-2xl border border-slate-200 peer-checked:border-blue-600 peer-checked:bg-blue-50/50 peer-checked:text-blue-700 font-bold text-sm">
-                                    A01
-                                    <div class="text-[11px] font-normal text-slate-500 mt-0.5">Toán - Lý - Anh</div>
+                                <div class="p-4 text-center rounded-2xl bg-white/5 border border-white/10 peer-checked:border-indigo-500 peer-checked:bg-indigo-500/10 peer-checked:text-indigo-300 font-bold text-sm transition-all hover:bg-white/10">
+                                    <span class="text-base block">A01</span>
+                                    <span class="text-[11px] font-normal text-slate-400 mt-1 block">Toán • Lý • Anh</span>
                                 </div>
                             </label>
                             <label class="cursor-pointer">
                                 <input type="radio" name="target_block" value="D01" class="peer sr-only">
-                                <div class="p-3 text-center rounded-2xl border border-slate-200 peer-checked:border-blue-600 peer-checked:bg-blue-50/50 peer-checked:text-blue-700 font-bold text-sm">
-                                    D01
-                                    <div class="text-[11px] font-normal text-slate-500 mt-0.5">Toán - Văn - Anh</div>
+                                <div class="p-4 text-center rounded-2xl bg-white/5 border border-white/10 peer-checked:border-indigo-500 peer-checked:bg-indigo-500/10 peer-checked:text-indigo-300 font-bold text-sm transition-all hover:bg-white/10">
+                                    <span class="text-base block">D01</span>
+                                    <span class="text-[11px] font-normal text-slate-400 mt-1 block">Toán • Văn • Anh</span>
                                 </div>
                             </label>
                             <label class="cursor-pointer">
                                 <input type="radio" name="target_block" value="B00" class="peer sr-only">
-                                <div class="p-3 text-center rounded-2xl border border-slate-200 peer-checked:border-blue-600 peer-checked:bg-blue-50/50 peer-checked:text-blue-700 font-bold text-sm">
-                                    B00
-                                    <div class="text-[11px] font-normal text-slate-500 mt-0.5">Toán - Hóa - Sinh</div>
+                                <div class="p-4 text-center rounded-2xl bg-white/5 border border-white/10 peer-checked:border-indigo-500 peer-checked:bg-indigo-500/10 peer-checked:text-indigo-300 font-bold text-sm transition-all hover:bg-white/10">
+                                    <span class="text-base block">B00</span>
+                                    <span class="text-[11px] font-normal text-slate-400 mt-1 block">Toán • Hóa • Sinh</span>
                                 </div>
                             </label>
                         </div>
                         <input type="hidden" id="acad-target-block" value="A00">
                     </div>
 
-                    <!-- Điểm học bạ 3 năm THPT -->
-                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
-                                <i class="fas fa-book-bookmark text-emerald-600"></i> 2. Điểm học bạ THPT 3 năm (Thang điểm 10)
+                    <!-- 2. Điểm học bạ 3 năm THPT -->
+                    <div class="figma-card p-6 sm:p-8 rounded-3xl">
+                        <div class="flex items-center justify-between mb-5 flex-wrap gap-2">
+                            <h3 class="text-base font-bold text-white flex items-center gap-2.5">
+                                <span class="w-7 h-7 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">2</span>
+                                <span>Điểm học bạ THPT 3 năm (Thang 10)</span>
                             </h3>
-                            <span class="text-xs px-2.5 py-1 bg-emerald-50 text-emerald-700 font-semibold rounded-full">Phục vụ Xét học bạ sớm</span>
+                            <span class="text-xs px-3 py-1 bg-emerald-500/15 text-emerald-300 font-semibold rounded-full border border-emerald-500/30">
+                                Phục vụ Xét tuyển Học bạ Sớm
+                            </span>
                         </div>
+
+                        <!-- 3 Year GPAs -->
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-600 mb-1">Điểm TB Lớp 10</label>
-                                <input type="number" step="0.1" min="0" max="10" id="acad-gpa-10" value="8.5" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm font-semibold">
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/5">
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">GPA Lớp 10</label>
+                                <input type="number" step="0.1" min="0" max="10" id="acad-gpa-10" value="8.5" class="w-full bg-[#0b0f19] px-4 py-2.5 rounded-xl border border-white/10 text-white font-bold text-sm focus:border-indigo-500 focus:outline-none">
                             </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-600 mb-1">Điểm TB Lớp 11</label>
-                                <input type="number" step="0.1" min="0" max="10" id="acad-gpa-11" value="8.6" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm font-semibold">
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/5">
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">GPA Lớp 11</label>
+                                <input type="number" step="0.1" min="0" max="10" id="acad-gpa-11" value="8.6" class="w-full bg-[#0b0f19] px-4 py-2.5 rounded-xl border border-white/10 text-white font-bold text-sm focus:border-indigo-500 focus:outline-none">
                             </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-600 mb-1">Điểm TB Lớp 12 (Kỳ 1 hoặc cả năm)</label>
-                                <input type="number" step="0.1" min="0" max="10" id="acad-gpa-12" value="8.8" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm font-semibold">
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/5">
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">GPA Lớp 12 (kỳ 1/cả năm)</label>
+                                <input type="number" step="0.1" min="0" max="10" id="acad-gpa-12" value="8.8" class="w-full bg-[#0b0f19] px-4 py-2.5 rounded-xl border border-white/10 text-white font-bold text-sm focus:border-indigo-500 focus:outline-none">
                             </div>
                         </div>
 
-                        <!-- Điểm 3 môn tổ hợp xét tuyển theo học bạ -->
-                        <div class="mt-5 pt-4 border-t border-slate-100">
-                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Chi tiết điểm học bạ 3 môn trong tổ hợp xét tuyển</label>
+                        <!-- 3 Subject Breakdown -->
+                        <div class="mt-6 pt-5 border-t border-white/10">
+                            <label class="block text-xs font-bold text-indigo-400 uppercase tracking-wider mb-3">Chi tiết điểm học bạ 3 môn trong tổ hợp</label>
                             <div class="grid grid-cols-3 gap-3">
                                 <div>
-                                    <span class="text-[11px] text-slate-500 font-medium">Môn 1 (vd: Toán)</span>
-                                    <input type="number" step="0.1" min="0" max="10" id="acad-sub-1" value="9.0" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-sm font-semibold mt-1">
+                                    <span class="text-[11px] text-slate-400 block mb-1">Môn 1 (Toán)</span>
+                                    <input type="number" step="0.1" min="0" max="10" id="acad-sub-1" value="9.0" class="w-full bg-[#0b0f19] px-3.5 py-2.5 rounded-xl border border-white/10 text-white font-bold text-sm">
                                 </div>
                                 <div>
-                                    <span class="text-[11px] text-slate-500 font-medium">Môn 2 (vd: Lý)</span>
-                                    <input type="number" step="0.1" min="0" max="10" id="acad-sub-2" value="8.6" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-sm font-semibold mt-1">
+                                    <span class="text-[11px] text-slate-400 block mb-1">Môn 2 (Lý)</span>
+                                    <input type="number" step="0.1" min="0" max="10" id="acad-sub-2" value="8.6" class="w-full bg-[#0b0f19] px-3.5 py-2.5 rounded-xl border border-white/10 text-white font-bold text-sm">
                                 </div>
                                 <div>
-                                    <span class="text-[11px] text-slate-500 font-medium">Môn 3 (vd: Hóa / Anh)</span>
-                                    <input type="number" step="0.1" min="0" max="10" id="acad-sub-3" value="8.6" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-sm font-semibold mt-1">
+                                    <span class="text-[11px] text-slate-400 block mb-1">Môn 3 (Hóa / Anh)</span>
+                                    <input type="number" step="0.1" min="0" max="10" id="acad-sub-3" value="8.6" class="w-full bg-[#0b0f19] px-3.5 py-2.5 rounded-xl border border-white/10 text-white font-bold text-sm">
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Xếp loại học lực & hạnh kiểm -->
-                        <div class="grid grid-cols-2 gap-4 mt-4">
+                        <!-- Ranking -->
+                        <div class="grid grid-cols-2 gap-4 mt-5">
                             <div>
-                                <label class="block text-xs font-semibold text-slate-600 mb-1">Xếp loại Học lực THPT</label>
-                                <select id="acad-rank" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 bg-white text-sm font-semibold">
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Xếp loại Học lực THPT</label>
+                                <select id="acad-rank" class="w-full bg-[#0b0f19] px-4 py-2.5 rounded-xl border border-white/10 text-white text-sm font-semibold">
                                     <option value="Xuất sắc">Xuất sắc</option>
                                     <option value="Giỏi" selected>Giỏi</option>
                                     <option value="Khá">Khá</option>
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold text-slate-600 mb-1">Xếp loại Hạnh kiểm THPT</label>
-                                <select id="acad-conduct" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 bg-white text-sm font-semibold">
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Xếp loại Hạnh kiểm THPT</label>
+                                <select id="acad-conduct" class="w-full bg-[#0b0f19] px-4 py-2.5 rounded-xl border border-white/10 text-white text-sm font-semibold">
                                     <option value="Tốt" selected>Tốt</option>
                                     <option value="Khá">Khá</option>
                                 </select>
@@ -223,36 +264,36 @@
                         </div>
                     </div>
 
-                    <!-- Điểm thi THPT & Chứng chỉ ngoại ngữ -->
-                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
-                        <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
-                            <i class="fas fa-award text-amber-500"></i> 3. Điểm thi tốt nghiệp THPT & Chứng chỉ chuẩn hóa
+                    <!-- 3. Điểm thi THPT & Chứng chỉ -->
+                    <div class="figma-card p-6 sm:p-8 rounded-3xl">
+                        <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2.5">
+                            <span class="w-7 h-7 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold">3</span>
+                            <span>Điểm thi Tốt nghiệp THPT dự kiến & Chứng chỉ Chuẩn hóa</span>
                         </h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-600 mb-1">Điểm thi THPT dự kiến hoặc thi thử (Thang 30)</label>
-                                <input type="number" step="0.25" min="0" max="30" id="acad-exam-score" value="25.5" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm font-bold text-blue-600">
-                                <p class="text-[11px] text-slate-400 mt-1">Tổng điểm 3 môn tổ hợp mục tiêu</p>
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/5">
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Điểm thi THPT dự kiến / Điểm thi thử (Thang 30)</label>
+                                <input type="number" step="0.25" min="0" max="30" id="acad-exam-score" value="25.5" class="w-full bg-[#0b0f19] px-4 py-2.5 rounded-xl border border-white/10 text-emerald-400 font-extrabold text-lg focus:border-indigo-500 focus:outline-none">
+                                <p class="text-[11px] text-slate-400 mt-1.5">Tổng điểm 3 môn tổ hợp mục tiêu</p>
                             </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-600 mb-1">Chứng chỉ tiếng Anh (nếu có)</label>
-                                <select id="acad-english-cert" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 bg-white text-sm font-semibold">
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/5">
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Chứng chỉ Tiếng Anh (IELTS / VSTEP)</label>
+                                <select id="acad-english-cert" class="w-full bg-[#0b0f19] px-4 py-2.5 rounded-xl border border-white/10 text-white text-sm font-semibold">
                                     <option value="">Chưa có chứng chỉ</option>
                                     <option value="IELTS 6.0">IELTS 6.0</option>
                                     <option value="IELTS 6.5" selected>IELTS 6.5</option>
                                     <option value="IELTS 7.0+">IELTS 7.0+</option>
                                     <option value="VSTEP B2">VSTEP B2</option>
-                                    <option value="TOEFL iBT 79+">TOEFL iBT 79+</option>
                                 </select>
-                                <p class="text-[11px] text-slate-400 mt-1">Quy đổi điểm 10 tiếng Anh theo Thông tư 06/2026</p>
+                                <p class="text-[11px] text-slate-400 mt-1.5">Quy đổi điểm 10 theo Thông tư 06/2026/TT-BGDĐT</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex justify-end gap-3 pt-2">
-                        <button type="submit" class="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/25 flex items-center gap-2 transition-all">
-                            <span>Lưu hồ sơ & Bắt đầu Khảo sát</span>
-                            <i class="fas fa-arrow-right"></i>
+                    <div class="flex justify-end pt-4">
+                        <button type="submit" class="px-8 py-4 bg-gradient-to-r from-indigo-600 via-blue-600 to-indigo-700 hover:from-indigo-500 hover:to-blue-500 text-white font-bold rounded-2xl shadow-xl shadow-indigo-600/30 flex items-center gap-3 transition-all hover:scale-[1.02]">
+                            <span class="text-sm">Lưu hồ sơ & Bắt đầu Khảo sát</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
                         </button>
                     </div>
                 </form>
@@ -260,39 +301,42 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- VIEW 2: KHẢO SÁT ĐA CHIỀU (4 TẦNG)         -->
+        <!-- VIEW 2: KHẢO SÁT ĐA CHIỀU (ASSESSMENT)     -->
         <!-- ========================================== -->
         <section id="view-survey" class="tab-view hidden">
             <div class="max-w-4xl mx-auto">
-                <!-- Progress Header -->
-                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm mb-6">
-                    <div class="flex items-center justify-between gap-4 mb-2">
+                
+                <!-- Modern Progress Hub -->
+                <div class="figma-card p-6 sm:p-8 rounded-3xl mb-6">
+                    <div class="flex items-center justify-between gap-4 mb-2 flex-wrap">
                         <div>
-                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Tiến trình Khảo sát</span>
-                            <h2 id="survey-step-title" class="text-xl font-bold text-slate-900 font-heading">Phần 1: Sở thích Nghề nghiệp (Holland RIASEC)</h2>
+                            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Tiến trình Khảo sát</span>
+                            <h2 id="survey-step-title" class="text-xl sm:text-2xl font-bold text-white font-display mt-0.5">Phần 1: Sở thích Nghề nghiệp (Holland RIASEC)</h2>
                         </div>
-                        <span id="survey-progress-percent" class="text-xl font-extrabold text-blue-600">20%</span>
+                        <div class="flex items-center gap-2">
+                            <span id="survey-progress-percent" class="text-2xl font-black text-indigo-400 font-display">20%</span>
+                        </div>
                     </div>
-                    <p id="survey-step-subtitle" class="text-xs text-slate-500 mb-3">Đánh giá mức độ hứng thú với từng hoạt động (1 - 5 sao)</p>
-                    <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
-                        <div id="survey-progress-bar" class="bg-gradient-to-r from-blue-600 to-indigo-600 h-2.5 rounded-full transition-all duration-300" style="width: 20%"></div>
+                    <p id="survey-step-subtitle" class="text-xs text-slate-400 mb-4">Đánh giá mức độ hứng thú với từng hoạt động (1 - 5 sao)</p>
+                    <div class="w-full bg-white/10 rounded-full h-2 overflow-hidden">
+                        <div id="survey-progress-bar" class="bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-400 h-2 rounded-full transition-all duration-300" style="width: 20%"></div>
                     </div>
                 </div>
 
-                <!-- Questions Container -->
+                <!-- Questions Card Container -->
                 <div id="survey-questions-container" class="space-y-4 mb-8">
-                    <!-- Dynamically populated by app.js -->
+                    <!-- Populated dynamically by app.js -->
                 </div>
 
-                <!-- Survey Nav Actions -->
-                <div class="flex items-center justify-between gap-4 pt-4 border-t border-slate-200">
-                    <button type="button" id="btn-survey-prev" class="px-5 py-2.5 bg-white border border-slate-200 text-slate-700 font-semibold rounded-xl hover:bg-slate-50 transition-all flex items-center gap-2">
+                <!-- Navigation Controls -->
+                <div class="flex items-center justify-between gap-4 pt-4 border-t border-white/10">
+                    <button type="button" id="btn-survey-prev" class="px-5 py-2.5 bg-white/5 border border-white/10 text-slate-300 font-semibold rounded-xl hover:bg-white/10 transition-all flex items-center gap-2 text-sm">
                         <i class="fas fa-chevron-left text-xs"></i> Quay lại
                     </button>
-                    <button type="button" id="btn-survey-next" class="ml-auto px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md shadow-blue-500/20 transition-all flex items-center gap-2">
+                    <button type="button" id="btn-survey-next" class="ml-auto px-7 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl shadow-lg shadow-indigo-600/30 transition-all flex items-center gap-2 text-sm">
                         <span>Tiếp tục</span> <i class="fas fa-chevron-right text-xs"></i>
                     </button>
-                    <button type="button" id="btn-survey-submit" style="display: none;" class="px-8 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold rounded-2xl shadow-lg shadow-emerald-500/25 flex items-center gap-2 transition-all">
+                    <button type="button" id="btn-survey-submit" style="display: none;" class="px-8 py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold rounded-2xl shadow-xl shadow-emerald-600/30 flex items-center gap-2 transition-all text-sm">
                         <i class="fas fa-check-circle"></i> Hoàn thành & Tạo Career Passport
                     </button>
                 </div>
@@ -303,63 +347,64 @@
         <!-- VIEW 3: CAREER PASSPORT DASHBOARD          -->
         <!-- ========================================== -->
         <section id="view-profile" class="tab-view hidden">
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-5xl mx-auto space-y-8">
                 
-                <!-- Empty state if not completed -->
-                <div id="profile-empty-state" class="text-center py-16 bg-white rounded-3xl border border-slate-200 p-8">
-                    <div class="w-16 h-16 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-2xl mx-auto mb-4">
+                <!-- Empty State -->
+                <div id="profile-empty-state" class="text-center py-20 figma-card rounded-3xl p-8">
+                    <div class="w-16 h-16 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex items-center justify-center text-2xl mx-auto mb-4">
                         <i class="fas fa-id-card"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2 font-heading">Chưa có dữ liệu Career Passport</h3>
-                    <p class="text-slate-500 text-sm max-w-md mx-auto mb-6">Em cần hoàn thành bài khảo sát đa chiều và lưu hồ sơ học bạ để hệ thống tính toán hồ sơ nhé!</p>
-                    <button type="button" onclick="window.app.switchTab('survey')" class="px-6 py-3 bg-blue-600 text-white rounded-xl font-bold shadow-md hover:bg-blue-700 transition-all">
+                    <h3 class="text-xl font-bold text-white mb-2 font-display">Chưa có dữ liệu Career Passport</h3>
+                    <p class="text-slate-400 text-sm max-w-md mx-auto mb-6">Em cần hoàn thành bài khảo sát 4 tầng và lưu học bạ để hệ thống tính toán hồ sơ nhé!</p>
+                    <button type="button" onclick="window.app.switchTab('survey')" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-bold shadow-lg shadow-indigo-600/30 transition-all">
                         Làm khảo sát ngay
                     </button>
                 </div>
 
-                <!-- Profile Content -->
+                <!-- Profile Dashboard Content -->
                 <div id="profile-content" class="space-y-8 hidden">
                     
-                    <!-- Passport Hero Card -->
-                    <div class="bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
-                        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <!-- Holographic Career Passport Card -->
+                    <div class="passport-card p-8 rounded-3xl">
                         <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                             <div>
-                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-400/30">Hồ Sơ Hướng Nghiệp Cá Nhân Hóa</span>
-                                <h2 id="passport-student-name" class="text-3xl font-extrabold mt-2 font-heading">Nguyễn Hoàng Phúc</h2>
-                                <p id="passport-school" class="text-slate-300 text-sm mt-0.5">THPT Chuyên - Học sinh Lớp 12</p>
+                                <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">
+                                    Hồ Sơ Hướng Nghiệp Chuẩn Hóa 2026
+                                </span>
+                                <h2 id="passport-student-name" class="text-3xl font-extrabold text-white mt-2.5 font-display tracking-tight">Nguyễn Hoàng Phúc</h2>
+                                <p id="passport-school" class="text-slate-400 text-sm mt-0.5">THPT Chuyên - Học sinh Lớp 12</p>
                                 
                                 <div class="flex flex-wrap items-center gap-2 mt-4">
-                                    <span id="passport-holland-badge" class="px-3 py-1 bg-white/10 rounded-xl text-xs font-bold border border-white/15">Mã Holland: IRC</span>
-                                    <span id="passport-disc-badge" class="px-3 py-1 bg-white/10 rounded-xl text-xs font-bold border border-white/15">DISC: Quyết đoán (D)</span>
+                                    <span id="passport-holland-badge" class="px-3 py-1 bg-white/10 rounded-xl text-xs font-bold border border-white/15 text-indigo-300">Mã Holland: IRC</span>
+                                    <span id="passport-disc-badge" class="px-3 py-1 bg-white/10 rounded-xl text-xs font-bold border border-white/15 text-cyan-300">DISC: Quyết đoán (D)</span>
                                 </div>
                             </div>
 
-                            <!-- Academic Quick Badges -->
+                            <!-- Badges Grid -->
                             <div class="grid grid-cols-2 gap-3 w-full md:w-auto">
-                                <div class="bg-white/10 backdrop-blur-md p-3.5 rounded-2xl border border-white/10 text-center">
-                                    <span class="text-[10px] text-slate-300 uppercase tracking-wider block">Học bạ 3 năm</span>
-                                    <strong id="passport-gpa-overall" class="text-xl font-extrabold text-emerald-400">8.63</strong>
+                                <div class="bg-black/30 backdrop-blur-md p-3.5 rounded-2xl border border-white/10 text-center">
+                                    <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Học bạ 3 năm</span>
+                                    <strong id="passport-gpa-overall" class="text-2xl font-black text-emerald-400 font-display">8.63</strong>
                                 </div>
-                                <div class="bg-white/10 backdrop-blur-md p-3.5 rounded-2xl border border-white/10 text-center">
-                                    <span class="text-[10px] text-slate-300 uppercase tracking-wider block">Khối học bạ</span>
-                                    <strong id="passport-block-score" class="text-xl font-extrabold text-blue-400">26.2đ</strong>
+                                <div class="bg-black/30 backdrop-blur-md p-3.5 rounded-2xl border border-white/10 text-center">
+                                    <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Khối học bạ</span>
+                                    <strong id="passport-block-score" class="text-2xl font-black text-indigo-400 font-display">26.2đ</strong>
                                 </div>
-                                <div class="col-span-2 bg-white/10 backdrop-blur-md p-3 rounded-2xl border border-white/10 text-center">
-                                    <span class="text-[10px] text-slate-300 uppercase tracking-wider block">Điểm thi THPT dự kiến</span>
+                                <div class="col-span-2 bg-black/30 backdrop-blur-md p-3 rounded-2xl border border-white/10 text-center">
+                                    <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Điểm thi THPT dự kiến</span>
                                     <strong id="passport-exam-score" class="text-sm font-bold text-amber-300">25.5đ (Khối A00)</strong>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- AI Summary Callout -->
-                    <div class="bg-blue-50 border border-blue-200/80 rounded-3xl p-6">
-                        <div class="flex items-center gap-2 text-blue-900 font-bold mb-2">
-                            <i class="fas fa-brain text-blue-600"></i>
-                            <h4>Nhận định Chuyên sâu từ AI Cố vấn (DeepSeek Reasoner)</h4>
+                    <!-- AI Insights Box -->
+                    <div class="bg-gradient-to-r from-indigo-950/40 via-purple-950/20 to-blue-950/40 border border-indigo-500/30 rounded-3xl p-6 relative overflow-hidden">
+                        <div class="flex items-center gap-2.5 text-indigo-300 font-bold mb-2">
+                            <i class="fas fa-brain text-indigo-400"></i>
+                            <h4 class="text-sm font-bold">Nhận định Chuyên sâu từ AI Cố vấn (DeepSeek Reasoner)</h4>
                         </div>
-                        <p id="passport-ai-summary" class="text-sm text-slate-700 leading-relaxed">
+                        <p id="passport-ai-summary" class="text-sm text-slate-300 leading-relaxed">
                             Đang tải nhận định...
                         </p>
                     </div>
@@ -367,42 +412,42 @@
                     <!-- Charts Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- Radar Holland -->
-                        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
-                            <h3 class="text-base font-bold text-slate-900 mb-1 flex items-center gap-2">
-                                <i class="fas fa-chart-pie text-blue-600"></i> Biểu đồ Sở thích Holland (RIASEC)
+                        <div class="figma-card p-6 rounded-3xl">
+                            <h3 class="text-base font-bold text-white mb-1 flex items-center gap-2">
+                                <i class="fas fa-chart-pie text-indigo-400"></i> Biểu đồ Sở thích Holland (RIASEC)
                             </h3>
-                            <p class="text-xs text-slate-500 mb-4">Đo lường mức độ tương thích trên 6 nhóm sở thích nghề nghiệp</p>
+                            <p class="text-xs text-slate-400 mb-4">Mức độ tương thích trên 6 nhóm năng khiếu</p>
                             <div class="h-64 relative">
                                 <canvas id="holland-radar-chart"></canvas>
                             </div>
                         </div>
 
                         <!-- Scatter SCCT Matrix -->
-                        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
-                            <h3 class="text-base font-bold text-slate-900 mb-1 flex items-center gap-2">
-                                <i class="fas fa-chart-scatter text-emerald-600"></i> Ma trận Niềm tin Năng lực (SCCT)
+                        <div class="figma-card p-6 rounded-3xl">
+                            <h3 class="text-base font-bold text-white mb-1 flex items-center gap-2">
+                                <i class="fas fa-chart-scatter text-emerald-400"></i> Ma trận Niềm tin Năng lực (SCCT)
                             </h3>
-                            <p class="text-xs text-slate-500 mb-4">Tương quan 4 ô: Sở thích (%) × Niềm tin Tự tin (%)</p>
+                            <p class="text-xs text-slate-400 mb-4">Tương quan 4 ô: Sở thích (%) × Niềm tin Tự tin (%)</p>
                             <div class="h-64 relative">
                                 <canvas id="scct-scatter-chart"></canvas>
                             </div>
                         </div>
 
                         <!-- Gardner Intelligences -->
-                        <div class="col-span-1 md:col-span-2 bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
-                            <h3 class="text-base font-bold text-slate-900 mb-1 flex items-center gap-2">
-                                <i class="fas fa-shapes text-indigo-600"></i> 8 Loại hình Đa trí tuệ (Howard Gardner)
+                        <div class="col-span-1 md:col-span-2 figma-card p-6 rounded-3xl">
+                            <h3 class="text-base font-bold text-white mb-1 flex items-center gap-2">
+                                <i class="fas fa-shapes text-cyan-400"></i> 8 Loại hình Đa trí tuệ (Howard Gardner)
                             </h3>
-                            <p class="text-xs text-slate-500 mb-4">Xác định phong cách học tập và tiếp thu kiến thức hiệu quả nhất</p>
+                            <p class="text-xs text-slate-400 mb-4">Phong cách học tập & tiếp thu kiến thức hiệu quả nhất</p>
                             <div class="h-60 relative">
                                 <canvas id="gardner-bar-chart"></canvas>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Action to next step -->
-                    <div class="text-center pt-4">
-                        <button type="button" onclick="window.app.switchTab('recommendations')" class="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/25 transition-all">
+                    <!-- CTA to Next Tab -->
+                    <div class="text-center pt-2">
+                        <button type="button" onclick="window.app.switchTab('recommendations')" class="px-8 py-4 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-bold rounded-2xl shadow-xl shadow-indigo-600/30 transition-all hover:scale-105">
                             Xem Danh sách Phân tầng Nguyện vọng Đại học <i class="fas fa-arrow-right ml-2"></i>
                         </button>
                     </div>
@@ -417,9 +462,11 @@
         <section id="view-recommendations" class="tab-view hidden">
             <div class="max-w-5xl mx-auto">
                 <div class="mb-8">
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-700">Bước 4 trên 4</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 mt-2 font-heading">Chiến lược Phân tầng Nguyện vọng Đại học 2026</h2>
-                    <p class="text-slate-500 text-sm mt-1">Phân bổ chiến lược 3 cấp độ: <strong>Mơ ước (Dream)</strong>, <strong>Vừa sức (Target)</strong>, và <strong>An toàn (Safety)</strong> dựa trên chuẩn Thông tư 06/2026/TT-BGDĐT.</p>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-3">
+                        <i class="fas fa-layer-group text-[10px]"></i> Bước 4: Chiến lược Nguyện vọng
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display tracking-tight">Chiến lược Phân tầng Nguyện vọng Đại học 2026</h2>
+                    <p class="text-slate-400 text-sm mt-2">Phân bổ chiến lược 3 cấp độ: <strong>Mơ ước (Dream)</strong>, <strong>Vừa sức (Target)</strong>, và <strong>An toàn (Safety)</strong> dựa trên chuẩn Thông tư 06/2026/TT-BGDĐT.</p>
                 </div>
 
                 <div id="recommendations-container" class="space-y-6">
@@ -434,13 +481,13 @@
         <section id="view-roadmap" class="tab-view hidden">
             <div class="max-w-3xl mx-auto">
                 <div class="mb-8 text-center">
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700">Quy chế Bộ GD&ĐT</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 mt-2 font-heading">Lộ trình Tuyển sinh Đại học Lớp 12</h2>
-                    <p class="text-slate-500 text-sm mt-1">6 Giai đoạn trọng tâm mùa thi tuyển sinh năm 2026 theo Thông tư 06/2026/TT-BGDĐT</p>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">Quy chế Bộ GD&ĐT 2026</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 font-display">Lộ trình Tuyển sinh Đại học Lớp 12</h2>
+                    <p class="text-slate-400 text-sm mt-2">6 Giai đoạn trọng tâm mùa thi tuyển sinh năm 2026 theo Thông tư 06/2026/TT-BGDĐT</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
-                    <div id="roadmap-timeline-container" class="space-y-2">
+                <div class="figma-card p-8 rounded-3xl">
+                    <div id="roadmap-timeline-container" class="space-y-3">
                         <!-- Populated dynamically -->
                     </div>
                 </div>
@@ -448,21 +495,21 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- VIEW 6: TRỢ LÝ CỐ VẤN AI DEEPSEEK REASONER -->
+        <!-- VIEW 6: CỐ VẤN AI DEEPSEEK REASONER        -->
         <!-- ========================================== -->
         <section id="view-chat" class="tab-view hidden">
-            <div class="max-w-4xl mx-auto h-[calc(100vh-14rem)] flex flex-col bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="max-w-4xl mx-auto h-[calc(100vh-14rem)] flex flex-col figma-card rounded-3xl overflow-hidden border border-white/10">
                 <!-- Chat Header -->
-                <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <div class="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-black/20">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 to-blue-600 flex items-center justify-center text-white shadow-md">
+                        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white shadow-md">
                             <i class="fas fa-brain text-sm"></i>
                         </div>
                         <div>
-                            <h3 class="font-bold text-slate-900 text-sm">Trợ lý Cố vấn AI DeepSeek (R1/V3)</h3>
-                            <p class="text-[11px] text-emerald-600 font-semibold flex items-center gap-1">
-                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                                Tích hợp dữ liệu Tuyensinh247 & Bộ GD&ĐT
+                            <h3 class="font-bold text-white text-sm">Cố vấn AI DeepSeek Reasoner (R1/V3)</h3>
+                            <p class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Đã kết nối dữ liệu Tuyensinh247 & Bộ GD&ĐT
                             </p>
                         </div>
                     </div>
@@ -472,18 +519,18 @@
                 <div id="chat-messages-container" class="flex-1 p-6 overflow-y-auto space-y-4">
                     <!-- Initial Welcome Message -->
                     <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                        <div class="max-w-[80%] p-4 rounded-2xl bg-slate-100 text-slate-800 text-sm leading-relaxed rounded-tl-none">
-                            Chào em! Thầy/cô cố vấn <strong>CareerCompass-AI 2026</strong> luôn sẵn sàng đồng hành cùng em. Em có thắc mắc gì về <strong>phương thức xét học bạ</strong>, <strong>điểm chuẩn các trường ĐH</strong> hay <strong>chiến lược đặt nguyện vọng</strong> không? Hãy nhắn cho thầy/cô nhé!
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                        <div class="max-w-[80%] p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-200 text-sm leading-relaxed rounded-tl-none">
+                            Chào em! Thầy/cô cố vấn <strong>CareerCompass AI 2026</strong> luôn sẵn sàng đồng hành cùng em. Em có thắc mắc gì về <strong>phương thức xét học bạ</strong>, <strong>điểm chuẩn các trường ĐH</strong> hay <strong>chiến lược đặt nguyện vọng</strong> không? Hãy nhắn cho thầy/cô nhé!
                         </div>
                     </div>
                 </div>
 
                 <!-- Chat Input Form -->
-                <form id="chat-form" class="p-4 border-t border-slate-100 bg-white">
+                <form id="chat-form" class="p-4 border-t border-white/10 bg-black/30">
                     <div class="flex items-center gap-2">
-                        <input type="text" id="chat-input" placeholder="Ví dụ: Với học bạ 8.6 và điểm thi 25.5 khối A00, em nên xét trường Bách khoa hay Kinh tế Quốc dân?" class="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm">
-                        <button type="submit" class="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-md shadow-blue-500/20 transition-all flex items-center gap-2">
+                        <input type="text" id="chat-input" placeholder="Ví dụ: Với học bạ 8.6 và điểm thi 25.5 khối A00, em nên xét trường Bách khoa hay Kinh tế Quốc dân?" class="flex-1 bg-white/5 px-4 py-3 rounded-xl border border-white/10 text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none text-sm">
+                        <button type="submit" class="px-5 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-bold shadow-md shadow-indigo-600/30 transition-all flex items-center gap-2">
                             <i class="fas fa-paper-plane text-xs"></i>
                             <span class="hidden sm:inline">Gửi</span>
                         </button>
@@ -495,57 +542,57 @@
     </main>
 
     <!-- Auth Modal (Login / Register) -->
-    <div id="auth-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white max-w-md w-full rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-2xl modal-enter relative">
-            <button type="button" id="auth-modal-close" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-lg">
+    <div id="auth-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-[#0f172a] max-w-md w-full rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl modal-enter relative">
+            <button type="button" id="auth-modal-close" class="absolute top-5 right-5 text-slate-400 hover:text-white text-lg">
                 <i class="fas fa-times"></i>
             </button>
 
             <div class="text-center mb-6">
-                <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mx-auto mb-3">
+                <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 flex items-center justify-center text-xl mx-auto mb-3">
                     <i class="fas fa-user-graduate"></i>
                 </div>
-                <h3 id="auth-modal-title" class="text-2xl font-bold text-slate-900 font-heading">Đăng nhập CareerCompass-AI</h3>
-                <p class="text-xs text-slate-500 mt-1">Hệ thống Cố vấn Hướng nghiệp Chuẩn Bộ GD&ĐT 2026</p>
+                <h3 id="auth-modal-title" class="text-2xl font-bold text-white font-display">Đăng nhập CareerCompass AI</h3>
+                <p class="text-xs text-slate-400 mt-1">Hệ thống Cố vấn Hướng nghiệp Chuẩn Bộ GD&ĐT 2026</p>
             </div>
 
             <form id="auth-form" class="space-y-4">
                 <div id="register-extra-fields" class="space-y-4 hidden">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-700 mb-1">Họ và tên học sinh</label>
-                        <input type="text" id="auth-fullname" placeholder="Nguyễn Hoàng Phúc" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Họ và tên học sinh</label>
+                        <input type="text" id="auth-fullname" placeholder="Nguyễn Hoàng Phúc" class="w-full bg-white/5 px-4 py-2.5 rounded-xl border border-white/10 text-white text-sm focus:border-indigo-500 focus:outline-none">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-700 mb-1">Trường THPT đang theo học</label>
-                        <input type="text" id="auth-school" placeholder="THPT Chuyên / THPT..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Trường THPT đang theo học</label>
+                        <input type="text" id="auth-school" placeholder="THPT Chuyên / THPT..." class="w-full bg-white/5 px-4 py-2.5 rounded-xl border border-white/10 text-white text-sm focus:border-indigo-500 focus:outline-none">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold text-slate-700 mb-1">Email</label>
-                    <input type="email" id="auth-email" required placeholder="hocsinh@gmail.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
+                    <input type="email" id="auth-email" required placeholder="hocsinh@gmail.com" class="w-full bg-white/5 px-4 py-2.5 rounded-xl border border-white/10 text-white text-sm focus:border-indigo-500 focus:outline-none">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold text-slate-700 mb-1">Mật khẩu</label>
-                    <input type="password" id="auth-password" required minlength="6" placeholder="Tối thiểu 6 ký tự" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Mật khẩu</label>
+                    <input type="password" id="auth-password" required minlength="6" placeholder="Tối thiểu 6 ký tự" class="w-full bg-white/5 px-4 py-2.5 rounded-xl border border-white/10 text-white text-sm focus:border-indigo-500 focus:outline-none">
                 </div>
 
-                <button type="submit" id="auth-submit-btn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-500/25 transition-all text-sm mt-2">
+                <button type="submit" id="auth-submit-btn" class="w-full py-3 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-bold rounded-xl shadow-lg shadow-indigo-600/30 transition-all text-sm mt-2">
                     Đăng nhập ngay
                 </button>
             </form>
 
-            <div class="mt-6 pt-4 border-t border-slate-100 text-center text-xs text-slate-500">
-                <p id="auth-switch-text">Chưa có tài khoản? <button type="button" id="switch-to-register" class="text-blue-600 font-semibold hover:underline">Đăng ký mới</button></p>
+            <div class="mt-6 pt-4 border-t border-white/10 text-center text-xs text-slate-400">
+                <p id="auth-switch-text">Chưa có tài khoản? <button type="button" id="switch-to-register" class="text-indigo-400 font-semibold hover:underline">Đăng ký mới</button></p>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200/80 py-6 text-center text-xs text-slate-500">
+    <footer class="bg-[#070a12]/80 border-t border-white/5 py-6 text-center text-xs text-slate-500 relative z-10">
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p>© 2026 <strong>CareerCompass-AI</strong>. Nền tảng Định hướng Nghề nghiệp & Tuyển sinh Đại học Lớp 12.</p>
+            <p>© 2026 <strong>CareerCompass AI</strong>. Nền tảng Định hướng Nghề nghiệp & Tuyển sinh Đại học Lớp 12.</p>
             <div class="flex items-center gap-4 text-slate-400">
                 <span>Thông tư 06/2026/TT-BGDĐT</span>
                 <span>•</span>

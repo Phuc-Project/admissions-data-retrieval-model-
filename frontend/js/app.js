@@ -359,40 +359,49 @@ class App {
     renderLikertQuestions(container, questions, sectionKey) {
         questions.forEach((q, idx) => {
             const card = document.createElement('div');
-            card.className = "bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-300 transition-all";
+            card.className = "figma-card p-6 sm:p-7 rounded-3xl border border-white/10 hover:border-indigo-500/40 transition-all";
 
             const currentVal = this.surveyAnswers[sectionKey][q.id] || 3;
             const groupName = q.group || q.label || q.trait || q.type || q.category || "";
             const groupBadge = groupName ? ` • Nhóm ${groupName}` : "";
 
+            const likertLabels = {
+                1: "Hoàn toàn không",
+                2: "Ít hứng thú",
+                3: "Bình thường",
+                4: "Khá yêu thích",
+                5: "Rất say mê"
+            };
+
             card.innerHTML = `
                 <div class="flex items-start justify-between gap-4 mb-3">
-                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/15 text-indigo-300 border border-indigo-500/20">
                         Câu ${idx + 1}${groupBadge}
                     </span>
                 </div>
-                <p class="text-slate-800 font-medium text-base mb-4 leading-relaxed">${q.text}</p>
-                <div class="flex items-center justify-between sm:justify-start gap-2 sm:gap-3 flex-wrap">
+                <p class="text-white font-medium text-base sm:text-lg mb-5 leading-relaxed">${q.text}</p>
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
                     ${[1, 2, 3, 4, 5].map(star => `
                         <button type="button" 
                             data-qid="${q.id}" 
                             data-val="${star}"
-                            class="likert-btn ${currentVal === star ? 'active' : ''} px-4 py-2 rounded-xl text-sm font-semibold border border-slate-200 hover:border-blue-400">
-                            ${star} ⭐ ${star === 1 ? 'Rất ít' : star === 5 ? 'Rất nhiều' : ''}
+                            class="likert-card-btn ${currentVal === star ? 'active' : ''} p-3 rounded-2xl text-center">
+                            <span class="text-sm font-black block mb-0.5">${star} ⭐</span>
+                            <span class="text-[11px] font-medium text-slate-400 block">${likertLabels[star]}</span>
                         </button>
                     `).join('')}
                 </div>
             `;
 
             // Bind click
-            card.querySelectorAll('.likert-btn').forEach(btn => {
+            card.querySelectorAll('.likert-card-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
                     const qid = btn.dataset.qid;
                     const val = parseInt(btn.dataset.val);
                     this.surveyAnswers[sectionKey][qid] = val;
                     localStorage.setItem(CONFIG.STORAGE_KEYS.SURVEY_ANSWERS, JSON.stringify(this.surveyAnswers));
 
-                    card.querySelectorAll('.likert-btn').forEach(b => b.classList.remove('active'));
+                    card.querySelectorAll('.likert-card-btn').forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
                 });
             });
@@ -405,17 +414,17 @@ class App {
         const formDiv = document.createElement('div');
         formDiv.className = "space-y-4";
         formDiv.innerHTML = `
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                <label class="block text-slate-800 font-semibold mb-2">1. Điểm mạnh và kỹ năng nổi bật nhất của em là gì?</label>
-                <textarea id="qual-strengths" rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Ví dụ: Tư duy logic tốt, khả năng tự học công nghệ nhanh, giao tiếp tiếng Anh lưu loát...">${this.surveyAnswers.qualitative.strengths || ""}</textarea>
+            <div class="figma-card p-6 sm:p-7 rounded-3xl">
+                <label class="block text-white font-bold mb-2">1. Điểm mạnh và kỹ năng nổi bật nhất của em là gì?</label>
+                <textarea id="qual-strengths" rows="3" class="w-full bg-white/5 px-4 py-3 rounded-2xl border border-white/10 text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none text-sm" placeholder="Ví dụ: Tư duy logic tốt, khả năng tự học công nghệ nhanh, giao tiếp tiếng Anh lưu loát...">${this.surveyAnswers.qualitative.strengths || ""}</textarea>
             </div>
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                <label class="block text-slate-800 font-semibold mb-2">2. Kỹ năng nào em muốn cải thiện hoặc phát triển nhất trong tương lai?</label>
-                <textarea id="qual-weaknesses" rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Ví dụ: Kỹ năng thuyết trình trước đám đông, khả năng quản lý thời gian...">${this.surveyAnswers.qualitative.weaknesses_to_improve || ""}</textarea>
+            <div class="figma-card p-6 sm:p-7 rounded-3xl">
+                <label class="block text-white font-bold mb-2">2. Kỹ năng nào em muốn cải thiện hoặc phát triển nhất trong tương lai?</label>
+                <textarea id="qual-weaknesses" rows="3" class="w-full bg-white/5 px-4 py-3 rounded-2xl border border-white/10 text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none text-sm" placeholder="Ví dụ: Kỹ năng thuyết trình trước đám đông, khả năng quản lý thời gian...">${this.surveyAnswers.qualitative.weaknesses_to_improve || ""}</textarea>
             </div>
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                <label class="block text-slate-800 font-semibold mb-2">3. Môi trường học tập và làm việc mong muốn của em?</label>
-                <textarea id="qual-env" rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Ví dụ: Năng động, môi trường quốc tế, nhiều cơ hội thực tập doanh nghiệp công nghệ...">${this.surveyAnswers.qualitative.preferred_work_environment || ""}</textarea>
+            <div class="figma-card p-6 sm:p-7 rounded-3xl">
+                <label class="block text-white font-bold mb-2">3. Môi trường học tập và làm việc mong muốn của em?</label>
+                <textarea id="qual-env" rows="3" class="w-full bg-white/5 px-4 py-3 rounded-2xl border border-white/10 text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none text-sm" placeholder="Ví dụ: Năng động, môi trường quốc tế, nhiều cơ hội thực tập doanh nghiệp công nghệ...">${this.surveyAnswers.qualitative.preferred_work_environment || ""}</textarea>
             </div>
         `;
         container.appendChild(formDiv);
@@ -562,9 +571,9 @@ class App {
 
     renderTiersHTML(container, data) {
         const tiers = [
-            { key: 'dream', label: 'Nguyện vọng Mơ ước (Dream)', badge: 'badge-dream', icon: 'fa-star text-purple-600', desc: 'Điểm chuẩn cao hơn 0.5 - 1.5đ. Cơ hội bứt phá vào các trường top đầu.' },
-            { key: 'target', label: 'Nguyện vọng Vừa sức (Target)', badge: 'badge-target', icon: 'fa-bullseye text-blue-600', desc: 'Điểm chuẩn sát với năng lực học tập và học bạ của em (Tỷ lệ đỗ 75-85%).' },
-            { key: 'safety', label: 'Nguyện vọng An toàn (Safety)', badge: 'badge-safety', icon: 'fa-shield-halved text-emerald-600', desc: 'Điểm chuẩn thấp hơn 1.0 - 2.5đ. Đảm bảo chắc chắn 100% cơ hội trúng tuyển đại học.' }
+            { key: 'dream', label: 'Nguyện vọng Mơ ước (Dream)', badgeClass: 'bg-purple-500/20 text-purple-300 border-purple-500/30', borderClass: 'border-purple-500/30 hover:border-purple-500/60', icon: 'fa-star text-purple-400', desc: 'Điểm chuẩn cao hơn 0.5 - 1.5đ. Cơ hội bứt phá vào các trường top đầu.' },
+            { key: 'target', label: 'Nguyện vọng Vừa sức (Target)', badgeClass: 'bg-blue-500/20 text-blue-300 border-blue-500/30', borderClass: 'border-blue-500/30 hover:border-blue-500/60', icon: 'fa-bullseye text-blue-400', desc: 'Điểm chuẩn sát với năng lực học tập và học bạ của em (Tỷ lệ đỗ 75-85%).' },
+            { key: 'safety', label: 'Nguyện vọng An toàn (Safety)', badgeClass: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30', borderClass: 'border-emerald-500/30 hover:border-emerald-500/60', icon: 'fa-shield-halved text-emerald-400', desc: 'Điểm chuẩn thấp hơn 1.0 - 2.5đ. Đảm bảo chắc chắn 100% cơ hội trúng tuyển đại học.' }
         ];
 
         let html = '<div class="space-y-8">';
@@ -572,24 +581,31 @@ class App {
         tiers.forEach(t => {
             const list = data[t.key] || [];
             html += `
-                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-2">
+                <div class="figma-card p-6 sm:p-8 rounded-3xl border ${t.borderClass}">
+                    <div class="flex items-center gap-3 mb-2 flex-wrap">
                         <i class="fas ${t.icon} text-xl"></i>
-                        <h3 class="text-lg font-bold text-slate-900">${t.label}</h3>
-                        <span class="ml-auto px-3 py-1 rounded-full text-xs font-semibold ${t.badge}">${list.length} ngành đề xuất</span>
+                        <h3 class="text-xl font-bold text-white font-display">${t.label}</h3>
+                        <span class="ml-auto px-3 py-1 rounded-full text-xs font-semibold border ${t.badgeClass}">${list.length} ngành đề xuất</span>
                     </div>
-                    <p class="text-xs text-slate-500 mb-4">${t.desc}</p>
+                    <p class="text-xs text-slate-400 mb-5">${t.desc}</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         ${list.map(item => `
-                            <div class="p-4 rounded-2xl border border-slate-100 bg-slate-50/70 hover:bg-white hover:border-blue-200 hover:shadow-md transition-all">
-                                <div class="flex justify-between items-start gap-2 mb-2">
-                                    <h4 class="font-bold text-slate-800 text-sm leading-snug">${item.major_name || item.name}</h4>
-                                    <span class="text-xs font-semibold px-2 py-0.5 bg-blue-100 text-blue-700 rounded-md">Mã: ${item.code || item.major_code}</span>
+                            <div class="p-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all flex flex-col justify-between group">
+                                <div>
+                                    <div class="flex justify-between items-start gap-2 mb-2">
+                                        <h4 class="font-bold text-white text-base leading-snug group-hover:text-indigo-300 transition-colors">${item.major_name || item.name}</h4>
+                                        <span class="text-xs font-bold px-2.5 py-0.5 bg-indigo-500/20 text-indigo-300 rounded-lg border border-indigo-400/20">Mã: ${item.code || item.major_code}</span>
+                                    </div>
+                                    <p class="text-xs text-slate-400 mb-4">${item.university_name || 'Đại học Quốc gia / Đại học Công lập'}</p>
                                 </div>
-                                <p class="text-xs text-slate-500 mb-3">${item.university_name || 'Đại học Quốc gia / Đại học Công lập'}</p>
-                                <div class="flex items-center justify-between text-xs text-slate-600 border-t border-slate-200/60 pt-2">
-                                    <span>Điểm chuẩn 2025: <strong class="text-blue-600 font-bold">${item.cutoff_2025 || item.benchmark || '25.5'}đ</strong></span>
-                                    <span>Tổ hợp: <strong>${item.target_block || this.academicData.target_block}</strong></span>
+                                <div>
+                                    <div class="flex items-center justify-between text-xs text-slate-300 border-t border-white/10 pt-3">
+                                        <span>Điểm chuẩn 2025: <strong class="text-indigo-400 font-bold">${item.cutoff_2025 || item.benchmark || '25.5'}đ</strong></span>
+                                        <span>Tổ hợp: <strong class="text-white">${item.target_block || this.academicData.target_block}</strong></span>
+                                    </div>
+                                    <button type="button" onclick="window.app.askAIAboutMajor('${item.major_name || item.name}', '${item.university_name || ''}')" class="mt-3.5 w-full py-2 px-3 bg-white/5 hover:bg-indigo-600/30 border border-white/10 hover:border-indigo-500/40 rounded-xl text-xs text-indigo-300 hover:text-white font-semibold flex items-center justify-center gap-1.5 transition-all">
+                                        <i class="fas fa-sparkles text-[11px] text-indigo-400"></i> Hỏi AI về trường này
+                                    </button>
                                 </div>
                             </div>
                         `).join('')}
@@ -600,6 +616,15 @@ class App {
 
         html += '</div>';
         container.innerHTML = html;
+    }
+
+    askAIAboutMajor(majorName, uniName) {
+        this.switchTab('chat');
+        const input = document.getElementById('chat-input');
+        if (input) {
+            input.value = `Thầy/cô tư vấn chi tiết giúp em về ngành ${majorName} tại ${uniName || 'các trường đại học'}, cơ hội việc làm và chiến lược điểm chuẩn 2026 với nhé!`;
+            this.sendChatMessage();
+        }
     }
 
     renderFallbackTiers(container) {
@@ -624,14 +649,14 @@ class App {
             const res = await api.getRoadmap();
             if (res.success && res.data) {
                 container.innerHTML = res.data.map((m, idx) => `
-                    <div class="relative pl-8 pb-8 border-l-2 border-blue-200 last:border-l-0 last:pb-0">
-                        <div class="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-blue-600 border-4 border-white shadow"></div>
-                        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-50 text-blue-700 mb-1">
+                    <div class="relative pl-8 pb-8 border-l-2 border-indigo-500/30 last:border-l-0 last:pb-0">
+                        <div class="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#0b0f19] shadow-lg shadow-indigo-500/50"></div>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/15 text-indigo-300 border border-indigo-500/20 mb-2">
                             ${m.timeline || `Giai đoạn ${idx + 1}`}
                         </span>
-                        <h4 class="text-base font-bold text-slate-900 mb-1">${m.phase_name || m.title}</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed mb-2">${m.action_items || m.description}</p>
-                        ${m.tips ? `<div class="p-3 bg-amber-50 rounded-xl border border-amber-200/60 text-xs text-amber-800">💡 <strong>Lưu ý:</strong> ${m.tips}</div>` : ''}
+                        <h4 class="text-lg font-bold text-white mb-1.5 font-display">${m.phase_name || m.title}</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-3">${m.action_items || m.description}</p>
+                        ${m.tips ? `<div class="p-3.5 bg-amber-500/10 rounded-2xl border border-amber-500/20 text-xs text-amber-200">💡 <strong>Lưu ý quan trọng:</strong> ${m.tips}</div>` : ''}
                     </div>
                 `).join('');
             }
