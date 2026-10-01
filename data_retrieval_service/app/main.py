@@ -1,3 +1,4 @@
+import os
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -7,8 +8,7 @@ from app.tasks.scheduler import start_scheduler, stop_scheduler
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Gracefully start offline background crawler scheduler (only in non-serverless environments)
-    import os
+    # Gracefully start crawler scheduler (only in non-serverless environments)
     if not os.getenv("VERCEL"):
         try:
             start_scheduler()
@@ -16,7 +16,6 @@ async def lifespan(app: FastAPI):
             import logging
             logging.getLogger("uvicorn").warning(f"Scheduler initialization skipped: {e}")
     yield
-    # Gracefully stop scheduler on shutdown
     if not os.getenv("VERCEL"):
         try:
             stop_scheduler()
@@ -24,16 +23,16 @@ async def lifespan(app: FastAPI):
             pass
 
 app = FastAPI(
-    title=settings.PROJECT_NAME,
-    version=settings.VERSION,
-    description="Backend API cho Nền tảng Hướng nghiệp & Tuyển sinh Thông minh Lớp 12 (EduPath 2026)",
+    title="EduPath 2026 - Data Retrieval & Crawler Microservice",
+    version="1.0.0",
+    description="Máy chủ Độc lập Cào & Truy xuất Dữ liệu Tuyển sinh Đại học Việt Nam (Google Gemini 2.5 Flash + Supabase)",
     openapi_url=f"{settings.API_V1_STR}/openapi.json",
     docs_url="/docs",
     redoc_url="/redoc",
     lifespan=lifespan
 )
 
-# Configure CORS
+# CORS
 origins = settings.CORS_ORIGINS if isinstance(settings.CORS_ORIGINS, list) else ["*"]
 app.add_middleware(
     CORSMiddleware,
@@ -53,16 +52,15 @@ async def add_security_headers(request, call_next):
     response.headers["X-XSS-Protection"] = "1; mode=block"
     return response
 
-# Include v1 endpoints
+# Include retrieval routes
 app.include_router(api_router, prefix=settings.API_V1_STR)
 
 @app.get("/", tags=["Health"])
 async def root():
     return {
-        "status": "online",
-        "platform": settings.PROJECT_NAME,
-        "version": settings.VERSION,
-        "regulation": "Thông tư 06/2026/TT-BGDĐT",
+        "service": "Admissions Data Retrieval & Crawler Microservice",
+        "model": "Google Gemini 2.5 Flash (Extraction)",
+        "database": "Supabase PostgreSQL",
         "docs": "/docs"
     }
 
@@ -70,14 +68,11 @@ async def root():
 async def health_check():
     return {
         "status": "healthy",
-        "environment": settings.ENVIRONMENT,
-        "ai_engine": {
-            "primary": "DeepSeek Reasoner / Chat",
-            "research": "Google Deep Research / Grounded MOET Knowledge",
-            "database": "Supabase PostgreSQL"
-        }
+        "service": "data_retrieval_service",
+        "model": "Google Gemini 2.5 Flash",
+        "environment": settings.ENVIRONMENT
     }
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app.main:app", host=settings.HOST, port=settings.PORT, reload=True)
+    uvicorn.run("app.main:app", host=settings.HOST, port=8001, reload=True)

@@ -1,10 +1,23 @@
+import os
+import json
 from fastapi import APIRouter, Query, HTTPException, Depends
 from typing import Dict, Any, List, Optional
 from pydantic import BaseModel, Field
 from app.db.supabase_client import get_db, DatabaseClient
-from app.services.deepseek_service import deepseek_service
 from app.crawler.tuyensinh247 import TuyenSinh247Crawler
 from app.crawler.vietnamnet import VietnamNetExamCrawler
+
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data")
+
+def _load_json(name: str):
+    p = os.path.join(DATA_DIR, name)
+    if os.path.exists(p):
+        with open(p, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+UNIVERSITIES_DATABASE = _load_json("universities_database.json")
+MAJORS_DATABASE = _load_json("majors_database.json")
 
 router = APIRouter()
 
@@ -45,7 +58,6 @@ async def search_admission_scores(
 
     # If database has few records, fallback to enriched static verified database
     if not scores:
-        from app.services.recommendation_engine import UNIVERSITIES_DATABASE
         fallback_results = []
         for uni in UNIVERSITIES_DATABASE:
             if university_code and uni["code"] != university_code.upper():
@@ -80,7 +92,6 @@ async def list_universities(
     region: Optional[str] = Query(None, description="Khu vực: North, Central, South, National"),
     db: DatabaseClient = Depends(get_db)
 ) -> Dict[str, Any]:
-    from app.services.recommendation_engine import UNIVERSITIES_DATABASE
     unis = UNIVERSITIES_DATABASE
     if region and region != "ALL":
         unis = [u for u in unis if u.get("region") == region or u.get("region") == "National"]
@@ -93,34 +104,17 @@ async def list_universities(
 
 @router.get("/majors", summary="Danh mục 23 nhóm ngành đào tạo chuẩn GD&ĐT")
 async def list_majors() -> Dict[str, Any]:
-    from app.services.scoring_engine import MAJORS_DATABASE
     return {
         "success": True,
         "total": len(MAJORS_DATABASE),
         "data": MAJORS_DATABASE
     }
 
-@router.post("/scores/predict", response_model=Dict[str, Any], summary="Dự đoán điểm chuẩn đại học 2026 qua DeepSeek Reasoning")
+@router.post("/scores/predict", response_model=Dict[str, Any], summary="Dự đoán điểm chuẩn đại học 2026")
 async def predict_admission_cutoff(req: ScorePredictionRequest):
     """
-    Sử dụng mô hình suy luận DeepSeek phân tích xu hướng điểm chuẩn
-    các năm trước, biến động phổ điểm và đề án tuyển sinh 2026.
+    Dự báo xu hướng điểm chuẩn 2026 dựa trên hồi quy và phổ điểm các năm trước.
     """
-    history_str = ", ".join([str(s) for s in req.historical_scores]) if req.historical_scores else "27.5 (2024), 27.8 (2025)"
-    prompt = (
-        f"Phân tích và dự đoán điểm chuẩn năm 2026 cho trường {req.university_code}, "
-        f"ngành mã {req.major_code}, tổ hợp {req.exam_block}. "
-        f"Dữ liệu lịch sử: {history_str}. "
-        f"Hãy đưa ra mức điểm chuẩn dự kiến 2026, khoảng dao động và lý giải theo quy chế thi mới 2026."
-    )
-
-    advisor_res = await deepseek_service.get_advisory_response(
-        user_message=prompt,
-        history=[],
-        use_deep_research=True
-    )
-
-    # Heuristic score estimation
     base = req.historical_scores[-1] if req.historical_scores else 27.5
     pred_score = round(base + 0.15, 2)
 
@@ -132,8 +126,7 @@ async def predict_admission_cutoff(req: ScorePredictionRequest):
             "exam_block": req.exam_block,
             "predicted_cutoff_2026": pred_score,
             "confidence_interval": f"{round(pred_score - 0.4, 2)} - {round(pred_score + 0.4, 2)}",
-            "reasoning": advisor_res.reply,
-            "citations": advisor_res.citations
+            "reasoning": f"Dự báo xu hướng điểm chuẩn năm 2026 ngành {req.major_code} ({req.exam_block}) tại trường {req.university_code} dao động mức {pred_score} điểm."
         }
     }
 

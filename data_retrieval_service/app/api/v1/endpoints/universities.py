@@ -4,12 +4,14 @@ import os
 import json
 
 router = APIRouter()
-
-from app.services.scoring_engine import DATA_DIR
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data")
 
 def load_json(name: str):
-    with open(os.path.join(DATA_DIR, name), "r", encoding="utf-8") as f:
-        return json.load(f)
+    path = os.path.join(DATA_DIR, name)
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
 
 UNIVERSITIES = load_json("universities_database.json")
 MAJORS = load_json("majors_database.json")

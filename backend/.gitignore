@@ -1,9 +1,0 @@
-.env
-*.env
-.env.*
-!.env.example
-__pycache__/
-*.pyc
-checkpoints/
-*.log
-.pytest_cache/
