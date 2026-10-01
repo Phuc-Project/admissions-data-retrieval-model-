@@ -51,14 +51,31 @@ def main():
         for s in scores[:4]:
             print(f"    - [{s.get('year')}] {s.get('major_code')} - {s.get('major_name')}: {s.get('cutoff_score')} điểm (Tổ hợp: {s.get('subject_groups')})")
 
-        # 5. Search Cutoff Scores by Keyword (Công nghệ thông tin)
+        # 5. Search Cutoff Scores for BKA (Đại học Bách Khoa Hà Nội)
         t0 = time.time()
-        r_it = client.get("/api/v1/retrieval/scores/search?keyword=Khoa học máy tính&limit=3")
+        r_bka = client.get("/api/v1/retrieval/scores/search?university_code=BKA&limit=5")
         latency = (time.time() - t0) * 1000
-        it_scores = r_it.json().get("data", [])
-        print(f"\n[5] GET /api/v1/retrieval/scores/search?keyword=Khoa học máy tính: HTTP {r_it.status_code} ({latency:.1f}ms)")
-        for s in it_scores[:3]:
-            print(f"    - [{s.get('uni_code')}] {s.get('major_name')}: {s.get('cutoff_score')} điểm")
+        bka_scores = r_bka.json().get("data", [])
+        print(f"\n[5] GET /api/v1/retrieval/scores/search?university_code=BKA: HTTP {r_bka.status_code} ({latency:.1f}ms)")
+        print("    Truy xuất điểm chuẩn Đại học Bách Khoa Hà Nội (HUST):")
+        for s in bka_scores:
+            print(f"    - [{s.get('year')}] {s.get('major_code')} - {s.get('major_name')}: {s.get('cutoff_score')} điểm ({s.get('subject_groups')}) | {s.get('note')}")
+
+        # 6. Score Prediction 2026
+        t0 = time.time()
+        pred_payload = {
+            "university_code": "BKA",
+            "major_code": "IT1",
+            "exam_block": "A00",
+            "historical_scores": [28.2, 28.5, 28.8]
+        }
+        r_pred = client.post("/api/v1/retrieval/scores/predict", json=pred_payload)
+        latency = (time.time() - t0) * 1000
+        p_data = r_pred.json().get("data", {})
+        print(f"\n[6] POST /api/v1/retrieval/scores/predict: HTTP {r_pred.status_code} ({latency:.1f}ms)")
+        print(f"    Dự báo 2026 cho {p_data.get('university_code')} ngành {p_data.get('major_code')} ({p_data.get('exam_block')}):")
+        print(f"    - Điểm chuẩn dự báo: {p_data.get('predicted_cutoff_2026')} | Khoảng tin cậy: {p_data.get('confidence_interval')}")
+
 
         # 6. Check OpenAPI Documentation
         t0 = time.time()

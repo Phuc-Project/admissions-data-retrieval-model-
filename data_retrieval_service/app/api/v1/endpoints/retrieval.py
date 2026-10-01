@@ -7,7 +7,8 @@ from app.db.supabase_client import get_db, DatabaseClient
 from app.crawler.tuyensinh247 import TuyenSinh247Crawler
 from app.crawler.vietnamnet import VietnamNetExamCrawler
 
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data")
+# Points to data_retrieval_service/app/data
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))), "data")
 
 def _load_json(name: str):
     p = os.path.join(DATA_DIR, name)

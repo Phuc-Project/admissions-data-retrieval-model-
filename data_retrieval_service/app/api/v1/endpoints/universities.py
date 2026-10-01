@@ -4,7 +4,8 @@ import os
 import json
 
 router = APIRouter()
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data")
+# Points to data_retrieval_service/app/data
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))), "data")
 
 def load_json(name: str):
     path = os.path.join(DATA_DIR, name)
