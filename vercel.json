@@ -2,7 +2,16 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/api/index.py"
+      "destination": {
+        "type": "service",
+        "service": "admissions-data-retrieval-api"
+      }
     }
-  ]
+  ],
+  "services": {
+    "admissions-data-retrieval-api": {
+      "root": "backend",
+      "entrypoint": "app.main:app"
+    }
+  }
 }
